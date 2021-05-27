@@ -25,6 +25,12 @@ class Serie
     private $nom;
 
     /**
+     * @ORM\ManyToOne(targetEntity=Marque::class, inversedBy="series")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $marque;
+
+    /**
      * @ORM\OneToMany(targetEntity=Produit::class, mappedBy="serie")
      */
     private $produits;
@@ -33,6 +39,7 @@ class Serie
     {
         $this->produits = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
@@ -49,6 +56,27 @@ class Serie
         $this->nom = $nom;
 
         return $this;
+    }
+
+    public function getMarque(): ?Marque
+    {
+        return $this->marque;
+    }
+
+    public function setMarque(?Marque $marque): self
+    {
+        $this->marque = $marque;
+
+        return $this;
+    }
+
+
+
+
+    public function __toString(){
+        $nomSerie = $this->nom;
+        $nomMarque = $this->getMarque()->getNom();
+        return " serie ".$nomSerie;
     }
 
     /**
@@ -80,4 +108,5 @@ class Serie
 
         return $this;
     }
+
 }

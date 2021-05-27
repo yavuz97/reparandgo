@@ -1,0 +1,39 @@
+.ipadClined {
+    -webkit-transform: translate(82%, -50%);
+    -ms-transform: translate(82%, -50%);
+    transform: translate(82%, -50%);
+    opacity: 0;
+    margin-bottom: -475px;
+    -webkit-transition: 1s .3s;
+    transition: 1s .3s;
+}
+.ipadClined.show {
+    -webkit-transform: translate(67%, -50%);
+    -ms-transform: translate(67%, -50%);
+    transform: translate(67%, -50%);
+    opacity: 1;
+}
+.ipadClined img{
+    width: 647px;
+}
+
+
+.tabletteWhite {
+    -webkit-transform: translate(0%, 40%);
+    -ms-transform: translate(0%, 40%);
+    transform: translate(0%, 40%);
+    opacity: 0;
+    -webkit-transition: 1s .3s;
+    transition: 1s .3s;
+}
+.tabletteWhite.show {
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
+
+.tabletteWhite img{
+    width: 60%;
+    margin-top: 43px;
+}

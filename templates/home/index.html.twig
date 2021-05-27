@@ -1,0 +1,619 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <body>
+
+    <nav class="main navbar navbar-expand-lg nav-transp" >
+        <a class="navbar-brand" href="index.html"> <img class="logo" src="{{ asset("general/logo.png") }}" alt="logo">   </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li  class="nav-item fade-service">
+                    <a class="nav-link" href="#">Réparation téléphones  <span class="sr-only">(current)</span> </a>
+                    <div class="menuPhone">
+                        <div class="titleMenuDrop">huawei</div>
+                        <hr>
+                        <div class="list-item-drop">
+                            <a href="">Série Mate</a>
+                            <a href="">Série P</a>
+                            <a href="">Série nova</a>
+                            <a href="" >Série Y</a>
+                        </div>
+
+                        <div class="titleMenuDrop">Apple</div>
+                        <hr>
+                        <div class="list-item-drop">
+                            <a href="">iPhone 12 pro</a>
+                            <a href="">iPhone SE</a>
+                            <a href="">iPhone 11</a>
+                            <a href="">iPhone XR</a>
+                        </div>
+                        <div class="titleMenuDrop">Samsung</div>
+                        <hr>
+                        <div class="list-item-drop">
+                            <a href="">Galaxy A </a>
+                            <a href="">Galaxy M</a>
+                            <a href="">Galaxy S</a>
+                            <a href="">Galaxy Z</a>
+                        </div>
+                    </div>
+                </li>
+                <li  class="nav-item fade-service">
+                    <a class="nav-link" href="#">Services</a>
+                    <div class="menuService">
+                        <div class="row">
+                            <div class="col">
+                                <h5> Tampon Gravure </h5>
+                                <p> Nous réalisons vos tampons et gravures pour votre utilisation personnelle ou votre entreprise </p>
+                                <img class="menuService-img" src="images/services/tampon.jpg" alt="logo">
+                            </div>
+                            <div class="col">
+                                <h5> Réparation ordinateur </h5>
+                                <p> Windows & Mac Disque dur, écran, carte mère, ventilateur, clavier, RAM Mémoire, carte Graphique…</p>
+                                <img class="menuService-img" src="images/services/ordinateur.jpg" alt="logo">
+                            </div>
+                            <div class="col">
+                                <h5> Réparation de tablette</h5>
+                                <p>dépanne votre tablette tactile La réparation d’une tablette demande une grande vigilance</p>
+                                <img class="menuService-img" src="images/services/tablet.jpg" alt="logo">
+                            </div>
+                            <div class="col">
+                                <h5> Cles Minute </h5>
+                                <p> Reproductions de clés,  grand choix de modèles de clés standards différentes et un stock important.</p>
+                                <img class="menuService-img" src="images/services/cles.png" alt="logo">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nous trouver </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div id="hero-image-navbar-trigger" class="hero-image">
+
+    </div>
+
+    <div id="sloganContent" class="yav-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-4" >
+                    <h1> Réparation rapide et efficace! </h1>
+                    <p style="margin-top: 2rem">Écran cassé? Batterie non fonctionnelle? Téléphone bloqué? Faites confiance à notre service de réparation et déblocage et confiez nous votre téléphone. Nous vous le remettrons comme neuf en un rien de temps!</p>
+                </div>
+            </div>
+            <figure class="iphone-s1-6"> <img src="{{ asset("general/images/iphone-s1.png") }}" alt="iphoneS1" ></figure>
+        </div>
+    </div>
+
+    <div id="" class="yav-container yav-container-dark">
+        <div class="container" >
+            <div class="row">
+                <div class="vektors-home"  >
+
+                    <div class="col">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="{{ asset("images/undraw/android2.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
+                        </div>
+                        <div style="width: 100%; margin-top: 17px" class="d-flex align-items-center justify-content-center">
+                            <h5 > Système </h5>
+                        </div>
+                        <p> Réparation des problèmes lié au système  </p>
+                    </div>
+                    <div class="col">
+                        <div style="width: 218px; margin-left: 30px;" class="d-flex align-items-center justify-content-center">
+                            <img src="images/undraw/undraw_voice_assistant_nrv7.svg" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
+                        </div>
+                        <div style="margin-top: 5px;" class="d-flex align-items-center justify-content-center">
+                            <h5>Button on/off </h5>
+                        </div>
+                        <p>Réparation des problèmes de bouton d'alimentation</p>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex align-items-center justify-content-center" >
+                            <img src="images/undraw/undraw_sync4_xlc6.svg" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5>  Réseau   </h5>
+                        </div>
+                        <p> Réparation des problèmes lié au connexion  </p>
+                    </div>
+                    <div class="col">
+                        <div style="margin-top: -8px;" class="d-flex align-items-center justify-content-center">
+                            <img src="images/undraw/undraw_Mobile_app_re_catg.svg" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5> Batterie  </h5>
+                        </div>
+                        <p>Réparation des problèmes de bouton d'alimentation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="h-bold mt-100 mb-4" >La Tranquilité D'esprit pour vos problèmes informatiques </h1>
+                    <p>Chez Répar' & Go avec une expérience plus du 10 ans dans le domaine, nous sommes à votre service pour diagnostiquer gratuitement et répaer tout,
+                        du simple écran cassé aux réparations les plus avancées impliquant la micro-soudure.
+                    </p>
+
+
+                    <div class="">
+                        <div  class="phoneOutside-left" >
+                            <div class="phoneInsideTable-cote">
+                                <div class="phoneInsideTable-logo">
+                                    <img style="width: 15% " src="images/homepage/xiomi-logo.png" alt="xiomilogo">
+                                    <img style="width: 17%;margin-left: 8px; " src="images/homepage/googlepixel-logo.png" alt="googlepixellogo">
+                                    <img src="images/homepage/motorola-logo.png" alt="lenevologo">
+                                </div>
+                                <div class="phoneInsideTable-containter">
+                                    <div class="phoneInsideTable-containter-names">
+                                        <div> IPHONE 8 PLUS</div>
+                                        <div> IPHONE 8/7 PLUS</div>
+                                        <div> IPHONE 7</div>
+                                        <div> IPHONE 6S / 6 PLUS</div>
+                                        <div> IPHONE 6</div>
+                                        <div> IPHONE 5 / 5S / 5C</div>
+                                    </div>
+                                    <div class="phoneInsideTable-containter-prices">
+                                        <div>111€</div>
+                                        <div>109€</div>
+                                        <div>99€</div>
+                                        <div>79€</div>
+                                        <div>69€</div>
+                                        <div>59€</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phoneOutside-right">
+                            <div class="phoneInsideTable-cote">
+                                <div class="phoneInsideTable-logo">
+                                    <img src="images/homepage/BlackBerry-Logo.png" alt="blackberrylogo">
+                                    <img src="images/homepage/oppo-logo.png" alt="oppologo">
+                                    <img src="images/homepage/Nokia-logo.png" alt="nokialogo">
+                                </div>
+                                <div class="phoneInsideTable-containter">
+                                    <div class="phoneInsideTable-containter-names">
+                                        <div> IPHONE 8 PLUS</div>
+                                        <div> IPHONE 8/7 PLUS</div>
+                                        <div> IPHONE 7</div>
+                                        <div> IPHONE 6S / 6 PLUS</div>
+                                        <div> IPHONE 6</div>
+                                        <div> IPHONE 5 / 5S / 5C</div>
+                                    </div>
+                                    <div class="phoneInsideTable-containter-prices">
+                                        <div>111€</div>
+                                        <div>109€</div>
+                                        <div>99€</div>
+                                        <div>79€</div>
+                                        <div>69€</div>
+                                        <div>59€</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phoneInsideTable-center">
+                            <div class="phoneInsideTable-logo">
+                                <img src="images/homepage/iphone-logo.png" alt="iphonelogo">
+                                <img src="images/homepage/samsung-logo.png" alt="samsunglogo">
+                                <img src="images/homepage/huawei-logo.png" alt="huaweilogo">
+                            </div>
+                            <div class="phoneInsideTable-containter">
+                                <div class="phoneInsideTable-containter-names">
+                                    <div> IPHONE 8 PLUS</div>
+                                    <div> IPHONE 8/7 PLUS</div>
+                                    <div> IPHONE 7</div>
+                                    <div> IPHONE 6S / 6 PLUS</div>
+                                    <div> IPHONE 6</div>
+                                    <div> IPHONE 5 / 5S / 5C</div>
+                                </div>
+                                <div class="phoneInsideTable-containter-prices">
+                                    <div>111€</div>
+                                    <div>109€</div>
+                                    <div>99€</div>
+                                    <div>79€</div>
+                                    <div>69€</div>
+                                    <div>59€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="iphones-s2"><img src="images/homepage/iphones-s2.png" alt="iphones-s2"></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" avis-google-container" >
+        <div class="col-6 google-left" >
+            <div> Les avis sur Google  </div>
+            <img src="images/google_avis.png">
+            <a href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5"> Voir tout les avis <i class="fa fa-external-link" aria-hidden="true"></i> </a>
+            <div style="font-weight: initial;"> Satisfaction client garantie <img style="width: 95px;position: absolute;margin: -21px 0 0 0;" src="images/undraw/satisfaction-garantie.png" alt="satisfactionClient"> </div>
+
+        </div>
+        <div class="col-6 google-right">
+            <section id="testim" class="testim" >
+
+                <div class="wrap" style="align-items: flex-end">
+
+                    <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                    <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                    <ul id="testim-dots" class="dots">
+                        <li class="dot active"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li>
+                    </ul>
+                    <div id="testim-content" class="cont">
+
+                        <div class="active">
+                            <div class="img">
+                                <img src="images/testimonial-users/1.jfif" alt=""></div>
+                            <h2>Lucie M.</h2>
+                            <p>
+                                Fortement conseillé par une amie à moi ..
+                                J&rsquo;étais agréablement surprise par l&rsquo;accueil à la fois professionnel et compréhensif que j&rsquo;ai reçu.
+                                Très bon travail, je suis repartie avec une batterie toute neuve , et un nouvel écran !
+                                Excellent rapport qualité/prix 🙂
+                                Je ne pourrais que le conseiller , c&rsquo;est certain.
+                                Merci beaucoup pour ce joli travail, rapide et efficace !
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="img"><img src="images/testimonial-users/2.jfif" alt=""></div>
+                            <h2>Elisa A.</h2>
+                            <p>
+                                Dépannage un dimanche suite à un écran cassé, accueil très chaleureux, serviable et conciliant. Travail très bien effectué et rapide. Ravie d avoir pu faire réparer mon téléphone un dimanche après-midi et surtout très compétent. Je recommande vivement
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="img"><img src="images/testimonial-users/3.jfif" alt=""></div>
+                            <h2>Morgane K.</h2>
+                            <p>Un service et un accueil très professionnel, toujours avec le sourire. Je participe donc à tous ces avis positifs et recommande ce réparateur sans aucune hésitation.</p>
+                        </div>
+
+                        <div>
+                            <div class="img"><img src="images/testimonial-users/4.jfif" alt=""></div>
+                            <h2>Julien F.</h2>
+                            <p>Mon IPhone 6S ne fonctionnais plus .. Impossible de le démarrer .. un accueil chaleureux, une réparation rapide et je repars avec une batterie neuve également !
+                                Après avoir regardé les avis sur la page j&rsquo;ai choisis cette boutique vraiment bien située en plus ! Je dois dire que je ne suis pas déçu ! Super rapport qualité/prix ! Je recommande vivement !
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="img"><img src="images/testimonial-users/5.jfif" alt=""></div>
+                            <h2>Thomas C.</h2>
+                            <p>
+                                Fortement conseillé par une amie à moi ..
+                                J&rsquo;étais agréablement surprise par l&rsquo;accueil à la fois professionnel et compréhensif que j&rsquo;ai reçu.
+                                Très bon travail, je suis repartie avec une batterie toute neuve , et un nouvel écran !<br />
+                                Excellent rapport qualité/prix 🙂
+                                Je ne pourrais que le conseiller , c&rsquo;est certain.
+                                Merci beaucoup
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div  class="yav-container " style="margin: 180px 0 0 0; display: none">
+        <div class="container" >
+            <div id="quote" class="row">
+                <div class="col-md-7 col-sm-10">
+                    <blockquote class="mt-80">
+                        <h4 class="h-light text-uppercase">Speaking of ciclope</h4>
+                        <h2 class="h-semibold">
+
+                            Ciclope is the most original
+                            app for the iPhone that I’ve
+                            seen in the App Store in
+                            years.
+                        </h2>
+
+                    </blockquote>
+                    <figure class="iphone-s6"><img src="images/homepage/iphone-portrait.png"><img src="images/homepage/iphone-landscape.png"></figure>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="yav-container  mt-70" style="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <hr>
+                    <h1 class="h-heavy mt-80">Votre expert de la réparation de téléphone & Ordinateur & Tablette à Metz.</h1>
+                    <div class="row iphone-features-cont">
+                        <div class="col-lg-3 col-md-4 col-sm-4  helo">
+                            <div class="iphone-details left text-right">
+                                <h4 class="h-bold">Votre téléphone n'a plus d'image ?</h4>
+                            </div>
+                            <div class="iphone-details left text-right">
+                                <h4 class="h-bold">Votre cellulaire ne charge plus ?</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-4">
+                            <a target="_blank" href="https://www.google.com/maps/place/R%C3%A9par'+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+%26+Ordinateur+%26+Tablette/@49.1158957,6.1719842,394m/data=!3m1!1e3!4m5!3m4!1s0x0:0x3577dc2fb7cc5cd1!8m2!3d49.1161085!4d6.1723196?hl=fr"> <figure  class="iphone-s3" ><img src="images/homepage/iphone-4-2-darkMap.png" alt="reparationMetz"></figure></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="iphone-details right text-left">
+                                <h4 class="h-bold">Votre téléphone ne s'allume plus ? </h4>
+                            </div>
+                            <div class="iphone-details right text-left">
+                                <h4 class="h-bold">La pile ne garde plus la charge ?</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" boutique-content"  style=" display: none;margin-top: 200px">
+        <div class="col-6">
+            <div style="margin: auto" >
+                <div id="boutique-img-container">
+                    <img  id="boutique-img" src="images/boutique3.png" alt="">
+                </div>
+                <div id="fayette-img-container">
+                    <img  id="fayette-img"  src="images/fayette.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="p-4" style="    display: block;
+    float: right;
+    position: absolute;
+    right: 106px;
+    text-align: center;
+    top: 48px;">
+                <div style="font-weight: lighter;font-size: 33px;color: white"> Réparation en  <strong>20 minutes </strong>   </div><br>
+                <div style="font-weight: lighter;font-size: 33px;color: white"> sans <strong> rendez-vous </strong> </div>
+
+                <div style="font-weight: lighter;font-size: 22px;color: white ; margin-top: 87px" >    Comment nous trouver  ?
+                    <i class="fa fa-external-link" aria-hidden="true"></i> </div>
+            </div>
+            <div style="padding: 0px 26px;color: #d6d6c3;margin-top: 135px;margin-left: 138px;font-weight: 300;font-style: oblique;">On est situé à place de la république de centre-ville. A l’intérieur de des galeries
+                de la Fayette près de l’entrée de parking place république. </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-coordinates">
+            <div>
+                <div> <i class="fa fa-phone" aria-hidden="true"></i> Téléphone: 0387749801</div>
+                <div> <i class="fa fa-envelope-o" aria-hidden="true"></i> Courrier: reparandgo57@gmail.com</div>
+                <div> <i class="fa fa-location-arrow" aria-hidden="true"></i> Adresse:  1, av Ney 57000 Metz (GALERIE PARKING REPUBLIQUE)</div>
+            </div>
+            <div>
+                <div> <i class="fa fa-clock-o" aria-hidden="true"></i> Ouvert de Lundi à Samedi du 10h00  à 18h</div>
+            </div>
+
+        </div>
+        <div class="footer-phones">
+            <div>
+                <div> Réparation iPhone 11 Pro Max      </div>
+                <div> Réparation iPhone 11 Pro</div>
+                <div> Réparation iPhone 11</div>
+                <div> Réparation iPhone XS / XS Max</div>
+                <div> Réparation iPhone XR</div>
+                <div> Réparation iPhone X</div>
+                <div> Réparation iPhone 8 / 8+</div>
+                <div> Réparation iPhone 7 / 7+</div>
+                <div> Réparation iPhone 6S / 6S+</div>
+                <div> Réparation iPhone 6 / 6+</div>
+            </div>
+            <div>
+                <div> Réparation Samsung Galaxy S10</div>
+                <div> Réparation Samsung Galaxy S10 Plus</div>
+                <div> Réparation Samsung Galaxy S9</div>
+                <div> Réparation Samsung Galaxy S9 Plus</div>
+                <div> Réparation Samsung Galaxy S8</div>
+                <div> Réparation Samsung Galaxy S8 Plus</div>
+                <div> Réparation Samsung Galaxy A80</div>
+                <div> Réparation Samsung Galaxy A70</div>
+                <div> Réparation Samsung Galaxy Note 10</div>
+                <div> Réparation Samsung Galaxy Note 9</div>
+            </div>
+            <div>
+                <div>Réparation Huawei P Smart Plus</div>
+                <div>Réparation Huawei P Smart 2019</div>
+                <div>Réparation Huawei P Smart 2018</div>
+                <div>Réparation Huawei P30 Pro</div>
+                <div>Réparation Huawei Mate 20 Pro</div>
+                <div>Réparation Huawei Mate 20 Lite</div>
+                <div>Réparation Huawei Mate 20</div>
+                <div>Réparation Huawei Mate 10 Pro</div>
+                <div>Réparation Huawei Y9 2019</div>
+            </div>
+        </div>
+
+    </footer>
+    </body>
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+    <script type="text/javascript" src="{{ asset("js/bootstrap.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/jquery.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/general.js") }}"></script>
+
+    <script>
+        // vars
+        'use strict'
+        var	testim = document.getElementById("testim"),
+            testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+            testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+            testimLeftArrow = document.getElementById("left-arrow"),
+            testimRightArrow = document.getElementById("right-arrow"),
+            testimSpeed = 4500,
+            currentSlide = 0,
+            currentActive = 0,
+            testimTimer,
+            touchStartPos,
+            touchEndPos,
+            touchPosDiff,
+            ignoreTouch = 30;
+        ;
+
+        window.onload = function() {
+
+            // Testim Script
+            function playSlide(slide) {
+                for (var k = 0; k < testimDots.length; k++) {
+                    testimContent[k].classList.remove("active");
+                    testimContent[k].classList.remove("inactive");
+                    testimDots[k].classList.remove("active");
+                }
+
+                if (slide < 0) {
+                    slide = currentSlide = testimContent.length-1;
+                }
+
+                if (slide > testimContent.length - 1) {
+                    slide = currentSlide = 0;
+                }
+
+                if (currentActive != currentSlide) {
+                    testimContent[currentActive].classList.add("inactive");
+                }
+                testimContent[slide].classList.add("active");
+                testimDots[slide].classList.add("active");
+
+                currentActive = currentSlide;
+
+                clearTimeout(testimTimer);
+                testimTimer = setTimeout(function() {
+                    playSlide(currentSlide += 1);
+                }, testimSpeed)
+            }
+
+            testimLeftArrow.addEventListener("click", function() {
+                playSlide(currentSlide -= 1);
+            })
+
+            testimRightArrow.addEventListener("click", function() {
+                playSlide(currentSlide += 1);
+            })
+
+            for (var l = 0; l < testimDots.length; l++) {
+                testimDots[l].addEventListener("click", function() {
+                    playSlide(currentSlide = testimDots.indexOf(this));
+                })
+            }
+
+            playSlide(currentSlide);
+
+            // keyboard shortcuts
+            document.addEventListener("keyup", function(e) {
+                switch (e.keyCode) {
+                    case 37:
+                        testimLeftArrow.click();
+                        break;
+
+                    case 39:
+                        testimRightArrow.click();
+                        break;
+
+                    case 39:
+                        testimRightArrow.click();
+                        break;
+
+                    default:
+                        break;
+                }
+            })
+
+            testim.addEventListener("touchstart", function(e) {
+                touchStartPos = e.changedTouches[0].clientX;
+            })
+
+            testim.addEventListener("touchend", function(e) {
+                touchEndPos = e.changedTouches[0].clientX;
+
+                touchPosDiff = touchStartPos - touchEndPos;
+
+                console.log(touchPosDiff);
+                console.log(touchStartPos);
+                console.log(touchEndPos);
+
+
+                if (touchPosDiff > 0 + ignoreTouch) {
+                    testimLeftArrow.click();
+                } else if (touchPosDiff < 0 - ignoreTouch) {
+                    testimRightArrow.click();
+                } else {
+                    return;
+                }
+
+            })
+        }
+    </script>
+    <script>
+        $(window).load(function(){
+
+            // Scroll Changes
+
+            peScrollChange.init({
+                elem: '.iphone-s1-6',
+                trigger: '#sloganContent',
+                classesToChange: 'show',
+                offset: 340,
+                endPoint: document.querySelector('#sloganContent').offsetHeight
+            });
+
+
+            peScrollChange.init({
+                elem: '.iphone-s6',
+                trigger: '#quote',
+                classesToChange: 'show'
+            });
+
+            peScrollChange.init({
+                elem: '.iphone-s3',
+                trigger: '.iphone-s3',
+                classesToChange: 'show',
+                offset: 300,
+            });
+
+        })
+
+        // function hoverRed(x){
+        //     var y = x.nextElementSibling;
+        //     var nextImg = document.getElementById(y.id);
+        //     nextImg.classList.add("showRed");
+        //     console.log("ll");
+        // }
+        // function RemoveHoverRed(x){
+        //     var y = x.nextElementSibling;
+        //     var nextImg = document.getElementById(y.id);
+        //     nextImg.classList.add("removeShowRed")
+        // }
+    </script>
+
+{% endblock %}

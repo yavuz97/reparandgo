@@ -29,9 +29,15 @@ class Marque
      */
     private $produits;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Serie::class, mappedBy="marque", orphanRemoval=true)
+     */
+    private $series;
+
     public function __construct()
     {
         $this->produits = new ArrayCollection();
+        $this->series = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -80,4 +86,41 @@ class Marque
 
         return $this;
     }
+
+
+    /**
+     * @return Collection|Serie[]
+     */
+    public function getSeries(): Collection
+    {
+        return $this->series;
+    }
+
+    public function addSerie(Serie $serie): self
+    {
+        if (!$this->series->contains($serie)) {
+            $this->series[] = $serie;
+            $serie->setMarque($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSerie(Serie $serie): self
+    {
+        if ($this->series->removeElement($serie)) {
+            // set the owning side to null (unless already changed)
+            if ($serie->getMarque() === $this) {
+                $serie->setMarque(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+    public function __toString(){
+        return $this->nom;
+    }
+
 }
