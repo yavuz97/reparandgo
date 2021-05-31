@@ -18,12 +18,137 @@
 
         {% endblock %}
 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+        <script type="text/javascript" src="{{ asset("js/bootstrap.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("js/jquery.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("js/general.js") }}"></script>
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
 
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+    <nav class="main navbar navbar-expand-lg nav-transp" style="position: fixed" >
+        <a class="navbar-brand" href="{{ path("home") }}"> <img class="logo" src="{{ asset("images/general/logo.png") }}" alt="logo">   </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path("clesMinute") }}">Clés minute</a>
+                </li>
+                <li  class="nav-item fade-service">
+                    <a class="nav-link" href="{{ path("tout_nos_produits") }}">Réparation téléphones  <span class="sr-only">(current)</span> </a>
+                    <div class="menuPhone">
+                        {% for marque in marques %}
+                            {% if marque.produits | length > 0 %}
+                                    <div class="titleMenuDrop"> {{ marque.nom }}</div>
+                                    <hr>
+                                    <div class="list-item-drop">
+                                        {% for serie in marque.series  %}
+                                            <a href="{{ path("seriePhone",{'id':serie.id}) }}"> {{serie.nom}}</a>
+                                        {% endfor %}
+                                    </div>
+                             {% endif %}
+                        {% endfor %}
+
+                    </div>
+                </li>
+
+                <li  class="nav-item fade-service">
+                    <a class="nav-link" href="#">Services</a>
+                    <div class="menuService">
+                        <div class="row">
+                            <div class="col">
+                                <a href="{{ path("impressionTampon") }}"><h5> Tampon Gravure </h5></a>
+                                <p> Nous réalisons vos tampons et gravures pour votre utilisation personnelle ou votre entreprise </p>
+                                <img class="menuService-img" src="images/services/tampon.jpg" alt="logo">
+                            </div>
+                            <div class="col">
+                               <a href="{{ path("reparationOrdinateur") }}"><h5> Réparation ordinateur </h5></a>
+                                <p> Windows & Mac Disque dur, écran, carte mère, ventilateur, clavier, RAM Mémoire, carte Graphique…</p>
+                                <img class="menuService-img" src="images/services/ordinateur.jpg" alt="logo">
+                            </div>
+                            <div class="col">
+                                <a href="{{ path("reparationTablette") }}">   <h5> Réparation de tablette</h5></a>
+                                <p>dépanne votre tablette tactile La réparation d’une tablette demande une grande vigilance</p>
+                                <img class="menuService-img" src="images/services/tablet.jpg" alt="logo">
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path("contact") }}">Nous trouver </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    {% block body %}{% endblock %}
+
+    <footer>
+        <div class="footer-coordinates">
+            <div>
+                <div> <i class="fa fa-phone" aria-hidden="true"></i> Téléphone: 0387749801</div>
+                <div> <i class="fa fa-envelope-o" aria-hidden="true"></i> Courrier: reparandgo57@gmail.com</div>
+                <div> <i class="fa fa-location-arrow" aria-hidden="true"></i> Adresse:  1, av Ney 57000 Metz (GALERIE PARKING REPUBLIQUE)</div>
+            </div>
+            <div>
+                <div> <i class="fa fa-clock-o" aria-hidden="true"></i> Ouvert de Lundi à Samedi du 10h00  à 18h</div>
+            </div>
+
+        </div>
+        <div class="footer-phones">
+            <div>
+                <div> Réparation iPhone 11 Pro Max      </div>
+                <div> Réparation iPhone 11 Pro</div>
+                <div> Réparation iPhone 11</div>
+                <div> Réparation iPhone XS / XS Max</div>
+                <div> Réparation iPhone XR</div>
+                <div> Réparation iPhone X</div>
+                <div> Réparation iPhone 8 / 8+</div>
+                <div> Réparation iPhone 7 / 7+</div>
+                <div> Réparation iPhone 6S / 6S+</div>
+                <div> Réparation iPhone 6 / 6+</div>
+            </div>
+            <div>
+                <div> Réparation Samsung Galaxy S10</div>
+                <div> Réparation Samsung Galaxy S10 Plus</div>
+                <div> Réparation Samsung Galaxy S9</div>
+                <div> Réparation Samsung Galaxy S9 Plus</div>
+                <div> Réparation Samsung Galaxy S8</div>
+                <div> Réparation Samsung Galaxy S8 Plus</div>
+                <div> Réparation Samsung Galaxy A80</div>
+                <div> Réparation Samsung Galaxy A70</div>
+                <div> Réparation Samsung Galaxy Note 10</div>
+                <div> Réparation Samsung Galaxy Note 9</div>
+            </div>
+            <div>
+                <div>Réparation Huawei P Smart Plus</div>
+                <div>Réparation Huawei P Smart 2019</div>
+                <div>Réparation Huawei P Smart 2018</div>
+                <div>Réparation Huawei P30 Pro</div>
+                <div>Réparation Huawei Mate 20 Pro</div>
+                <div>Réparation Huawei Mate 20 Lite</div>
+                <div>Réparation Huawei Mate 20</div>
+                <div>Réparation Huawei Mate 10 Pro</div>
+                <div>Réparation Huawei Y9 2019</div>
+            </div>
+        </div>
+
+    </footer>
+
+
     </body>
 </html>

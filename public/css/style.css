@@ -9,8 +9,8 @@ header{
     font-family: 'Quicksand', sans-serif;
 }
 body {
-    background-color: white;
-    color: #de0000;
+    background-color: #001bff;
+    color: #454545;
     /*font-family: 'Cabin-Regular';*/
     font-size: 22px;
 }
@@ -181,7 +181,6 @@ nav.main ul li.fade-service:hover div {
 
 /*hero image */
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("../images/general/hero12.jfif");
     height: 95vh;
     background-position: center;
     background-repeat: no-repeat;

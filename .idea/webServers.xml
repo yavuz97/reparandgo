@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="75d788d1-83f1-4517-958e-af4508db0d2c" name="reparAndGo" url="http://ftp.samu-info.com">
+        <fileTransfer rootFolder="/reparAndGoApp" host="ftp.samu-info.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

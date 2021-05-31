@@ -18,6 +18,30 @@ class ProduitRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Produit::class);
     }
+//
+//    public function findBySerie($serieId)
+//    {
+//        $entityManager = $this->getEntityManager();
+//
+//        $query = $entityManager->createQuery(
+//            'SELECT p.id
+//        FROM App\Entity\Produit p
+//        INNER JOIN p.serie serie
+//        WHERE serie.id = :id'
+//        )->setParameter('id', $serieId);
+//
+//        return $query->getResult();
+//    }
+//    public function findBySerieX($serieId)
+//    {
+//        return $this->createQueryBuilder('ph')
+//            ->join('ph.serie', 'serie')
+//            ->andWhere('serie = :id')
+////            ->addSelect('serie')
+//            ->setParameter('id', $serieId)
+//            ->getQuery()
+//            ->getResult();
+//    }
 
     // /**
     //  * @return Produit[] Returns an array of Produit objects

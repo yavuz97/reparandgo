@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="{{ asset("css/tabletteReparation.css") }}"  >
+    <link rel="stylesheet" href="{{ asset("css/clesMinute.css") }}"  >
+    <link rel="stylesheet" href="{{ asset("css/computerReparation.css") }}"  >
+
+{#    <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('images/general/reparationOrdinateurCover.jpg'); " id="hero-image-navbar-trigger" class="hero-image"></div>#}
+    <div style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('images/general/reparationOrdinateurCover.jpg'); " id="hero-image-navbar-trigger" class="hero-image"></div>
+
+
+<div id="sloganContent" class="yav-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 " >
+                <h1> Réparation rapide et efficace! </h1>
+                <p style="margin-top: 2rem">Écran cassé? Batterie non fonctionnelle? Téléphone bloqué? Faites confiance à notre service de réparation et déblocage et confiez nous votre téléphone. Nous vous le remettrons comme neuf en un rien de temps!</p>
+            </div>
+        </div>
+        <figure class="ipadClined"> <img src="{{ asset("images/services/tablette/ipad2.png") }}" alt="tabllete" ></figure>
+    </div>
+</div>
+
+<div id="" class="yav-container yav-container-dark">
+    <div class="container" >
+        <div class="row">
+            <div class="col">
+                <h1> <i class="fa fa-external-link" aria-hidden="true"></i> Interactive</h1>
+                <p>La Tranquilité D'esprit pour vos problèmes
+                    informatiquesLa Tranquilité D'esprit pour vos problèmes
+                    informatiquesLa Tranquilité D'esprit pour vos problèmes
+                    informatiquesLa Tranquilité D'esprit pour vos problèmes
+                    informatiques</p>
+            </div>
+            <div class="col">
+                <h1> <i class="fa fa-cogs" aria-hidden="true"></i> Interactive</h1>
+                <p>La Tranquilité D'esprit pour vos problèmes
+                    informatiquesLa Tranquilité D'esprit pour vos problèmes
+                    informatiquesLa Tranquilité D'esprit pour vos problèmes
+                    informatiquesLa Tranquilité D'esprit pour vos problèmes
+                    informatiques</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="h-bold mt-100 mb-4" >La Tranquilité D'esprit pour vos problèmes informatiques </h1>
+                <p>Chez Répar' & Go avec une expérience plus du 10 ans dans le domaine, nous sommes à votre service pour diagnostiquer gratuitement et répaer tout,
+                    du simple écran cassé aux réparations les plus avancées impliquant la micro-soudure.
+                </p>
+
+
+                <figure class="tabletteWhite"><img src="{{ asset("images/services/tablette/tabletteWhite.png") }}" alt="ipad"></figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div  class="yav-container"  style="margin-top: 50px;">
+    <div class="container computerIcons">
+
+
+        <div class="row">
+            <div class="col">
+                <i class="fa fa-bug" aria-hidden="true"></i>
+                <div>Virus</div>
+                <p>Nettoyage de virus de votre ordinateur avec nos logiciels spécialisé</p>
+            </div>
+            <div class="col">
+                <i class="fa fa-upload" aria-hidden="true"></i>
+                <div>Mise à jour</div>
+                <p>Mise à jour de vos système d'exploitation ou de vos logiciels que vous souhaitez </p>
+            </div>
+            <div class="col">
+                <i class="fa fa-tasks" aria-hidden="true"></i>
+                <div>Sauvegarde des données</div>
+                <p> On effectue le récupération des données, et leur sauvegarde, plus craint de perde de données </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+    <script type="text/javascript" src="{{ asset("js/bootstrap.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/jquery.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/general.js") }}"></script>
+
+<script>
+    $(window).load(function(){
+
+        // Scroll Changes
+
+        peScrollChange.init({
+            elem: '.ipadClined',
+            trigger: '#sloganContent',
+            classesToChange: 'show',
+            offset: 340,
+            endPoint: document.querySelector('#sloganContent').offsetHeight
+        });
+
+        peScrollChange.init({
+            elem: '.tabletteWhite',
+            trigger: '.tabletteWhite',
+            classesToChange: 'show',
+            offset: -300,
+
+        });
+
+
+
+        peScrollChange.init({
+            elem: '.iphone-s6',
+            trigger: '#quote',
+            classesToChange: 'show'
+        });
+
+        peScrollChange.init({
+            elem: '.iphone-s3',
+            trigger: '.iphone-s3',
+            classesToChange: 'show',
+            offset: 300,
+        });
+
+    })
+
+
+</script>
+{% endblock %}

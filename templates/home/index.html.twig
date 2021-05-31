@@ -4,91 +4,8 @@
 
 {% block body %}
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <body>
-
-    <nav class="main navbar navbar-expand-lg nav-transp" >
-        <a class="navbar-brand" href="index.html"> <img class="logo" src="{{ asset("general/logo.png") }}" alt="logo">   </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li  class="nav-item fade-service">
-                    <a class="nav-link" href="#">Réparation téléphones  <span class="sr-only">(current)</span> </a>
-                    <div class="menuPhone">
-                        <div class="titleMenuDrop">huawei</div>
-                        <hr>
-                        <div class="list-item-drop">
-                            <a href="">Série Mate</a>
-                            <a href="">Série P</a>
-                            <a href="">Série nova</a>
-                            <a href="" >Série Y</a>
-                        </div>
-
-                        <div class="titleMenuDrop">Apple</div>
-                        <hr>
-                        <div class="list-item-drop">
-                            <a href="">iPhone 12 pro</a>
-                            <a href="">iPhone SE</a>
-                            <a href="">iPhone 11</a>
-                            <a href="">iPhone XR</a>
-                        </div>
-                        <div class="titleMenuDrop">Samsung</div>
-                        <hr>
-                        <div class="list-item-drop">
-                            <a href="">Galaxy A </a>
-                            <a href="">Galaxy M</a>
-                            <a href="">Galaxy S</a>
-                            <a href="">Galaxy Z</a>
-                        </div>
-                    </div>
-                </li>
-                <li  class="nav-item fade-service">
-                    <a class="nav-link" href="#">Services</a>
-                    <div class="menuService">
-                        <div class="row">
-                            <div class="col">
-                                <h5> Tampon Gravure </h5>
-                                <p> Nous réalisons vos tampons et gravures pour votre utilisation personnelle ou votre entreprise </p>
-                                <img class="menuService-img" src="images/services/tampon.jpg" alt="logo">
-                            </div>
-                            <div class="col">
-                                <h5> Réparation ordinateur </h5>
-                                <p> Windows & Mac Disque dur, écran, carte mère, ventilateur, clavier, RAM Mémoire, carte Graphique…</p>
-                                <img class="menuService-img" src="images/services/ordinateur.jpg" alt="logo">
-                            </div>
-                            <div class="col">
-                                <h5> Réparation de tablette</h5>
-                                <p>dépanne votre tablette tactile La réparation d’une tablette demande une grande vigilance</p>
-                                <img class="menuService-img" src="images/services/tablet.jpg" alt="logo">
-                            </div>
-                            <div class="col">
-                                <h5> Cles Minute </h5>
-                                <p> Reproductions de clés,  grand choix de modèles de clés standards différentes et un stock important.</p>
-                                <img class="menuService-img" src="images/services/cles.png" alt="logo">
-                            </div>
-
-
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nous trouver </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-    <div id="hero-image-navbar-trigger" class="hero-image">
-
-    </div>
+    <div style="
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url('images/general/yallowBackgroundPhones.png');" id="hero-image-navbar-trigger" class="hero-image"> </div>
 
     <div id="sloganContent" class="yav-container">
         <div class="container">
@@ -98,7 +15,7 @@
                     <p style="margin-top: 2rem">Écran cassé? Batterie non fonctionnelle? Téléphone bloqué? Faites confiance à notre service de réparation et déblocage et confiez nous votre téléphone. Nous vous le remettrons comme neuf en un rien de temps!</p>
                 </div>
             </div>
-            <figure class="iphone-s1-6"> <img src="{{ asset("general/images/iphone-s1.png") }}" alt="iphoneS1" ></figure>
+            <figure class="iphone-s1-6"> <img src="{{ asset("images/general/iphone-s1.png") }}" alt="iphoneS1" ></figure>
         </div>
     </div>
 
@@ -158,9 +75,12 @@
                         <div  class="phoneOutside-left" >
                             <div class="phoneInsideTable-cote">
                                 <div class="phoneInsideTable-logo">
-                                    <img style="width: 15% " src="images/homepage/xiomi-logo.png" alt="xiomilogo">
-                                    <img style="width: 17%;margin-left: 8px; " src="images/homepage/googlepixel-logo.png" alt="googlepixellogo">
-                                    <img src="images/homepage/motorola-logo.png" alt="lenevologo">
+                                    <img style="width: 15% " src=" {{ asset("images/homepage/xiomi-logo.png") }} " alt="xiomilogo">
+                                    <img style="width: 17%;margin-left: 8px; " src="{{ asset("images/homepage/googlepixel-logo.png") }} " alt="googlepixellogo">
+                                    <img src="{{ asset("images/homepage/motorola-logo.png") }} " alt="lenevologo">
+
+                                    <img src="{{ asset("images/homepage/Nokia-logo.png") }}" alt="nokialogo">
+
                                 </div>
                                 <div class="phoneInsideTable-containter">
                                     <div class="phoneInsideTable-containter-names">
@@ -185,9 +105,9 @@
                         <div class="phoneOutside-right">
                             <div class="phoneInsideTable-cote">
                                 <div class="phoneInsideTable-logo">
-                                    <img src="images/homepage/BlackBerry-Logo.png" alt="blackberrylogo">
-                                    <img src="images/homepage/oppo-logo.png" alt="oppologo">
-                                    <img src="images/homepage/Nokia-logo.png" alt="nokialogo">
+                                    <img src="{{ asset("images/homepage/BlackBerry-Logo.png") }}" alt="blackberrylogo">
+                                    <img src="{{ asset("images/homepage/oppo-logo.png") }}" alt="oppologo">
+                                    <img src="{{ asset("images/homepage/Nokia-logo.png") }}" alt="nokialogo">
                                 </div>
                                 <div class="phoneInsideTable-containter">
                                     <div class="phoneInsideTable-containter-names">
@@ -241,10 +161,10 @@
         </div>
     </div>
 
-    <div class=" avis-google-container" >
+    <div class=" avis-google-container"  style="display: none;">
         <div class="col-6 google-left" >
             <div> Les avis sur Google  </div>
-            <img src="images/google_avis.png">
+            <img src="{{ asset("images/general/google_avis.png") }}">
             <a href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5"> Voir tout les avis <i class="fa fa-external-link" aria-hidden="true"></i> </a>
             <div style="font-weight: initial;"> Satisfaction client garantie <img style="width: 95px;position: absolute;margin: -21px 0 0 0;" src="images/undraw/satisfaction-garantie.png" alt="satisfactionClient"> </div>
 
@@ -267,7 +187,7 @@
 
                         <div class="active">
                             <div class="img">
-                                <img src="images/testimonial-users/1.jfif" alt=""></div>
+                                <img src="{{ asset("images/testimonial-users/1.jfif") }}" alt=""></div>
                             <h2>Lucie M.</h2>
                             <p>
                                 Fortement conseillé par une amie à moi ..
@@ -280,7 +200,7 @@
                         </div>
 
                         <div>
-                            <div class="img"><img src="images/testimonial-users/2.jfif" alt=""></div>
+                            <div class="img"><img src="{{ asset("images/testimonial-users/2.jfif") }}" alt=""></div>
                             <h2>Elisa A.</h2>
                             <p>
                                 Dépannage un dimanche suite à un écran cassé, accueil très chaleureux, serviable et conciliant. Travail très bien effectué et rapide. Ravie d avoir pu faire réparer mon téléphone un dimanche après-midi et surtout très compétent. Je recommande vivement
@@ -288,13 +208,13 @@
                         </div>
 
                         <div>
-                            <div class="img"><img src="images/testimonial-users/3.jfif" alt=""></div>
+                            <div class="img"><img src="{{ asset("images/testimonial-users/3.jfif") }}" alt=""></div>
                             <h2>Morgane K.</h2>
                             <p>Un service et un accueil très professionnel, toujours avec le sourire. Je participe donc à tous ces avis positifs et recommande ce réparateur sans aucune hésitation.</p>
                         </div>
 
                         <div>
-                            <div class="img"><img src="images/testimonial-users/4.jfif" alt=""></div>
+                            <div class="img"><img src="{{ asset("images/testimonial-users/4.jfif") }}" alt=""></div>
                             <h2>Julien F.</h2>
                             <p>Mon IPhone 6S ne fonctionnais plus .. Impossible de le démarrer .. un accueil chaleureux, une réparation rapide et je repars avec une batterie neuve également !
                                 Après avoir regardé les avis sur la page j&rsquo;ai choisis cette boutique vraiment bien située en plus ! Je dois dire que je ne suis pas déçu ! Super rapport qualité/prix ! Je recommande vivement !
@@ -302,7 +222,7 @@
                         </div>
 
                         <div>
-                            <div class="img"><img src="images/testimonial-users/5.jfif" alt=""></div>
+                            <div class="img"><img src="{{ asset("images/testimonial-users/5.jfif") }}" alt=""></div>
                             <h2>Thomas C.</h2>
                             <p>
                                 Fortement conseillé par une amie à moi ..
@@ -380,10 +300,10 @@
         <div class="col-6">
             <div style="margin: auto" >
                 <div id="boutique-img-container">
-                    <img  id="boutique-img" src="images/boutique3.png" alt="">
+                    <img  id="boutique-img" src="{{ asset("images/general/boutique3.png") }}" alt="boutique">
                 </div>
                 <div id="fayette-img-container">
-                    <img  id="fayette-img"  src="images/fayette.jpg" alt="">
+                    <img  id="fayette-img"  src="{{ asset("images/general/fayette.jpg") }}" alt="">
                 </div>
             </div>
         </div>
@@ -406,174 +326,7 @@
 
     </div>
 
-    <footer>
-        <div class="footer-coordinates">
-            <div>
-                <div> <i class="fa fa-phone" aria-hidden="true"></i> Téléphone: 0387749801</div>
-                <div> <i class="fa fa-envelope-o" aria-hidden="true"></i> Courrier: reparandgo57@gmail.com</div>
-                <div> <i class="fa fa-location-arrow" aria-hidden="true"></i> Adresse:  1, av Ney 57000 Metz (GALERIE PARKING REPUBLIQUE)</div>
-            </div>
-            <div>
-                <div> <i class="fa fa-clock-o" aria-hidden="true"></i> Ouvert de Lundi à Samedi du 10h00  à 18h</div>
-            </div>
 
-        </div>
-        <div class="footer-phones">
-            <div>
-                <div> Réparation iPhone 11 Pro Max      </div>
-                <div> Réparation iPhone 11 Pro</div>
-                <div> Réparation iPhone 11</div>
-                <div> Réparation iPhone XS / XS Max</div>
-                <div> Réparation iPhone XR</div>
-                <div> Réparation iPhone X</div>
-                <div> Réparation iPhone 8 / 8+</div>
-                <div> Réparation iPhone 7 / 7+</div>
-                <div> Réparation iPhone 6S / 6S+</div>
-                <div> Réparation iPhone 6 / 6+</div>
-            </div>
-            <div>
-                <div> Réparation Samsung Galaxy S10</div>
-                <div> Réparation Samsung Galaxy S10 Plus</div>
-                <div> Réparation Samsung Galaxy S9</div>
-                <div> Réparation Samsung Galaxy S9 Plus</div>
-                <div> Réparation Samsung Galaxy S8</div>
-                <div> Réparation Samsung Galaxy S8 Plus</div>
-                <div> Réparation Samsung Galaxy A80</div>
-                <div> Réparation Samsung Galaxy A70</div>
-                <div> Réparation Samsung Galaxy Note 10</div>
-                <div> Réparation Samsung Galaxy Note 9</div>
-            </div>
-            <div>
-                <div>Réparation Huawei P Smart Plus</div>
-                <div>Réparation Huawei P Smart 2019</div>
-                <div>Réparation Huawei P Smart 2018</div>
-                <div>Réparation Huawei P30 Pro</div>
-                <div>Réparation Huawei Mate 20 Pro</div>
-                <div>Réparation Huawei Mate 20 Lite</div>
-                <div>Réparation Huawei Mate 20</div>
-                <div>Réparation Huawei Mate 10 Pro</div>
-                <div>Réparation Huawei Y9 2019</div>
-            </div>
-        </div>
-
-    </footer>
-    </body>
-    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
-    <script type="text/javascript" src="{{ asset("js/bootstrap.js") }}"></script>
-    <script type="text/javascript" src="{{ asset("js/jquery.js") }}"></script>
-    <script type="text/javascript" src="{{ asset("js/general.js") }}"></script>
-
-    <script>
-        // vars
-        'use strict'
-        var	testim = document.getElementById("testim"),
-            testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
-            testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
-            testimLeftArrow = document.getElementById("left-arrow"),
-            testimRightArrow = document.getElementById("right-arrow"),
-            testimSpeed = 4500,
-            currentSlide = 0,
-            currentActive = 0,
-            testimTimer,
-            touchStartPos,
-            touchEndPos,
-            touchPosDiff,
-            ignoreTouch = 30;
-        ;
-
-        window.onload = function() {
-
-            // Testim Script
-            function playSlide(slide) {
-                for (var k = 0; k < testimDots.length; k++) {
-                    testimContent[k].classList.remove("active");
-                    testimContent[k].classList.remove("inactive");
-                    testimDots[k].classList.remove("active");
-                }
-
-                if (slide < 0) {
-                    slide = currentSlide = testimContent.length-1;
-                }
-
-                if (slide > testimContent.length - 1) {
-                    slide = currentSlide = 0;
-                }
-
-                if (currentActive != currentSlide) {
-                    testimContent[currentActive].classList.add("inactive");
-                }
-                testimContent[slide].classList.add("active");
-                testimDots[slide].classList.add("active");
-
-                currentActive = currentSlide;
-
-                clearTimeout(testimTimer);
-                testimTimer = setTimeout(function() {
-                    playSlide(currentSlide += 1);
-                }, testimSpeed)
-            }
-
-            testimLeftArrow.addEventListener("click", function() {
-                playSlide(currentSlide -= 1);
-            })
-
-            testimRightArrow.addEventListener("click", function() {
-                playSlide(currentSlide += 1);
-            })
-
-            for (var l = 0; l < testimDots.length; l++) {
-                testimDots[l].addEventListener("click", function() {
-                    playSlide(currentSlide = testimDots.indexOf(this));
-                })
-            }
-
-            playSlide(currentSlide);
-
-            // keyboard shortcuts
-            document.addEventListener("keyup", function(e) {
-                switch (e.keyCode) {
-                    case 37:
-                        testimLeftArrow.click();
-                        break;
-
-                    case 39:
-                        testimRightArrow.click();
-                        break;
-
-                    case 39:
-                        testimRightArrow.click();
-                        break;
-
-                    default:
-                        break;
-                }
-            })
-
-            testim.addEventListener("touchstart", function(e) {
-                touchStartPos = e.changedTouches[0].clientX;
-            })
-
-            testim.addEventListener("touchend", function(e) {
-                touchEndPos = e.changedTouches[0].clientX;
-
-                touchPosDiff = touchStartPos - touchEndPos;
-
-                console.log(touchPosDiff);
-                console.log(touchStartPos);
-                console.log(touchEndPos);
-
-
-                if (touchPosDiff > 0 + ignoreTouch) {
-                    testimLeftArrow.click();
-                } else if (touchPosDiff < 0 - ignoreTouch) {
-                    testimRightArrow.click();
-                } else {
-                    return;
-                }
-
-            })
-        }
-    </script>
     <script>
         $(window).load(function(){
 
@@ -603,17 +356,6 @@
 
         })
 
-        // function hoverRed(x){
-        //     var y = x.nextElementSibling;
-        //     var nextImg = document.getElementById(y.id);
-        //     nextImg.classList.add("showRed");
-        //     console.log("ll");
-        // }
-        // function RemoveHoverRed(x){
-        //     var y = x.nextElementSibling;
-        //     var nextImg = document.getElementById(y.id);
-        //     nextImg.classList.add("removeShowRed")
-        // }
     </script>
 
 {% endblock %}
