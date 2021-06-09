@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Marque;
 use App\Entity\Produit;
 use App\Entity\Serie;
 use App\Repository\MarqueRepository;
@@ -55,6 +56,24 @@ class PhoneController extends AbstractController
     public function tout_nos_produits()
     {
         $phones = $this->getDoctrine()->getRepository(Produit::class)->findAll();
+
+        return $this->render('phone/seriePhones.html.twig', [
+            'produits' => $phones,
+            'marques' => $this->marques,
+            'controller_name' => 'PhoneController',
+        ]);
+    }
+
+    /**
+     * @Route("/produits_deMarque/{id}", name="produits_deMarque")
+     */
+    public function produits_deMarque($id)
+    {
+        $marque = $this->getDoctrine()->getRepository(Marque::class)->find($id);
+        $phones = $this->getDoctrine()->getRepository(Produit::class)->findBy([
+            'marque' => $marque
+        ]);
+
 
         return $this->render('phone/seriePhones.html.twig', [
             'produits' => $phones,

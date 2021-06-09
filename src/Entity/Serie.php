@@ -76,7 +76,7 @@ class Serie
     public function __toString(){
         $nomSerie = $this->nom;
         $nomMarque = $this->getMarque()->getNom();
-        return " serie ".$nomSerie;
+        return $nomSerie;
     }
 
     /**

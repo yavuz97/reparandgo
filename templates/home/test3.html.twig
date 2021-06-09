@@ -1,0 +1,197 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <div style=" " id="hero-image-navbar-trigger" class="hero-image index-black"> </div>
+
+    <div id="sloganContent" class="yav-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-4" >
+                    <h1>
+                        Réparation rapide et efficace! </h1>
+                    <p class="mt-4">Écran cassé? Batterie non fonctionnelle? Téléphone bloqué? Faites confiance à notre service de réparation et déblocage et confiez nous votre téléphone. Nous vous le remettrons comme neuf en un rien de temps!</p>
+                </div>
+            </div>
+            <figure class="iphone-s1-6"> <img style="width: 986px"  src="{{ asset("build/general/iphoneClined.webp") }}" alt="iphoneS1" ></figure>
+        </div>
+    </div>
+
+    <div id="" class="yav-container yav-container-dark">
+        <div class="container" >
+            <div class="row">
+                <div class="vektors-home"  >
+                    <div class="col">
+                        <div class="undrawSVG-index d-flex align-items-center justify-content-center">
+                            <img src="{{ asset("build/undraw/undraw_app_data_re_vg5c.svg") }}" alt="android" >
+                        </div>
+                        <div  class="undrawSVG-index d-flex align-items-center justify-content-center">
+                            <h5 > Système </h5>
+                        </div>
+                        <p> Réparation des problèmes lié au système  </p>
+                    </div>
+                    <div class="col">
+                        <div class="undrawSVG-index d-flex align-items-center justify-content-center">
+                            <img src="{{ asset("build/undraw/undraw_voice_assistant_nrv7.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
+                        </div>
+                        <div class="undrawSVG-index d-flex align-items-center justify-content-center">
+                            <h5>Button on/off </h5>
+                        </div>
+                        <p>Réparation des problèmes de bouton d'alimentation</p>
+                    </div>
+                    <div class="col">
+                        <div class="undrawSVG-index d-flex align-items-center justify-content-center" >
+                            <img src="{{ asset("build/undraw/undraw_sync4_xlc6.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5>  Réseau   </h5>
+                        </div>
+                        <p> Réparation des problèmes lié au connexion  </p>
+                    </div>
+                    <div class="col">
+                        <div class="undrawSVG-index d-flex align-items-center justify-content-center">
+                            <img src="{{ asset("build/undraw/undraw_Mobile_app_re_catg.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5> Batterie  </h5>
+                        </div>
+                        <p>Réparation des problèmes de bouton d'alimentation</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="h-bold mt-100 mb-4" >La Tranquilité D'esprit pour vos problèmes informatiques </h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="yav-container " >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="row iphone-features-cont">
+                        <div class="col-lg-3 col-md-4 col-sm-4  helo">
+                            <div class="iphone-details left text-right">
+                                <h4 class="h-bold">Votre téléphone n'a plus d'image ?</h4>
+                            </div>
+                            <div class="iphone-details left text-right">
+                                <h4 class="h-bold">Votre cellulaire ne charge plus ?</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-4">
+                            <a target="_blank" href="https://www.google.com/maps/place/R%C3%A9par'+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+%26+Ordinateur+%26+Tablette/@49.1158957,6.1719842,394m/data=!3m1!1e3!4m5!3m4!1s0x0:0x3577dc2fb7cc5cd1!8m2!3d49.1161085!4d6.1723196?hl=fr"> <figure  class="iphone-s3" ><img src="{{ asset("build/homepage/iphone-4-2-darkMap.webp") }}" alt="reparationMetz"></figure></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="iphone-details right text-left">
+                                <h4 class="h-bold">Votre téléphone ne s'allume plus ? </h4>
+                            </div>
+                            <div class="iphone-details right text-left">
+                                <h4 class="h-bold">La pile ne garde plus la charge ?</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5" >
+        <div class="row googleImageAndTextContainer" >
+            <div class="col  d-flex flex-column justify-content-center align-items-center ">
+                <div> Les avis sur Google  </div>
+                <img src="{{ asset("build/general/google_avis.png") }}">
+                <a href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5"> Voir tout les avis <i class="fa fa-external-link" aria-hidden="true"></i> </a>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card cardGoogle" >
+                    <div class="row">
+                        <div class="col  d-flex align-items-center justify-content-center" >
+
+                            <div class="googleUserImg bgPurple">B</div>
+                            <div class="googleUserInfo">
+                                <p>BAHU Alexia</p> <span>1 commentaire</span>
+                                <div>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Très satisfaite, tant par l'accueil, les explications et la qualité du travail apportés à la réparation de l'écran de l'iphone 7 de mon fils. Les propriétaires sont charmants et soigneux. Prix tout à fait corrects. Mon fils est reparti ravi.                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card cardGoogle" >
+                    <div class="row">
+                        <div class="col  d-flex align-items-center justify-content-center" >
+
+                            <div class="googleUserImg bg-info">J</div>
+                            <div class="googleUserInfo">
+                                <p>Julien F.</p> <span>1 commentaire</span>
+                                <div>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Mon IPhone 6S ne fonctionnais plus .. Impossible de le démarrer .. un accueil chaleureux, une réparation rapide et je repars avec une batterie neuve également !
+                            Après avoir regardé les avis sur la page j&rsquo;ai choisis cette boutique vraiment bien située en plus ! Je dois dire que je ne suis pas déçu ! Super rapport qualité/prix ! Je recommande vivement !                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card cardGoogle" >
+                    <div class="row">
+                        <div class="col  d-flex align-items-center justify-content-center" >
+
+                            <div class="googleUserImg bgGreenD">E</div>
+                            <div class="googleUserInfo">
+                                <p>Elisa A.</p> <span>1 commentaire</span>
+                                <div>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Dépannage un dimanche suite à un écran cassé, accueil très chaleureux, serviable et conciliant. Travail très bien effectué et rapide. Ravie d avoir pu faire réparer mon téléphone un dimanche après-midi et surtout très compétent. Je recommande vivement
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ encore_entry_script_tags('homePage') }}
+
+{% endblock %}

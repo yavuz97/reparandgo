@@ -23,6 +23,10 @@ class HomeController extends AbstractController
      * @var Serie[]
      */
     private array $series;
+    /**
+     * @var \App\Entity\Marque[]
+     */
+    private array $marques;
 
     public function __construct(Environment $twig, EntityManagerInterface $entityManager, MarqueRepository $marqueRepository)
     {
@@ -121,6 +125,31 @@ class HomeController extends AbstractController
 
         ]);
     }
+
+    /**
+     * @Route("/test2", name="test2")
+     */
+    public function test2(): Response
+    {
+        return $this->render('home/test2.html.twig', [
+            'controller_name' => 'HomeController',
+            'marques' => $this->marques,
+
+        ]);
+    }
+
+    /**
+     * @Route("/test3", name="test3")
+     */
+    public function test3(): Response
+    {
+        return $this->render('home/test3.html.twig', [
+            'controller_name' => 'HomeController',
+            'marques' => $this->marques,
+
+        ]);
+    }
+
 
 
 
