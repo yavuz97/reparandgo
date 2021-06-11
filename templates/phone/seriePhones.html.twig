@@ -9,12 +9,12 @@
     <div class="phone-conainer">
 
         {% for produit in produits %}
-        <a href="{{ path("produit_show", {'id':produit.id }) }}">
+        <a href="{{ path("produit_show", {'id':produit.id }) }}" style="    color: #3a4658;text-decoration: none;">
         <div class="phone-card">
             <div class="phone-card-img">
-              <img src="{{ asset("images/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
+              <img src="{{ asset("build/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
             </div>
-            <div class="phone-card-text"> {{ produit.marque.nom }}  {{ produit.serie.nom }}  {{ produit.model }} </div>
+            <div class="phone-card-text"  > {{ produit.marque.nom }}  {{ produit.serie.nom }}  {{ produit.model }} </div>
         </div>
         </a>
         {% endfor %}

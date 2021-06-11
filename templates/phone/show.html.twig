@@ -4,42 +4,94 @@
 
 {% block body %}
 
+    <style>
+        .phone_show_interventions .title{
+            font-size: 17px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .phone_show_interventions div div{
+            margin-bottom: 20px;
+        }
+        .phone_show_interventions i{
+            margin-right: 3%;
+            color: #fbf40d;
+        }
+
+        .phone_show_interventions i.horizantal{
+            font-size: 40px;
+        }
+        .phone_show_interventions i.vertical{
+            font-size: 23px;
+            margin: 9px 5px 0 0px;
+        }
+        .phone_show_interventions h6{
+            margin: 9px 0 0 1px;
+        }
+
+
+    </style>
     <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
 
-<div class="row">
-    <div class="col-6" style="    display: flex;
-    justify-content: flex-end;
-    align-content: center;
-    flex-wrap: wrap;">
-        <img src="{{ asset("images/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
-    </div>
-    <div class="col-6 " style="
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-start;
-    padding: 87px 0px;
-">
-        <h4>{{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }}</h4>
-        <div class="information-reparation" style=" font-size: 18px;font-weight: 100;">
-        <div>   Réparation en <strong> 20 min  </strong> </div>
-        <div>  Sans  <strong>rendez-vous</strong>  </div>
-        <div>  Réparation garantie <strong> 2 ans </strong>   </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h5> Pour votre prochaine opération vous aurez <span class="text-primary">5 %</span>  de réduction jusqu'à 4 fois</h5>
+            </div>
         </div>
-
-
-       <div class="reparation-prices">
-           <div class="prices-list-title"> Pour avoir une idée de nos tarifs
-           </div>
-           <div class="prices-list">
-               <div>Changement d’écran : 79€</div>
-               <div>Remplacement de batterie : 79€ </div>
-           </div>
-       </div>
-
+        <div class="row">
+            <div class="col-6">
+                <img src="{{ asset("build/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
+            </div>
+            <div class="col-6">
+                <div class="row mt-5">
+                    <h4>{{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }}</h4>
+                </div>
+                <div class="row">
+                    <p class="fw-light m-0">24 mois de garantie <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
+                    <p class="fw-light">Réparation en 20 minutes <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
+                </div>
+                <div class="row phone_show_interventions">
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <i style="font-size: 32px;margin: 4px 9px 0 -5px;" class="green horizantal fa fa-cog" aria-hidden="true"></i>
+                            <h6 >Vibreur</h6 >
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <i style="font-size: 32px;margin: 4px 9px 0 -4px;" class="green horizantal fa fa-bullseye" aria-hidden="true"></i>
+                            <h6 >Buttton on / off</h6 >
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <i class="green horizantal fa fa-mobile" aria-hidden="true"></i>
+                            <h6 > Façade avant</h6 >
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <i class="green horizantal  fa fa-mobile" aria-hidden="true"></i>
+                            <h6 >Façade arrière</h6 >
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <i  class=" red vertical fa fa-battery-quarter" aria-hidden="true"></i>
+                            <h6 >Batterie</h6 >
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <i  class=" green vertical fa fa-plug" aria-hidden="true"></i>
+                            <h6 >Connecteur de charge</h6 >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-
 
 {% endblock %}

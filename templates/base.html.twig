@@ -49,12 +49,12 @@
                     <div class="menuPhone">
                         {% for marque in marques %}
                             {% if marque.produits | length > 0 %}
-                                <a style="color:black" href="{{ path("produits_deMarque",{'id':marque.id}) }}">  <div class="titleMenuDrop"> {{ marque.nom }}</div> </a>
+                                <a class="text-decoration-none text-dark" href="{{ path("produits_deMarque",{'id':marque.id}) }}">  <h5 class="mt-3"><strong>{{ marque.nom }}</strong> </h5> </a>
                                 <hr>
                                     <div class="list-item-drop">
                                             {% for serie in marque.series  %}
                                                 {% if serie.produits | length > 0 %}
-                                                <a href="{{ path("seriePhone",{'id':serie.id}) }}"> {{serie.nom}}</a>
+                                                <a  href="{{ path("seriePhone",{'id':serie.id}) }}"> <h6> {{serie.nom}} </h6> </a>
                                                 {% endif %}
                                             {% endfor %}
                                     </div>
@@ -109,55 +109,125 @@
 
 
     {% block body %}{% endblock %}
-    <footer>
-        <div class="footer-coordinates">
-            <div>
-                <div> <i class="fa fa-phone" aria-hidden="true"></i> Téléphone: 0387749801</div>
-                <div> <i class="fa fa-envelope-o" aria-hidden="true"></i> Courrier: reparandgo57@gmail.com</div>
-                <div> <i class="fa fa-location-arrow" aria-hidden="true"></i> Adresse:  1, av Ney 57000 Metz (GALERIE PARKING REPUBLIQUE)</div>
-            </div>
-            <div>
-                <div> <i class="fa fa-clock-o" aria-hidden="true"></i> Ouvert de Lundi à Samedi du 10h00  à 18h</div>
+    <footer class="page-footer font-small cyan darken-3">
+
+        <!-- Footer Elements -->
+        <div class="container ">
+            <div class="row">
+                <div class=" mt-5 col-6 d-flex  flex-column">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <h5 class="mb-5 text-white">NOTRE ADRESSE</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="d-flex mb-2">
+                            <div class="me-2">
+                                <h1 ><i class="fa fa-phone" aria-hidden="true"></i> </h1>
+                            </div>
+                            <div class="d-flex flex-column ">
+                                <h6>Téléphone:</h6>
+                                <h6 class="text-white">0387749801 </h6>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <div class="me-2">
+                                <h1><i class="fa fa-envelope-o" aria-hidden="true"></i> </h1>
+                            </div>
+                            <div class="d-flex flex-column ">
+                                <h6>Courrier:</h6>
+                                <h6 class="text-white">reparandgo57@gmail.com </h6>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="me-2">
+                                <h1 ><i class="fa fa-location-arrow" aria-hidden="true"></i> </h1>
+                            </div>
+                            <div class="d-flex flex-column ">
+                                <h6>Adresse:</h6>
+                                <h6 class="text-white">1, av Ney 57000 Metz (GALERIE PARKING REPUBLIQUE)</h6>
+                            </div>
+                        </div>
+
+{#                        <h5> <i class="fa fa-envelope-o" aria-hidden="true"></i> Courrier: reparandgo57@gmail.com</h5>#}
+{#                        <h5> <i class="fa fa-location-arrow" aria-hidden="true"></i>  Adresse:  1, av Ney 57000 Metz (GALERIE PARKING REPUBLIQUE)</h5>#}
+{#                   #}
+                    </div>
+
+                </div>
+                <div class= " mt-5  col-6 d-flex  flex-column">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <h5 class="mb-5 text-white">HORAIRES D’OUVERTURES</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="d-flex">
+                            <div>
+                                <div class="d-flex mb-2">
+                                    <div class="me-2">
+                                        <h1 ><i class="fa fa-clock-o" aria-hidden="true"></i> </h1>
+                                    </div>
+                                    <div class="d-flex flex-column ">
+                                        <h6>Lundi à samedi:</h6>
+                                        <h6 class="text-white">10h à 18h </h6>
+                                    </div>
+                                </div>
+                                <div class="d-flex ">
+                                    <div class="me-2">
+                                        <h1><i class="fa fa-clock-o" aria-hidden="true"></i> </h1>
+                                    </div>
+                                    <div class="d-flex flex-column ">
+                                        <h6>Dimanche:</h6>
+                                        <h6 class="text-white">fermé </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  style="    width: 100%;  height: 106%;  margin-left: 27px;">
+                                <img style="    object-fit: cover;height: 171px;width: 119%;" src="{{ asset("build/general/googleMaps.png") }}">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-12 d-flex justify-content-start">
+                           <a href="https://www.facebook.com/reparngo" class="me-5 text-white">  <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                           <a href="https://www.instagram.com/reparandgometz/" class="me-5 text-white" > <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                           <a href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5" class="text-white">  <i class="fa fa-google-plus-official fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
+
+            <div class="row mt-5">
+                {% for marque in marques %}
+                    <div class="row">
+                        <h5> Réparation {{ marque.nom }} à Metz </h5>
+                        <footer class="blockquote-footer" style="font-size: 13px;">
+                        {% if marque.produits | length > 0 %}
+                            {% for produit in marque.produits %}
+                                <a href="{{ path("produit_show", {'id':produit.id }) }}" class="text-white" style="font-size: 13px"><em> Réparation {{ produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }},  </em> </a>
+                            {% endfor %}
+                        {% endif %}
+                        </footer>
+                    </div>
+                {% endfor %}
+            </div>
+
+
+
+
         </div>
-        <div class="footer-phones">
-            <div>
-                <div> Réparation iPhone 11 Pro Max      </div>
-                <div> Réparation iPhone 11 Pro</div>
-                <div> Réparation iPhone 11</div>
-                <div> Réparation iPhone XS / XS Max</div>
-                <div> Réparation iPhone XR</div>
-                <div> Réparation iPhone X</div>
-                <div> Réparation iPhone 8 / 8+</div>
-                <div> Réparation iPhone 7 / 7+</div>
-                <div> Réparation iPhone 6S / 6S+</div>
-                <div> Réparation iPhone 6 / 6+</div>
-            </div>
-            <div>
-                <div> Réparation Samsung Galaxy S10</div>
-                <div> Réparation Samsung Galaxy S10 Plus</div>
-                <div> Réparation Samsung Galaxy S9</div>
-                <div> Réparation Samsung Galaxy S9 Plus</div>
-                <div> Réparation Samsung Galaxy S8</div>
-                <div> Réparation Samsung Galaxy S8 Plus</div>
-                <div> Réparation Samsung Galaxy A80</div>
-                <div> Réparation Samsung Galaxy A70</div>
-                <div> Réparation Samsung Galaxy Note 10</div>
-                <div> Réparation Samsung Galaxy Note 9</div>
-            </div>
-            <div>
-                <div>Réparation Huawei P Smart Plus</div>
-                <div>Réparation Huawei P Smart 2019</div>
-                <div>Réparation Huawei P Smart 2018</div>
-                <div>Réparation Huawei P30 Pro</div>
-                <div>Réparation Huawei Mate 20 Pro</div>
-                <div>Réparation Huawei Mate 20 Lite</div>
-                <div>Réparation Huawei Mate 20</div>
-                <div>Réparation Huawei Mate 10 Pro</div>
-                <div>Réparation Huawei Y9 2019</div>
-            </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a> reparandgo.com</a>
         </div>
+        <!-- Copyright -->
 
     </footer>
 

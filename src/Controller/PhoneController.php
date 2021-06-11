@@ -89,6 +89,7 @@ class PhoneController extends AbstractController
     public function produit_show($id):Response
     {
 
+
         $phone = $this->getDoctrine()->getRepository(Produit::class)->find($id);
         return $this->render('phone/show.html.twig', [
             'produit' => $phone,

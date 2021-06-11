@@ -116,7 +116,6 @@ class ProduitCrudController extends AbstractCrudController
         $analyseTable = $this->configureImage();
         dd($analyseTable);
 
-        dd();
     }
 
 
@@ -157,7 +156,7 @@ class ProduitCrudController extends AbstractCrudController
 
             $nom = $phone->getSerie().$phone->getModel();
             $nom = str_replace(' ', '', $nom);
-            dump($nom." "."----------");
+//            dump($nom." "."----------");
             foreach ($nomImages as $imageSearch){
                 similar_text($nom, $imageSearch, $perc);
 
@@ -172,9 +171,10 @@ class ProduitCrudController extends AbstractCrudController
                         $counter = $counter + 1;
 
                         $imageName = $imageSearch;
-                        $imageFile = new File("/home/samuinfo/yavuzcanozak.samu-info.com/reparAndGoApp/assets/images/product_images/".$imageName);
+//                        $imageFile = new File("/home/samuinfo/yavuzcanozak.samu-info.com/reparAndGoApp/assets/images/product_images/".$imageName);
                         $phone->setImage($imageName);
-                        $phone->setImageFile($imageFile);
+                        $phone->setUpdatedAt(new \DateTime('now'));
+//                        $phone->setImageFile($imageFile);
                         $this->entityManager->persist($phone);
                         $this->entityManager->flush();
 
@@ -187,7 +187,7 @@ class ProduitCrudController extends AbstractCrudController
                     }
                 }
         }
-        dump($counter);
+//        dump($counter);
         return $analyseTable;
     }
 }
