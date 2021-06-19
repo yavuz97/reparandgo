@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block page_title 'Business Stats' %}
+{% block body %}
+
+    <div style="height: 20vh"></div>
+    <div  id="hero-image-navbar-trigger" ></div>
+
+    <div class="container">
+        <h5> {{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }} </h5>
+        <hr>
+        <form method="post">
+        <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Intervention </th>
+            <th scope="col">Prix</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for intervention in interventions %}
+            {% for prixInter in prixInterventions %}
+                {% if intervention == prixInter.intervention %}
+                    {% set prix = prixInter.prix  %}
+                {% endif %}
+            {% endfor %}
+
+            <tr>
+                <td>
+                    {{ intervention.nom  }}
+                    <input name="intervention" type="text" value="{{ intervention.id }}" hidden>
+                </td>
+                <td>
+                    <input name="prix" type="text" class="form-control w-100" value="{{ prix | default('') }}"  >
+                </td>
+            </tr>
+            <input name="produit" type="text" value="{{ produit.id }}" hidden>
+        {% endfor %}
+
+        </tbody>
+    </table>
+        <button class="btn btn-success" name="validation" value="true"> Soummettre </button>
+        </form>
+</div>
+
+{% endblock %}

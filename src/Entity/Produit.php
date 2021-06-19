@@ -88,6 +88,16 @@ class Produit
      */
     private $serie;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Intervention::class, cascade={"persist", "remove"})
+     */
+    private $prixIntervention;
+
+    /**
+     * @ORM\OneToOne(targetEntity=PrixInter::class, mappedBy="Produit", cascade={"persist", "remove"})
+     */
+    private $prixInter;
+
     public function __construct()
     {
         $this->interventions = new ArrayCollection();
@@ -197,6 +207,35 @@ class Produit
     public function setSerie(?Serie $serie): self
     {
         $this->serie = $serie;
+
+        return $this;
+    }
+
+    public function getPrixIntervention(): ?Intervention
+    {
+        return $this->prixIntervention;
+    }
+
+    public function setPrixIntervention(?Intervention $prixIntervention): self
+    {
+        $this->prixIntervention = $prixIntervention;
+
+        return $this;
+    }
+
+    public function getPrixInter(): ?PrixInter
+    {
+        return $this->prixInter;
+    }
+
+    public function setPrixInter(PrixInter $prixInter): self
+    {
+        // set the owning side of the relation if necessary
+        if ($prixInter->getProduit() !== $this) {
+            $prixInter->setProduit($this);
+        }
+
+        $this->prixInter = $prixInter;
 
         return $this;
     }

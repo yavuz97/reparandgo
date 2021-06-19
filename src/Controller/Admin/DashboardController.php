@@ -3,9 +3,11 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Categorie;
+use App\Entity\Intervention;
 use App\Entity\Marque;
 use App\Entity\Produit;
 use App\Entity\Serie;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -45,10 +47,14 @@ class DashboardController extends AbstractDashboardController
             ->setController(PhoneCrudController::class);
 
 
-        yield MenuItem::section('Configuration');
+        yield MenuItem::section('Configuration produit');
          yield MenuItem::linkToCrud('les catégories', 'fas fa-list', Categorie::class);
          yield MenuItem::linkToCrud('les marques', 'fas fa-list', Marque::class);
          yield MenuItem::linkToCrud('les series', 'fas fa-list', Serie::class);
+         yield MenuItem::linkToCrud('les interventions', 'fas fa-list', Intervention::class);
+        yield MenuItem::section('Configuration application');
+        yield MenuItem::linkToCrud('Gestion utilisateurs', 'fas fa-list', User::class);
+        yield MenuItem::linktoRoute('les produits', 'fa fa-chart-bar', 'list-produits');
     }
 
 

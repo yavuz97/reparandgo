@@ -2,7 +2,6 @@
 
 import $ from 'jquery'
 import peScrollChange from './peScroll'
-console.log("oldu bitti");
 
 
 
@@ -17,7 +16,7 @@ $(window).on('load', function(){
         elem: '.iphone-s1-6',
         trigger: '#sloganContent',
         classesToChange: 'show',
-        offset: 340,
+        offset: 20,
         endPoint: document.querySelector('#sloganContent').offsetHeight
     });
 
@@ -28,7 +27,7 @@ $(window).on('load', function(){
         elem: '.iphone-s3',
         trigger: '.iphone-s3',
         classesToChange: 'show',
-        offset: 300,
+        offset: 100,
     });
 
 })

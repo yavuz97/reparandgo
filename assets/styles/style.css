@@ -800,3 +800,57 @@ width: 30%;
 .img-direction-blue{
     padding: 0
 }
+
+
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .navbar{
+        height: 160px;
+    }
+    .logo {
+        height: 88px;
+        width: 482px;
+        position: relative;
+        right: -150px;
+    }
+    .navbar-toggler{
+        height: 100px;
+        width: 100px;
+        color: white
+    }
+    .hero-image {
+        height: 40vh;
+    }
+    .yav-container .container{
+        max-width: 100%;
+    }
+    .yav-container .container h1{
+        font-size: 77px;
+    }
+    .yav-container .container p{
+        font-size: 27px;
+    }
+    .yav-container {
+        padding: 114px 0 181px 0;
+    }
+    .title-homePage-dark{
+        font-size: 60px;
+    }
+
+    .page-footer h5{
+        font-size: 59px;
+    }
+    .page-footer h6{
+        font-size: 38px;
+    }
+    .page-footer i{
+        font-size: 100px;
+        margin-right: 10px;
+    }
+    .page-footer em{
+        font-size: 33px;
+    }
+}

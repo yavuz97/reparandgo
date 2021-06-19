@@ -16,7 +16,7 @@
       <paths name="roche_reparAndgo">
         <serverdata>
           <mappings>
-            <mapping deploy="/yavuz" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/public_html/rag_symfony_app" local="$PROJECT_DIR$" web="/" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/.env" />

@@ -7,10 +7,12 @@ use App\Entity\Marque;
 use App\Entity\Produit;
 use App\Entity\Serie;
 use App\Repository\MarqueRepository;
+use Container7x5mAjH\getRedirectControllerService;
 use Doctrine\ORM\EntityManagerInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
@@ -32,12 +34,15 @@ class ProduitCrudController extends AbstractCrudController
     }
 
 
+    private $adminUrlGenerator;
+
 
     public function configureFields(string $pageName): iterable
     {
         $imageFile =  TextareaField::new('imageFile')->setFormType(VichImageType::class);
         $image =    ImageField::new('image')->setBasePath('images/product_images');
-        $fields = [
+
+        $fields  = [
             AssociationField::new('categorie'),
             AssociationField::new('marque'),
             AssociationField::new('serie'),
@@ -50,8 +55,14 @@ class ProduitCrudController extends AbstractCrudController
             $fields [] = $imageFile;
         }
 
+
+
         return $fields;
     }
+
+
+
+
 
 
     /**
@@ -83,9 +94,9 @@ class ProduitCrudController extends AbstractCrudController
      * @Route("/addMultiplePhone", name="addMultiplePhone")
      */
     public function addMultiplePhone(){
-        $marque = $this->getDoctrine()->getRepository(Marque::class)->find(5);
-        $serie = $this->getDoctrine()->getRepository(Serie::class)->find(19);
-        $categorie = $this->getDoctrine()->getRepository(Categorie::class)->find(1);
+        $marque = $this->getDoctrine()->getRepository(Marque::class)->find(3);
+        $serie = $this->getDoctrine()->getRepository(Serie::class)->find(22);
+        $categorie = $this->getDoctrine()->getRepository(Categorie::class)->find(2);
     if($this->request->get('validationBtn') == "valid"){
         for ($x = 0; $x < count($this->request->get('ajoutPhone')['model']); $x++) {
             if($this->request->get('ajoutPhone')['model'][$x] != null or $this->request->get('ajoutPhone')['model'][$x] != ""){

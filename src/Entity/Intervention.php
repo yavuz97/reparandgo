@@ -24,10 +24,7 @@ class Intervention
      */
     private $nom;
 
-    /**
-     * @ORM\Column(type="float", nullable=true)
-     */
-    private $prix;
+
 
     /**
      * @ORM\Column(type="time", nullable=true)
@@ -61,17 +58,7 @@ class Intervention
         return $this;
     }
 
-    public function getPrix(): ?float
-    {
-        return $this->prix;
-    }
 
-    public function setPrix(?float $prix): self
-    {
-        $this->prix = $prix;
-
-        return $this;
-    }
 
     public function getDuree(): ?\DateTimeInterface
     {

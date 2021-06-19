@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="container">
+        <div class="row">
+            <div class="col-8" style="margin-top: 100px">
+                {{ form_row(form.nom) }}
+                {{ form_row(form.prenom) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.password) }}
+                {{ form_row(form.confirmpassword) }}
+
+            </div>
+
+            <div class="col-8 justify-content-center align-items-center d-flex">
+                <button type="submit" class="btn  btn-success">S'enregistrer</button>
+            </div>
+        </div>
+    </div>
+
+
+    {{ form_end(form) }}
+
+
+
+
+{% endblock %}
+
+
+

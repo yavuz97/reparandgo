@@ -49,7 +49,7 @@
                     <div class="menuPhone">
                         {% for marque in marques %}
                             {% if marque.produits | length > 0 %}
-                                <a class="text-decoration-none text-dark" href="{{ path("produits_deMarque",{'id':marque.id}) }}">  <h5 class="mt-3"><strong>{{ marque.nom }}</strong> </h5> </a>
+                                <a class="text-decoration-none text-dark" href="{{ path("produits_deMarque",{'id':marque.id}) }}">  <h5 class=""><strong>{{ marque.nom }}</strong> </h5> </a>
                                 <hr>
                                     <div class="list-item-drop">
                                             {% for serie in marque.series  %}
@@ -114,7 +114,7 @@
         <!-- Footer Elements -->
         <div class="container ">
             <div class="row">
-                <div class=" mt-5 col-6 d-flex  flex-column">
+                <div class=" mt-5 col-6  col-lg-6 col-md-12  d-flex  flex-column">
                     <div class="row">
                         <div class="col-12 d-flex justify-content-center">
                             <h5 class="mb-5 text-white">NOTRE ADRESSE</h5>
@@ -155,7 +155,7 @@
                     </div>
 
                 </div>
-                <div class= " mt-5  col-6 d-flex  flex-column">
+                <div class= " mt-5  col-6 col-lg-6 col-md-12  d-flex  flex-column">
                     <div class="row">
                         <div class="col-12 d-flex justify-content-center">
                             <h5 class="mb-5 text-white">HORAIRES D’OUVERTURES</h5>
@@ -184,7 +184,7 @@
                                 </div>
                             </div>
                             <div  style="    width: 100%;  height: 106%;  margin-left: 27px;">
-                                <img style="    object-fit: cover;height: 171px;width: 119%;" src="{{ asset("build/general/googleMaps.png") }}">
+                                <a target="_blank" href="https://www.google.com/maps/place/R%C3%A9par'+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+%26+Ordinateur+%26+Tablette/@49.1158957,6.1719842,394m/data=!3m1!1e3!4m5!3m4!1s0x0:0x3577dc2fb7cc5cd1!8m2!3d49.1161085!4d6.1723196?hl=fr">   <img style="    object-fit: cover;height: 171px;width: 119%;" src="{{ asset("build/general/googleMaps.png") }}" alt="googleMaps"></a>
                             </div>
                         </div>
 
@@ -201,7 +201,6 @@
 
             </div>
 
-
             <div class="row mt-5">
                 {% for marque in marques %}
                     <div class="row">
@@ -216,10 +215,6 @@
                     </div>
                 {% endfor %}
             </div>
-
-
-
-
         </div>
         <!-- Footer Elements -->
 

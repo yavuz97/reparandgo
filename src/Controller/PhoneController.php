@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Intervention;
 use App\Entity\Marque;
+use App\Entity\PrixInter;
 use App\Entity\Produit;
 use App\Entity\Serie;
 use App\Repository\MarqueRepository;
@@ -10,10 +12,12 @@ use App\Repository\ProduitRepository;
 use App\Repository\SerieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
+
 
 class PhoneController extends AbstractController
 {
@@ -96,6 +100,61 @@ class PhoneController extends AbstractController
             'marques' => $this->marques,
         ]);
     }
+
+    /**
+     * @Route("list-produits", name="list-produits")
+     */
+    public function listProduit(){
+        $produits = $this->getDoctrine()->getRepository(Produit::class)->findAll();
+
+        return $this->render('admin/phone/list-produits.html.twig', [
+        'marques' => $this->marques,
+         'produits' => $produits
+        ]);
+    }
+
+    /**
+     * @Route("interventions-produit/{id}", name="interventions-produit")
+     */
+    public function interventionProduits($id, Request  $request){
+        $produit = $this->getDoctrine()->getRepository(Produit::class)->find(10);
+        $interventions = $this->getDoctrine()->getRepository(Intervention::class)->findAll();
+        $prixInterventions = $this->getDoctrine()->getRepository(PrixInter::class)->findBy(['Produit' => $produit ]);
+//        foreach ($interventions as $intervention){
+//            $produit->addIntervention($intervention);
+//            $this->entityManager->persist($produit);
+//            $this->entityManager->flush();
+//        }
+        if( $request->get('validation') !== null  ){
+            if($request->get('prix') !== null or $request->get('prix') !== ""  ){
+                $id_intervention = $request->get('intervention');
+                $intervention = $this->getDoctrine()->getRepository(Intervention::class)->find($id_intervention);
+                $produit = $this->getDoctrine()->getRepository(Produit::class)->find($request->get('produit'));
+                $prixIntervention = $this->getDoctrine()->getRepository(PrixInter::class)->findOneBy([
+                   'Produit' => $produit,
+                   'intervention' => $intervention
+                ]);
+                if($prixIntervention == null ){
+                    $prixIntervention = new PrixInter();
+                    $prixIntervention->setIntervention($intervention);
+                    $prixIntervention->setProduit($produit);
+                    $this->entityManager->persist($prixIntervention);
+                    $this->entityManager->flush($prixIntervention);
+                }
+                $prixIntervention->setPrix( $request->get('prix') );
+                $this->entityManager->persist($prixIntervention);
+                $this->entityManager->flush();
+            }
+        }
+
+        return $this->render('admin/phone/interventions-produit.html.twig', [
+            'marques' => $this->marques,
+            'produit' => $produit,
+            'interventions' => $interventions,
+            'prixInterventions' => $prixInterventions,
+        ]);
+    }
+
 
 
 

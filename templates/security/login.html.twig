@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style>
+        .alert{
+            top: 125px;
+        }
+    </style>
+    <div style="margin-top:150px "></div>
+    {% for message in app.flashes('message') %}
+        <div class="alert alert-success m-t-100" role="alert"></div>
+    {% endfor %}
+    {% for message in app.flashes('warning') %}
+        <div class="alert alert-warning m-t-100" role="alert"></div>
+    {% endfor %}
+    {% for message in app.flashes('danger') %}
+        <div style="margin-top: 100px" class="alert alert-danger m-t-100" role="alert"></div>
+    {% endfor %}
+    <div style="margin-top:150px "></div>
+    <div class="container">
+        <h1 class="row justify-content-center">Identification</h1>
+        <hr class="w-25"/>
+        <div class="d-flex justify-content-center">
+            <div class="border border-dark rounded w-75 p-3">
+                <form method="post" action="{{ path('security_login') }}">
+                    <div class="col">
+                        <label>Email :</label>
+                        <input type="text" class="form-control" name="_username">
+                    </div>
+                    <div class="col">
+                        <label>Mot de passe :</label>
+                        <input type="password" class="form-control" name="_password">
+                    </div>
+                    <br/>
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-outline-success">S'identifier</button>
+                    </div>
+                </form>
+{#                <div class="row ">#}
+{#                    <div class="col-6">#}
+{#                        <a style="margin-left: 20px;" href="{{ path('oubliePass') }}"> Mot de passe oublié ? </a>#}
+{#                    </div>#}
+{#                    <div class="col-6">#}
+{#                        <a style="margin-left: 20px" href="{{ path('renvoieActivationCompte') }}"> Renvoyer un mail de confirmation </a>#}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+{% endblock %}
