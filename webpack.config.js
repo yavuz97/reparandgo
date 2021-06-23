@@ -38,6 +38,7 @@ Encore
     .addEntry('service_tablette', './assets/service_tablette.js')
     .addEntry('service_ordinateur', './assets/service_ordinateur.js')
     .addEntry('service_clesMinute', './assets/service_clesMinute.js')
+    .addEntry('page_produit', './assets/page_produit.js')
     // .addEntry('toto', './assets/toto.js')
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

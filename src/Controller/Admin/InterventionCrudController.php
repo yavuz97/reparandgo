@@ -1,25 +1,1 @@
-<?php
-
-namespace App\Controller\Admin;
-
-use App\Entity\Intervention;
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-
-class InterventionCrudController extends AbstractCrudController
-{
-    public static function getEntityFqcn(): string
-    {
-        return Intervention::class;
-    }
-
-    /*
-    public function configureFields(string $pageName): iterable
-    {
-        return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
-        ];
-    }
-    */
-}
+<?php    namespace App\Controller\Admin;    use App\Entity\Intervention;    use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;    use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;    use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;    class InterventionCrudController extends AbstractCrudController    {        public static function getEntityFqcn(): string        {            return Intervention::class;        }        public function configureFields(string $pageName): iterable        {            return [                TextField::new('nom'),                FormField::addPanel('Ajout d\'icone ')                    ->setIcon('phone')->addCssClass('optional')                    ->setHelp('Veuillez copier le lien d\'icone sur le site "https://fontawesome.com/v4.7/icons/" '),                TextField::new('image'),            ];        }    }

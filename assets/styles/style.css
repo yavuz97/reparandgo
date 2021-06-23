@@ -854,3 +854,39 @@ and (max-device-width : 480px) {
         font-size: 33px;
     }
 }
+
+
+/*
+le page produit*/
+
+.phone_show_interventions div div{
+    margin-bottom: 20px;
+}
+.phone_show_interventions i{
+    margin-right: 3%;
+    color: #fbf40d;
+}
+
+
+.phone_show_interventions h6{
+    margin: 9px 0 0 1px;
+}
+
+.interventionCard:hover i{
+    color: #fbf40d;
+}
+.interventionCard:hover p{
+    color: #fbf40d;
+}
+.interventionCard:hover h4{
+    color: #fbf40d;
+}
+.interventionCard{
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.interventionCard:hover{
+    transform: scale(1.1);
+}
+

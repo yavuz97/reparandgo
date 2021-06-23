@@ -21,6 +21,8 @@
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/.env" />
             <excludedPath local="true" path="$PROJECT_DIR$/var" />
+            <excludedPath path="/www/rag_symfony_app/.env" />
+            <excludedPath path="/www/rag_symfony_app/var" />
           </excludedPaths>
         </serverdata>
       </paths>

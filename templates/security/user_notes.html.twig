@@ -1,0 +1,112 @@
+<title>{% block title %}Welcome!{% endblock %}</title>
+{{ encore_entry_link_tags('app') }}
+{% block body %}
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+        body {
+            margin: 0;
+            padding: 0;
+            background: lightgoldenrodyellow;
+        }
+        .paper {
+            position: relative;
+            height: auto;
+            width: 450px;
+            background: rgba(255,255,255,0.9);
+            margin: -275px -225px;
+            left: 50%;
+            top: 50%;
+            box-shadow: 0px 0px 5px 0px #888;
+        }
+        .paper::before {
+            content: '';
+            position: absolute;
+            left: 45px;
+            height: 100%;
+            width: 2px;
+            background: rgba(255,0,0,0.4);
+        }
+        .lines {
+            margin-top: 0px;
+            height: calc(100% - 40px);
+            width: 100%;
+            background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
+        }
+        .text {
+            position: relative;
+            top: 29px;
+            left: 55px;
+            bottom: 10px;
+            right: 10px;
+            line-height: 25px;
+            font-family: 'Indie Flower';
+            overflow: hidden;
+            outline: none;
+            padding: 0 43px 51px 0;
+        }
+        .holes {
+            position: absolute;
+            left: 10px;
+            height: 25px;
+            width: 25px;
+            background: lightgoldenrodyellow;
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 2px 0px #888;
+        }
+        .hole-top {
+            top: 10%;
+        }
+        .hole-middle {
+            top: 50%;
+        }
+        .hole-bottom {
+            bottom: 10%;
+        }
+        .noteForm{
+            padding: 27px 9px 0 52px;
+        }
+        .noteAuteur{
+            position: relative;float: right; margin-right: 5px;right: 14px;font-weight: bold;
+        }
+    </style>
+    {% set url = ea_url()
+        .setController('App\\Controller\\Admin\\UserCrudController')
+        .setAction('index')
+    %}
+
+    <div class="container">
+
+    </div>
+    <div class="paper">
+        <a style="    margin-left: 50px;" class="mb-5" href="{{ url }}"> Retour à menu </a>
+
+        <form method="post" class="noteForm">
+            <label for="exampleFormControlTextarea1" class="form-label">Ajoutez une note</label>
+            <textarea style="margin-bottom: 12px;" class="form-control" name="note" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <button type="submit" class="btn  btn-success"> soumettre </button>
+        </form>
+        <div class="lines">
+            {% for note in notes %}
+            <form method="post" style="position: absolute;
+       margin: 24px 0 0 4px;">
+                <button style="padding: 0px 15px 0 15px;" type="submit" name="supprimer_note" value="{{ note.id }}" class="btn btn-sm btn-danger"> x </button>
+            </form>
+            <div class="text" contenteditable spellcheck="false">
+                    <em> {{ note.date|date("m/d/Y")  }} </em> <span class="noteAuteur" >{{ note.auteur }}</span> <br /><br />
+                    {{ note.note }}
+                </div>
+            {% endfor %}
+
+
+        </div>
+        <div class="holes hole-top"></div>
+        <div class="holes hole-middle"></div>
+        <div class="holes hole-bottom"></div>
+    </div>
+
+
+{% endblock %}
+
+
+

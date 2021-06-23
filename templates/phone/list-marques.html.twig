@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réparations {% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset("css/clesMinute.css") }}"  >
+    <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
+
+   <div class="container">
+
+       <div class="smoothCard-container">
+
+       {% for marque in marques %}
+           <div  class="smoothCard">
+               <img src="{{ asset("build/brand_images/" ~ marque.image ) }}">
+           </div>
+       {% endfor %}
+
+  
+       </div>
+
+   </div>
+{% endblock %}
