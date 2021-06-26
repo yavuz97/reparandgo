@@ -1,17 +1,21 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');*/
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 /*general*/
+.responsiveMenuBar{
+    display: none;
+}
+
 a{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 17px;
 }
 header{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 body {
-    background-color: #ffffff;
     color: #454545;
     /*font-family: 'Cabin-Regular';*/
+    font-family: 'Lato', sans-serif;
     font-size: 22px;
 }
 
@@ -59,7 +63,7 @@ footer{
 
 
 .nav-item a{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 17px;
 }
 
@@ -68,7 +72,7 @@ footer{
     background-color: #141316;
     -webkit-transition: background-color .3s;
     transition: background-color .3s;
-    position: fixed; ;
+    position: fixed;;
     width: 100%;
 }
 
@@ -105,7 +109,100 @@ nav.main ul li.fade-link:hover div {
     position: absolute;
     margin: 6px 0 0 22px;
     background: #ffffff;
-    width: 222px;
+    width: 178px;
+    padding: 0 0 17px 13px;
+    box-shadow:  1px 1px 5px 1px  rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.menuPhoneTitle{
+    font-size: 15px;
+    margin-bottom: -7px;
+    margin-top: 10px;
+}
+.menuPhoneSub{
+    margin: 0 0 -17px 0;
+    font-size: 14px;
+    font-style: italic;
+}
+.titleMenuDrop{
+    font-weight: 500;
+    margin-top: 8px;
+    font-size: 18px;
+}
+.menuPhone hr{
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    width: 88%;
+    float: left;
+    margin-bottom: -4px;
+    margin-top: 9px;
+}
+.list-item-drop{
+    display: inline-grid;
+    line-height: 4px;
+}
+.list-item-drop a{
+    font-weight: lighter;
+    text-decoration-line: none;
+    color: black;
+    transition:   0.7s ease;
+
+}
+.list-item-drop a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+
+/*navbar menu service */
+.menuService{
+    width: 100%;
+    position: absolute;
+    margin: 0 0 0 0;
+    background: #000000;
+    display: block;
+    padding: 80px 48px 67px 7px;
+    box-shadow: 1px 1px 5px 1px rgb(0 0 0 / 20%);
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.menuService h5{
+    color: white;
+}
+.menuService p{
+    color: #9f9797;
+}
+.menuService-img{
+    width: 100%;
+    height: auto;
+}
+.menuService .row .col{
+    padding: 0 0 0 34px;
+}
+.menuService .row .col img{
+    margin-top: 50px;
+}
+nav.main ul li.fade-service div {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+    line-height: 36px;
+    margin-bottom: 10px;
+}
+nav.main ul li.fade-service:hover div {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*navbar menu phones */
+.menuPhone{
+    position: absolute;
+    margin: 6px 0 0 22px;
+    background: #ffffff;
+    width: 180px;
     padding: 0 0 17px 13px;
     box-shadow:  1px 1px 5px 1px  rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -119,7 +216,7 @@ nav.main ul li.fade-link:hover div {
     border: 0;
     border-top: 1px solid rgba(0,0,0,.1);
     float: left;
-    margin-top: -12px;
+    margin-top: -9px;
     width: 88%;
 }
 .list-item-drop{
@@ -188,16 +285,30 @@ nav.main ul li.fade-service:hover div {
     position: relative;
     z-index: -99;
 }
-.hero-image.index{
-    background-image:  url('../images/general/iphoneBoutiqueCover-min.jpg');
-}
-.hero-image.index-HD{
-    background-image:  url('../images/general/iphoneBoutiqueCover.jpg');
-}
+
 .hero-image.index-black{
 
     background-image:  url('../images/general/2telReparAndGo.png')
 }
+.hero-image-small.brokenComputer{
+    background-image:  url('../images/general/computerCoverBroken.jpg')
+}
+.hero-image-small.reparationOrdinateurCover{
+    background-image:  url('../images/general/reparationOrdinateurCover.jpg')
+}
+.hero-image-small.boutique2{
+    background-image:  url('../images/general/boutique2.png')
+}
+.hero-image-small {
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -99;
+    margin-bottom: 50px;
+}
+
 
 /*testimonials */
 
@@ -487,32 +598,51 @@ nav.main ul li.fade-service:hover div {
 
 /*product page*/
 .phone-conainer{
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction: row;*/
+    /*justify-content: flex-start;*/
+    /*padding: 14px 14px;*/
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-start;
-    padding: 14px 14px;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 .phone-card{
-    width: 310px;
-    height: 483px;
-    margin: 8px 6px;
-    transition:   0.5s ease;
+    /*width: 310px;*/
+    /*height: 483px;*/
+    /*margin: 8px 6px;*/
+    /*transition:   0.5s ease;*/
+    height: auto;
+    transition: .5s ease;
+    width: 245px;
+    padding: 8px 12px;
 }
 .phone-card:hover{
     box-shadow: 0px 0px 3px 0px rgb(0 0 0);
 }
+.phone-card-img {
+    width: 100%;
+    height: 100%;
+    /*remove this to come back to 4 phone per row*/
+}
 .phone-card-img img{
-    width: 310px;
-    height: 483px;
-    object-fit: cover;
+    /*width: 310px;*/
+    /*height: 483px;*/
+    /*object-fit: cover;*/
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
 }
 .phone-card-text{
-    text-align: center;
-    margin: -51px 0 0 0;
+    /*text-align: center;*/
+    /*margin: -51px 0 0 0;*/
+    /*font-size: 18px;*/
+    /*font-weight: 300;*/
     font-size: 18px;
     font-weight: 300;
+    text-align: center;
 }
 .prices-list-title{
     margin: 61px 0 0 0;font-size: 19px;font-weight: 400;font-style: italic;
@@ -647,12 +777,7 @@ width: 30%;
 }
 
 
-@media (min-width: 992px){
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
-    }
-}
+
 
 
 .undrawSVG-index img{
@@ -804,57 +929,6 @@ width: 30%;
 
 
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    .navbar{
-        height: 160px;
-    }
-    .logo {
-        height: 88px;
-        width: 482px;
-        position: relative;
-        right: -150px;
-    }
-    .navbar-toggler{
-        height: 100px;
-        width: 100px;
-        color: white
-    }
-    .hero-image {
-        height: 40vh;
-    }
-    .yav-container .container{
-        max-width: 100%;
-    }
-    .yav-container .container h1{
-        font-size: 77px;
-    }
-    .yav-container .container p{
-        font-size: 27px;
-    }
-    .yav-container {
-        padding: 114px 0 181px 0;
-    }
-    .title-homePage-dark{
-        font-size: 60px;
-    }
-
-    .page-footer h5{
-        font-size: 59px;
-    }
-    .page-footer h6{
-        font-size: 38px;
-    }
-    .page-footer i{
-        font-size: 100px;
-        margin-right: 10px;
-    }
-    .page-footer em{
-        font-size: 33px;
-    }
-}
-
 
 /*
 le page produit*/
@@ -888,5 +962,330 @@ le page produit*/
 }
 .interventionCard:hover{
     transform: scale(1.1);
+}
+
+
+.sidenav{
+    display: none;
+}
+
+
+.yav-card-title-container{
+    height: 75%
+}
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+
+    .navbar a {
+        background-color: transparent;
+        color: #fff;
+        float: left;
+        position: relative;
+        margin-top: 23px;
+        left: -200px;
+    }
+    .logo {
+        height: 88px;
+        width: 482px;
+        position: relative;
+    }
+    .navbar {
+        height: 160px;
+    }
+
+    .logo {
+        height: 88px;
+        width: 482px;
+        position: relative;
+        right: -150px;
+    }
+
+    .navbar-toggler {
+        height: 100px;
+        width: 100px;
+        color: white
+    }
+
+    .sidenav{
+        display: block;
+    }
+    .responsiveMenuBar{
+        font-size: 77px; cursor: pointer; position: absolute; color: white;float: right;right: 57px;
+        display: block;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 209px;
+    }
+
+    .sidenav a {
+        display: block;
+        font-size: 54px;
+        padding: 10px 8px 8px 96px;
+        text-decoration: none;
+        transition: .3s;
+        color: white;
+        font-weight: bold;
+    }
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 78px;
+        margin-left: 50px;
+    }
+
+    .navbar{
+        height: 160px;
+    }
+
+    .hero-image {
+        height: 40vh;
+    }
+    .yav-container .container{
+        max-width: 100%;
+    }
+    .yav-container .container h1{
+        font-size: 77px;
+    }
+    .yav-container .container p{
+        font-size: 27px;
+    }
+    .yav-container {
+        padding: 114px 0 181px 0;
+    }
+    .title-homePage-dark{
+        font-size: 60px;
+    }
+
+    .page-footer h5{
+        font-size: 59px;
+    }
+    .page-footer h6{
+        font-size: 38px;
+    }
+    .page-footer i{
+        font-size: 100px;
+        margin-right: 10px;
+    }
+    .page-footer em{
+        font-size: 33px;
+    }
+
+
+    /*home page responsive*/
+    .mainScroll {
+        height: 46vh;
+        padding: 194px 0 0 0;
+    }
+    h1 {
+        font-size: 5.9vw;
+    }
+    h2 {
+        font-size: 3.0vh;
+    }
+    h3{
+        font-size: 2vh;
+    }
+    h4{
+        font-size: 2vh;
+    }
+    p {
+        font-size: 2vmin;
+    }
+    .fa{
+        font-size: 73px;
+    }
+    .h5, h5 {
+        font-size: 30px
+    }
+    /*serie des phones */
+    .phone-card{
+        width: 310px;
+        height: 483px;
+        margin: 8px 6px;
+        transition:   0.5s ease;
+    }
+    .phone-card-img img{
+        width: 310px;
+        height: 483px;
+        object-fit: cover;
+    }
+    .phone-card-text{
+        text-align: center;
+        margin: -24px 0 0 0;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    #imageCol{
+        display: flex;
+        align-items: center;
+    }
+    .blockquote-footer {
+        font-size: 30px;
+
+    }
+    /*phone show*/
+    #imageCol img{
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+    .small, small {
+        font-size: 35px;
+    }
+    .showProduitGaranties{
+        font-size: 32px;
+    }
+    .inscrivezVousLink{
+        font-size: 31px;
+    }
+    .container-resp-w100{
+        max-width: 100%;
+    }
+    .interventionNameProduitShow{
+        font-size: 30px;
+    }
+
+    .yav-card-title-container{
+        height: 36%;
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+    .responsiveMenuBar {
+        /* display: block; */
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        float: right;
+        font-size: 40px;
+        position: absolute;
+        right: 57px;
+    }
+    .iphone-s1-6.show {
+        opacity: 1;
+        -webkit-transform: translate(-80%,-47%);
+        -ms-transform: translate(-80%,-47%);
+        transform: translate(-80%,-47%);
+    }
+    .respMenuLink{
+        font-size: 48px;
+        text-decoration: none;
+        color: gray;
+    }
+    .sidenav{
+        display: block;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 209px;
+    }
+    .sidenav a {
+        display: block;
+        font-size: 54px;
+        padding: 10px 8px 8px 96px;
+        text-decoration: none;
+        transition: .3s;
+        color: white;
+        font-weight: bold;
+    }
+
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 78px;
+        margin-left: 50px;
+    }
+
+    .acerComputers.show {
+        opacity: 1;
+        transform: translate(-41%,-77%);
+    }
+
+    .clesMinuteTabPrix {
+        top: 67px;
+        height: 41vh;
+        left: 21px;
+        position: absolute;
+        width: 27rem;
+    }
+    .hero-container .card {
+        top: 218px;
+        height: 20vh;
+        position: absolute;
+        right: 28px;
+        width: 38rem;
+    }
+    .hero-container img {
+        display: block;
+        height: 40vh;
+        width: 100%;
+    }
 }
 

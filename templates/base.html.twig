@@ -34,27 +34,37 @@
     </head>
 
 
+
     <body>
 
+
     <nav class="main navbar navbar-expand-lg nav-transp" style="position: fixed" >
+        <span id="id_responsiveMenuBar" class="responsiveMenuBar" >&#9776; </span>
+
         <a class="navbar-brand" href="{{ path("home") }}"> <img class="logo" src="{{ asset("build/general/logo.png") }}" alt="logo">   </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+{#        <button  id="id_responsiveMenuBar" style="color: white" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">#}
+{#            <span class="navbar-toggler-icon"></span>#}
+{#        </button>#}
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
 
                 <li  class="nav-item fade-service">
-                    <a class="nav-link" href="{{ path("tout_nos_produits") }}">Réparation téléphones  <span class="sr-only">(current)</span> </a>
-                    <div class="menuPhone">
+                    <a class="nav-link" href="{{ path("list-marques") }}">Réparations  <span class="sr-only">(current)</span> </a>
+                    <div class="menuPhone" style="width: 180px" >
+                        <div class="mt-2"></div>
                         {% for marque in marques %}
                             {% if marque.produits | length > 0 %}
-                                <a class="text-decoration-none text-dark" href="{{ path("produits_deMarque",{'id':marque.id}) }}">  <h5 class=""><strong>{{ marque.nom }}</strong> </h5> </a>
-                                <hr>
-                                    <div class="list-item-drop">
+                                <a class="text-decoration-none text-dark " href="{{ path("list-produits-marque",{'id':marque.id}) }}">  <h6 class="menuPhoneTitle" style="    margin-top: 10px;"><strong>{{ marque.nom }}</strong> </h6> </a>
+                                <hr style="border: 0;
+            border-top: 1px solid rgba(0,0,0,.1);
+            width: 88%;
+            float: left;
+            margin-bottom: -6px;
+            margin-top: 12px;" >
+                                    <div class="list-item-drop" style="margin-bottom: 10px;">
                                             {% for serie in marque.series  %}
                                                 {% if serie.produits | length > 0 %}
-                                                <a  href="{{ path("seriePhone",{'id':serie.id}) }}"> <h6> {{serie.nom}} </h6> </a>
+                                                <a  href="{{ path("seriePhone",{'id':serie.id}) }}"> <p class="fw-light menuPhoneSub"> {{serie.nom}} </p> </a>
                                                 {% endif %}
                                             {% endfor %}
                                     </div>
@@ -64,31 +74,6 @@
                     </div>
                 </li>
 
-                <li  class="nav-item fade-service" style="display: none">
-                    <a class="nav-link" href="#">Services</a>
-                    <div class="menuService">
-                        <div class="row">
-                            <div class="col">
-                                <a href="{{ path("impressionTampon") }}"><h5> Tampon Gravure </h5></a>
-                                <p> Nous réalisons vos tampons et gravures pour votre utilisation personnelle ou votre entreprise </p>
-                                <img class="menuService-img" src="{{ asset("build/services/tampon.jpg") }}" alt="logo">
-                            </div>
-                            <div class="col">
-                               <a href="{{ path("reparationOrdinateur") }}"><h5> Réparation ordinateur </h5></a>
-                                <p> Windows & Mac Disque dur, écran, carte mère, ventilateur, clavier, RAM Mémoire, carte Graphique…</p>
-                                <img class="menuService-img" src="{{ asset("build/services/ordinateur.jpg") }}" alt="logo">
-                            </div>
-                            <div class="col">
-                                <a href="{{ path("reparationTablette") }}">   <h5> Réparation de tablette</h5></a>
-                                <p>dépanne votre tablette tactile La réparation d’une tablette demande une grande vigilance</p>
-                                <img class="menuService-img" src="{{ asset("build/services/tablet.jpg") }}" alt="logo">
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path("reparationOrdinateur") }}">Ordinateur / Macbook </a>
                 </li>
@@ -104,6 +89,14 @@
             </ul>
         </div>
     </nav>
+    <div id="mySidenav" class="sidenav">
+        <a id="closeNavBar"  href="javascript:void(0)" class="closebtn" >&times;</a>
+        <a class="respMenuLink" href="{{ path("list-marques") }}">Réparations </a>
+        <a class="respMenuLink" href="{{ path("reparationOrdinateur") }}">Ordinateur / Macbook </a>
+        <a class="respMenuLink" href="{{ path("reparationTablette") }}">Tablette / Ipad </a>
+        <a class="respMenuLink" href="{{ path("clesMinute") }}">Clés minute</a>
+        <a class="respMenuLink" href="{{ path("contact") }}">Contact </a>
+    </div>
 
 
 

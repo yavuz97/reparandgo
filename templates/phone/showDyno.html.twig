@@ -6,23 +6,23 @@
 
     <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
 
-    <div class="container">
+    <div class="container container-resp-w100">
         <div class="row">
             <div class="col-12 d-flex flex-column align-items-center justify-content-center">
                 <h5> Vous avez <span class="text-primary">5 %</span>  de réduction si vous avez une compte Repar'& Go</h5>
-                <p class="text-muted"> <small> <em> Inscrition est gratuit, qu'attendez vous ? :) <a href="{{ path('registration') }}"> inscrivez-vous  </a>  </em> </small>  </p>
+                <p class="text-muted"> <small> <em class="inforProduitShow"> Inscrition est gratuit, qu'attendez vous ? :) <a class="inscrivezVousLink" href="{{ path('registration') }}"> inscrivez-vous  </a>  </em> </small>  </p>
             </div>
         </div>
         <div class="row">
             <div  class="col-6" id="imageCol">
-                <img style="height: 500px;"  id="social-float" src="{{ asset("build/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
+                <img style="height: 500px;"  id="social-float" src="{{ asset("images/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
             </div>
             <div class="col-6">
                 <div class="row mt-5">
                     <h4>{{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }}</h4>
                 </div>
                 <div class="row">
-                    <p class="fw-light m-0">24 mois de garantie <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
+                    <p class="fw-light m-0 showProduitGaranties">24 mois de garantie <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
                     <p class="fw-light">Réparation en 20 minutes <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
                 </div>
 
@@ -40,7 +40,7 @@
                                 <div class="card-body p-0">
                                     <div class="row ">
                                         <div class="col-9 align-items-center ">
-                                            <p class="fw-light" >{{ prixInter.intervention.nom }}</p>
+                                            <p class="fw-light interventionNameProduitShow" >{{ prixInter.intervention.nom }}</p>
                                         </div>
                                         <div class="col-3 align-items-center ">
                                             <h4 class=" float-end position-relative" >{{ prixInter.prix ~ " €" | default('') }}</h4>

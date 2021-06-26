@@ -37,3 +37,23 @@
     width: 60%;
     margin-top: 43px;
 }
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .ipadClined {
+        margin-bottom: -475px;
+        opacity: 0;
+        -webkit-transform: translate(82%,-20%);
+        -ms-transform: translate(82%,-20%);
+        transform: translate(82%,-20%);
+        -webkit-transition: 1s .3s;
+        transition: 1s .3s;
+    }
+    .ipadClined.show {
+        opacity: 1;
+        -webkit-transform: translate(68%,-20%);
+        -ms-transform: translate(68%,-20%);
+        transform: translate(68%,-20%);
+    }
+}

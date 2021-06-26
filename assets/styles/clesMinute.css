@@ -180,4 +180,61 @@
     width: 381px;
 }
 
+.clesMinuteTabPrix{
+    position: absolute;
+    bottom: 123px;
+    width: 27rem;
+    left: 47px;
+    height: 41vh;
+}
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+    /*cles minute*/
+    .hero-container img {
+        display: block;
+        height: 29vh;
+        width: 100%;
+    }
+    .hero-container .card {
+        top: 251px;
+        height: 19vh;
+        position: absolute;
+        right: 28px;
+        width: 38rem;
+    }
+    .card-small-txt-container {
+        bottom: 106px;
+        font-size: 33px;
+    }
+    .hero-container-ClesDeux .card {
+        width: 612px;
+    }
+    .hero-container-ClesDeux .card .card-small-txt {
+        font-weight: 900;
+    }
+    .phoneSpan {
+        margin-left: 324px;
+    }
+    .clesMinuteTabPrix{
+        bottom: 831px;
+    }
+    .clesMinuteTopCard2 i{
+        font-size: 30px;
+    }
+    .clesMinuteH1First{
+        font-size: 40px;
+        margin-top: 113px;
+    }
+
+    .birCokAnahtar.show {
+        transform: translate(-7%,-68%);
+    }
+
+
+}
+
 

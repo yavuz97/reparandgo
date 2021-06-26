@@ -12,13 +12,13 @@ import './styles/clesMinute.css';
 import './styles/computerReparation.css';
 import './styles/tabletteReparation.css';
 import './styles/tamponImpression.css';
+import './styles/scrollPhones.css';
 
 // start the Stimulus application
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import $ from 'jquery'
 
-console.log("je suis la")
 import peScrollChange from './peScroll'
 
 $(window).on('load', function(){
@@ -30,7 +30,15 @@ $(window).on('load', function(){
         removeClass: true,
     });
 
-})
+});
 
+document.getElementById("id_responsiveMenuBar").onclick = function openNav() {
+    document.getElementById("mySidenav").style.width = "60%";
+    document.getElementById("id_responsiveMenuBar").style.display = "none";
+};
+document.getElementById("closeNavBar").onclick = function openNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("id_responsiveMenuBar").style.display = "block";
 
+};
 

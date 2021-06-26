@@ -1,80 +1,13 @@
+
+
+
 {% extends 'base.html.twig' %}
 
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
 
-
-
-
-    <div id="hero-image-navbar-trigger" > </div>
-    <div class="grid-containerScroll">
-
-        <main class="grid-itemScroll mainScroll">
-            <div class="itemsScroll">
-                <div class="itemScroll item1">
-                    <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_tel-min.png') }}" alt="telephone">
-                    <a href="{{ path('list-marques') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
-                </div>
-                <div class="itemScroll item2">
-                    <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_ordi-min.png') }}" alt="telephone">
-                    <a href="{{ path('reparationOrdinateur') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
-                </div>
-                <div class="itemScroll item3">
-                    <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_tab-min.png') }}"  alt="telephone">
-                    <a href="{{ path('reparationTablette') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
-                </div>
-                <div class="itemScroll item4">
-                    <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_cle-min.png') }}" alt="telephone">
-                    <a href="{{ path('clesMinute') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
-                </div>
-                <div class="itemScroll item5">
-                    <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_access-min.png') }}" alt="telephone">
-                </div>
-                <div class="itemScroll item6">
-                    <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_imp-min.png') }}" alt="telephone">
-                    <a href="{{ path('impressionTampon') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
-                </div>
-            </div>
-
-        </main>
-    </div>
-
-    <h1 class="mb-5" style="text-align: center;font-style: italic;color: gray; font-family: FontAwesome" >  ‘‘Répar'&Go a tout ce qu'il faut.’’ </h1>
-    <div  class="container container-sm container-md container-lg container-xl container-xxl  ">
-        <div class="row" style="    margin-top: 100px;margin-bottom: 47px;">
-            <div class="col col-lg-2 col-xl-2  col-sm-4 col-md-4 mb-md-5 text-center">
-                <i class="fa fa-bug fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Virus</h5>
-                <p class="text-muted fw-light fs-6">Nettoyage de virus, augementation de vitesse</p>
-            </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4 col-md-4 mb-md-5 text-center">
-                <i class="fa fa-upload fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Mise à jour</h5>
-                <p class="text-muted fw-light fs-6"> Mise à jour de votre système</p>
-            </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4 col-md-4 mb-md-5 text-center">
-                <i class="fa fa-mobile fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Ecran</h5>
-                <p class="text-muted fw-light fs-6 "> Changement de écran cassé. Réplacement d'écran</p>
-            </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4   col-md-4 text-center">
-                <i class="fa fa-battery-half fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Batterie</h5>
-                <p class="text-muted fw-light fs-6 ">Problèmes lié au batterie non fonctionnel</p>
-            </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4 col-md-4 text-center">
-                <i class="fa fa-sliders fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Buttons</h5>
-                <p class="text-muted fw-light fs-6"> Réparation des buttons on/off ou buttons de clavier</p>
-            </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4 col-md-4 text-center">
-                <i class="fa fa-key fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Clés minute</h5>
-                <p class="text-muted fw-light fs-6">Service de clés-minute. Réproduction de vos clés</p>
-            </div>
-        </div>
-    </div>
+    <div style=" " id="hero-image-navbar-trigger" class="hero-image index-black"> </div>
 
     <div id="sloganContent" class="yav-container">
         <div class="container container-md container-sm">
@@ -260,9 +193,5 @@
 
 
     {{ encore_entry_script_tags('homePage') }}
-    {{ encore_entry_script_tags('scrollPhone') }}
 
 {% endblock %}
-
-
-

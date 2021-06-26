@@ -1,0 +1,100 @@
+@supports (display: grid) {
+    .grid-containerScroll {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+    @media screen and (max-width: 500px) {
+        .grid-containerScroll {
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.3fr 1fr auto 1fr;
+        }
+    }
+
+    .grid-itemScroll {
+        color: #fff;
+        background: skyblue;
+        padding: 3.5em 1em;
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+
+    .mainScroll {
+        color: #959595;
+        grid-area: mainScroll;
+        padding: 0;
+        overflow-y: hidden;
+        height: 83vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(0deg, rgb(255 255 255 / 60%) 24%, rgba(58,62,62,0.7091211484593838) 69%);;
+    }
+
+    .itemsScroll {
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transform: scale(0.98);
+        will-change: transform;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .itemsScroll.active {
+        /*background: rgba(255, 255, 255, 0.3);*/
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        transform: scale(1);
+    }
+
+    .itemScroll {
+        display: inline-block;
+        min-height: 250px;
+        min-width: 400px;
+        margin: 2em 1em;
+        max-width: 700px;
+    }
+    .itemScroll img{
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .itemScroll button{
+        left: -570px;
+        position: relative;
+        top: 97px;
+        width: 157px;
+        background-color: #1e1f1ec2;
+        font-family: cursive;
+        border: none;
+        cursor: alias;
+    }
+    @media screen and (max-width: 500px) {
+        .itemScroll {
+            min-height: 200px;
+            min-width: 200px;
+            max-width: 299px;
+        }
+        .mainScroll{
+            height: 60vh;
+        }
+    }
+}
+.grid-containerScroll {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+}
