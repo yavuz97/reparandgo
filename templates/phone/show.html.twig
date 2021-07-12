@@ -1,97 +1,101 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PhoneController!{% endblock %}
+{% block title %}Répareration {{ produit.nom }} par Repar and go sur Metz {% endblock %}
+{% block meta %}
+<meta name="description" content="Réparation de téléphone {{ produit.nom }}  metz ">
+<meta name="keywords" content="Réparation {{ produit.marque.nom }} Metz Repar and go " />
 
+{% endblock %}
 {% block body %}
 
-    <style>
-        .phone_show_interventions .title{
-            font-size: 17px;
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        .phone_show_interventions div div{
-            margin-bottom: 20px;
-        }
-        .phone_show_interventions i{
-            margin-right: 3%;
-            color: #fbf40d;
-        }
-
-        .phone_show_interventions i.horizantal{
-            font-size: 40px;
-        }
-        .phone_show_interventions i.vertical{
-            font-size: 23px;
-            margin: 9px 5px 0 0px;
-        }
-        .phone_show_interventions h6{
-            margin: 9px 0 0 1px;
-        }
-
-
-    </style>
     <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
 
-    <div class="container">
+    <div class="container container-resp-w100">
         <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-{#                <h5> Pour votre prochaine opération vous aurez <span class="text-primary">5 %</span>  de réduction jusqu'à 4 fois</h5>#}
+            <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+                <h5> Vous avez <span class="text-primary">10%</span>  de réduction si vous avez une compte Repar'& Go</h5>
+                <p class="text-muted"> <small> <em class="inforProduitShow"> Inscrition est gratuit, qu'attendez vous ? :) <a class="inscrivezVousLink" href="{{ path('registration') }}"> inscrivez-vous  </a>  </em> </small>  </p>
             </div>
+
         </div>
         <div class="row">
-            <div class="col-6">
-                <img src="{{ asset("images/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
+            <div  class="col-6 position-relative" id="imageCol" style=" min-height: 550px;">
+                <img  style="height: 500px;"  id="social-float" src="{{ asset("images/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
             </div>
             <div class="col-6">
                 <div class="row mt-5">
-                    <h4>{{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }}</h4>
+                    <h1> Réparation {{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }}</h1>
                 </div>
                 <div class="row">
-                    <p class="fw-light m-0">24 mois de garantie <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
-                    <p class="fw-light">Réparation en 20 minutes <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
+                    <p class="fw-light m-0 showProduitGaranties">24 mois de garantie <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
+                    <p class="fw-light">Réparation à partir de  20 minutes <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
                 </div>
-                <div class="row phone_show_interventions">
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <i style="font-size: 32px;margin: 4px 9px 0 -5px;" class="green horizantal fa fa-cog" aria-hidden="true"></i>
-                            <h6 >Vibreur</h6 >
+
+
+                <h3>Nos interventions</h3>
+                <hr />
+                {% for prixInter in  produit.prixInters %}
+                    <div class="card interventionCard w-100">
+                        <div class="row no-gutters me-2">
+
+                            <div class="col-sm-3 align-items-center justify-content-center d-flex">
+                                {{ prixInter.intervention.image | raw }}
+                            </div>
+                            <div class="col-sm-9 mt-3">
+                                <div class="card-body p-0">
+                                    <div class="row ">
+                                        <div class="col-9 align-items-center ">
+                                            <p class="fw-light interventionNameProduitShow" >{{ prixInter.intervention.nom }}</p>
+                                        </div>
+                                        <div class="col-3 align-items-center ">
+                                            <h4 class=" float-end position-relative" >{{ prixInter.prix ~ " €" | default('') }}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <i style="font-size: 32px;margin: 4px 9px 0 -4px;" class="green horizantal fa fa-bullseye" aria-hidden="true"></i>
-                            <h6 >Buttton on / off</h6 >
-                        </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+
+        <div id="abc" class="d-flex justify-content-center align-items-center">
+            <div class="card w-100 mt-5 mb-5 shadow rounded" style="border:none; ;
+;
+">
+                <div class="row no-gutters me-2">
+                    <div class="col-sm-3 align-items-center justify-content-center d-flex p-2">
+                        <img style=" width:150px;clip-path:ellipse(50% 50%);" src="{{ asset('build/services/imageBoutique/reparOrdi.jpg') }}">
                     </div>
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <i class="green horizantal fa fa-mobile" aria-hidden="true"></i>
-                            <h6 > Façade avant</h6 >
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <i class="green horizantal  fa fa-mobile" aria-hidden="true"></i>
-                            <h6 >Façade arrière</h6 >
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <i  class=" red vertical fa fa-battery-quarter" aria-hidden="true"></i>
-                            <h6 >Batterie</h6 >
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <i  class=" green vertical fa fa-plug" aria-hidden="true"></i>
-                            <h6 >Connecteur de charge</h6 >
+                    <div class="col-sm-9 mt-3">
+                        <div class="card-body p-0 ">
+                            <figure>
+                                <blockquote class="blockquote">
+                                    <h4>Une réparation de qualité.</h4>
+                                </blockquote>
+                                <figcaption class="blockquote-footer">
+                                    Nos techniciens sont <cite title="Source Title"> certifié et qualifié</cite> pour répondre à vos problèmes
+                                </figcaption>
+                            </figure>
+                            <div class="ms-4">
+                                <i class="fa fa-star fa-2x text-warning me-3" aria-hidden="true"></i>
+                                <i class="fa fa-star fa-2x text-warning me-3" aria-hidden="true"></i>
+                                <i class="fa fa-star fa-2x text-warning me-3" aria-hidden="true"></i>
+                                <i class="fa fa-star fa-2x text-warning me-3" aria-hidden="true"></i>
+                                <i class="fa fa-star fa-2x text-warning" aria-hidden="true"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
+
+
+        {{ encore_entry_script_tags('page_produit') }}
 
 {% endblock %}

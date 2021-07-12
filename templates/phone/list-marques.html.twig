@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Réparations {% endblock %}
+{% block meta %}
+    <meta name="robots" content="noindex, nofollow" />
+{% endblock %}
 
 {% block body %}
 
@@ -9,78 +12,38 @@
     <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
 
 
-   <div class="container">
+   <div class="container ">
        <div class="row d-flex justify-content-center mt-5 mb-5">
-           <div class="col-4 col-md-6 col-sm-6">
+           <div class="col-6 col-lg-6 col-md-12 col-sm-12">
                <a href="{{ path('list-marques-categorie', {'id' : 1}) }}" type="button" class="btn btn-primary btn-lg w-100 shadow rounded" style="border: aliceblue;background: linear-gradient(90deg, rgba(209,209,209,1) 0%, rgba(102,102,103,1) 82%);;">
                   <span class="d-flex justify-content-center">
                        <span> <i class="fa fa-mobile fa-3x" aria-hidden="true"></i></span>
-                       <span class="d-flex align-items-center ms-3"> Réparation téléphone</span>
+                       <p class="d-flex align-items-center ms-3"> Réparation téléphone</p>
                   </span>
                </a>
            </div>
-           <div class="col-4 col-md-6 col-sm-6">
+           <div class="col-6 col-lg-6 col-md-12 col-sm-12 mt-lg-0 mt-mb-5 mt-sm-5">
                <a href="{{ path('list-marques-categorie', {'id' : 2}) }}" type="button" class="btn btn-primary btn-lg  w-100 shadow rounded" style="border: aliceblue;background: linear-gradient(90deg, rgba(209,209,209,1) 0%, rgba(102,102,103,1) 82%);;">
                    <span class="d-flex justify-content-center">
                        <span> <i class="fa fa-tablet fa-3x" aria-hidden="true"></i></span>
-                       <span class="d-flex align-items-center ms-3"> Réparation tablette</span>
+                       <p class="d-flex align-items-center ms-3"> Réparation tablette</p>
                    </span>
                 </a>
            </div>
-       </div>
-       <div class="row mb-5" style="display: none" >
-           <div class="col-4 offset-4 d-flex justify-content-center mt-3">
-               <a type="button" class="btn  btn-lg  w-100 shadow rounded" style="border: aliceblue;background: linear-gradient(90deg, rgba(209,209,209,1) 0%, rgba(102,102,103,1) 82%);;">
-                      <span class="d-flex justify-content-center p-2">
-                       <span> <i class="fa fa-desktop fa-2x text-light" aria-hidden="true"></i></span>
-                       <span class="d-flex align-items-center ms-3 text-light"> Réparation ordinateur</span>
+
+           <div class="col-12 col-lg-6  col-md-12 col-sm-12 mt-lg-5 mt-mb-5 mt-sm-5">
+               <a href="{{ path('reparationOrdinateur') }}" type="button" class="btn btn-primary btn-lg  w-100 shadow rounded" style="border: aliceblue;background: linear-gradient(90deg, rgba(209,209,209,1) 0%, rgba(102,102,103,1) 82%);;">
+                   <span class="d-flex justify-content-center">
+                       <span> <i class="fa fa-laptop fa-3x" aria-hidden="true"></i></span>
+                       <p class="d-flex align-items-center ms-3"> Réparation ordinateur</p>
                    </span>
                </a>
            </div>
-       </div>
-
-
-       <div class="row mb-5 mt-5">
-           <div class="vektors-home"  >
-               <div class="col">
-                   <div class="undrawSVG-index d-flex align-items-center justify-content-center">
-                       <img src="{{ asset("build/undraw/undraw_app_data_re_vg5c.svg") }}" alt="android" >
-                   </div>
-                   <div  class="undrawSVG-index d-flex align-items-center justify-content-center">
-                       <h5 > Système </h5>
-                   </div>
-                   <p> Réparation des problèmes lié au système  </p>
-               </div>
-               <div class="col">
-                   <div class="undrawSVG-index d-flex align-items-center justify-content-center">
-                       <img src="{{ asset("build/undraw/undraw_voice_assistant_nrv7.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
-                   </div>
-                   <div class="undrawSVG-index d-flex align-items-center justify-content-center">
-                       <h5>Button on/off </h5>
-                   </div>
-                   <p>Réparation des problèmes de bouton d'alimentation</p>
-               </div>
-               <div class="col">
-                   <div class="undrawSVG-index d-flex align-items-center justify-content-center" >
-                       <img src="{{ asset("build/undraw/undraw_sync4_xlc6.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
-                   </div>
-                   <div class="d-flex align-items-center justify-content-center">
-                       <h5>  Réseau   </h5>
-                   </div>
-                   <p> Réparation des problèmes lié au connexion  </p>
-               </div>
-               <div class="col">
-                   <div class="undrawSVG-index d-flex align-items-center justify-content-center">
-                       <img src="{{ asset("build/undraw/undraw_Mobile_app_re_catg.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
-                   </div>
-                   <div class="d-flex align-items-center justify-content-center">
-                       <h5> Batterie  </h5>
-                   </div>
-                   <p>Réparation des problèmes de bouton d'alimentation</p>
-               </div>
-           </div>
 
        </div>
+
+
+
 
        <div class="row mb-5 mt-5">
             {% for marque in marques %}

@@ -3,28 +3,33 @@ import $ from 'jquery'
 import peScrollChange from './peScroll'
 
 
+var mediaQery = window.matchMedia("(max-device-width : 480px)")
 
-$(window).on('load', function(){
+if (!mediaQery.matches) { // If media query matches
 
-    // Scroll Changes
+    $(window).on('load', function(){
 
-    peScrollChange.init({
-        elem: '.acerComputers',
-        trigger: document.querySelector('#hero-image-navbar-trigger').offsetHeight,
-        classesToChange: 'show',
-    });
+        // Scroll Changes
 
-
-    peScrollChange.init({
-        elem: '.serviceOrdi-dissableComputer',
-        trigger: '#serviceOrdi-dissableComputer-declancheur',
-        classesToChange: 'show',
-        offset: -300,
-        // endPoint: document.querySelector('#serviceOrdi-dissableComputer-declancheur').offsetHeight
-    });
+        peScrollChange.init({
+            elem: '.acerComputers',
+            trigger: document.querySelector('#hero-image-navbar-trigger').offsetHeight,
+            classesToChange: 'show',
+        });
 
 
+        peScrollChange.init({
+            elem: '.serviceOrdi-dissableComputer',
+            trigger: '#serviceOrdi-dissableComputer-declancheur',
+            classesToChange: 'show',
+            offset: -300,
+            // endPoint: document.querySelector('#serviceOrdi-dissableComputer-declancheur').offsetHeight
+        });
 
-})
+
+
+    })
+}
+
 
 

@@ -81,15 +81,14 @@
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-    .acerComputers.show {
-        opacity: 1;
-        transform: translate(24%,-13%);
-    }
     .acerComputers {
-        margin-bottom: -186px;
-        opacity: 0;
-        transform: translate(-47%,-22%);
-        -webkit-transition: 1s .3s;
-        transition: 1s .3s;
+        margin-bottom: -150px;
+        opacity: 1;
+        transform: translate(31%,0%);
+    }
+    .serviceOrdi-dissableComputer {
+        margin-bottom: -103px;
+        opacity: 1;
+        transform: translate(-15%,9%);
     }
 }

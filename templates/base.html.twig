@@ -3,48 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
+
+        <meta name="Language" CONTENT="fr" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="Identifier-URL" content="https://reparandgo.com" />
+        {% block meta %}{% endblock %}
         {{ encore_entry_link_tags('app') }}
         {% block stylesheets %}
-{#            <link rel="stylesheet" href="{{ asset('css/style.css') }}">#}
-
-            {#{{ encore_entry_link_tags('app') }}#}
-{#            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"#}
-{#                  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"#}
-{#                  crossorigin="anonymous">#}
-{#            <link rel="preconnect" href="https://fonts.gstatic.com">#}
-{#            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">#}
-
-{#            not using#}
-            {#            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">#}
-
         {% endblock %}
-
-{#        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>#}
-{#        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>#}
-{#        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>#}
-{#        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>#}
-
-{#        <script src="https://use.fontawesome.com/1744f3f671.js"></script>#}
-{#        <script type="text/javascript" src="{{ asset("js/bootstrap.js") }}"></script>#}
-{#        <script type="text/javascript" src="{{ asset("js/jquery.js") }}"></script>#}
-{#        <script type="text/javascript" src="{{ asset("js/general.js") }}"></script>#}
-
-    </head>
-
-
 
     <body>
 
 
-    <nav class="main navbar navbar-expand-lg nav-transp" style="position: fixed" >
+    <nav class="main navbar navbar-expand-lg" >
         <span id="id_responsiveMenuBar" class="responsiveMenuBar" >&#9776; </span>
 
         <a class="navbar-brand" href="{{ path("home") }}"> <img class="logo" src="{{ asset("build/general/logo.png") }}" alt="logo">   </a>
-{#        <button  id="id_responsiveMenuBar" style="color: white" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">#}
-{#            <span class="navbar-toggler-icon"></span>#}
-{#        </button>#}
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
 
@@ -86,6 +60,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path("contact") }}">Contact </a>
                 </li>
+                <li class="nav-item dropdown position-absolute end-0 me-5 ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-user-circle-o me-3" aria-hidden="true"></i>Compte
+                    </a>
+                    <ul class="dropdown-menu mt-1 " aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item text-dark" href="{{ path('security_login') }}">Connection</a></li>
+                        <li><a class="dropdown-item text-dark " href="{{ path('registration') }}">Créer un compte</a></li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
     </nav>
@@ -142,16 +126,14 @@
                             </div>
                         </div>
 
-{#                        <h5> <i class="fa fa-envelope-o" aria-hidden="true"></i> Courrier: reparandgo57@gmail.com</h5>#}
-{#                        <h5> <i class="fa fa-location-arrow" aria-hidden="true"></i>  Adresse:  1, av Ney 57000 Metz (GALERIE PARKING REPUBLIQUE)</h5>#}
-{#                   #}
+
                     </div>
 
                 </div>
                 <div class= " mt-5  col-6 col-lg-6 col-md-12  d-flex  flex-column">
                     <div class="row">
                         <div class="col-12 d-flex justify-content-center">
-                            <h5 class="mb-5 text-white">HORAIRES D’OUVERTURES</h5>
+                            <h5 class="mb-5 text-white">HORAIRES D’OUVERTURE</h5>
                         </div>
                     </div>
                     <div class="row">
@@ -162,7 +144,7 @@
                                         <h1 ><i class="fa fa-clock-o" aria-hidden="true"></i> </h1>
                                     </div>
                                     <div class="d-flex flex-column ">
-                                        <h6>Lundi à samedi:</h6>
+                                        <h6>Lundi au samedi:</h6>
                                         <h6 class="text-white">10h à 18h </h6>
                                     </div>
                                 </div>
@@ -177,7 +159,7 @@
                                 </div>
                             </div>
                             <div  style="    width: 100%;  height: 106%;  margin-left: 27px;">
-                                <a target="_blank" href="https://www.google.com/maps/place/R%C3%A9par'+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+%26+Ordinateur+%26+Tablette/@49.1158957,6.1719842,394m/data=!3m1!1e3!4m5!3m4!1s0x0:0x3577dc2fb7cc5cd1!8m2!3d49.1161085!4d6.1723196?hl=fr">   <img style="    object-fit: cover;height: 171px;width: 119%;" src="{{ asset("build/general/googleMaps.png") }}" alt="googleMaps"></a>
+                                <a target="_blank" href="https://www.google.com/maps/place/R%C3%A9par'+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+%26+Ordinateur+%26+Tablette/@49.1158957,6.1719842,394m/data=!3m1!1e3!4m5!3m4!1s0x0:0x3577dc2fb7cc5cd1!8m2!3d49.1161085!4d6.1723196?hl=fr">   <img style="    object-fit: cover;height: 171px;width: 100%;" src="{{ asset("build/general/googleMaps.png") }}" alt="googleMaps"></a>
                             </div>
                         </div>
 
@@ -195,18 +177,7 @@
             </div>
 
             <div class="row mt-5">
-                {% for marque in marques %}
-                    <div class="row">
-                        <h5> Réparation {{ marque.nom }} à Metz </h5>
-                        <footer class="blockquote-footer" style="font-size: 13px;">
-                        {% if marque.produits | length > 0 %}
-                            {% for produit in marque.produits %}
-                                <a href="{{ path("produit_show", {'id':produit.id }) }}" class="text-white" style="font-size: 13px"><em> Réparation {{ produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }},  </em> </a>
-                            {% endfor %}
-                        {% endif %}
-                        </footer>
-                    </div>
-                {% endfor %}
+
             </div>
         </div>
         <!-- Footer Elements -->
@@ -214,6 +185,9 @@
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2020 Copyright:
             <a> reparandgo.com</a>
+        </div>
+        <div class="footer-copyright text-left py-3">
+            <p class="fs-6 ms-5 fst-italic"> <a class="text-decoration-none" href="{{ path('mentionsLegales') }}"> Mention légales </a>    </p>
         </div>
         <!-- Copyright -->
 
@@ -223,6 +197,185 @@
 
     {% block javascripts %}{% endblock %}
 
+<script>
 
+
+    /*
+    Copyright 2014 Google Inc. All rights reserved.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    */
+
+    (function(window) {
+
+        if (!!window.cookieChoices) {
+            return window.cookieChoices;
+        }
+
+        var document = window.document;
+        // IE8 does not support textContent, so we should fallback to innerText.
+        var supportsTextContent = 'textContent' in document.body;
+
+        var cookieChoices = (function() {
+
+            var cookieName = 'displayCookieConsent';
+            var cookieConsentId = 'cookieChoiceInfo';
+            var dismissLinkId = 'cookieChoiceDismiss';
+
+            function _createHeaderElement(cookieText, dismissText, linkText, linkHref) {
+                var butterBarStyles = 'position:fixed;width:100%;background-color:rgb(56 56 56);color:#F5F5F5;' +
+                    'margin:0; left:0; bottom:0; padding:5px;z-index:1000;text-align:center;font-size: 14px;';
+
+                var cookieConsentElement = document.createElement('div');
+                cookieConsentElement.id = cookieConsentId;
+                cookieConsentElement.style.cssText = butterBarStyles;
+                cookieConsentElement.appendChild(_createConsentText(cookieText));
+
+                if (!!linkText && !!linkHref) {
+                    cookieConsentElement.appendChild(_createInformationLink(linkText, linkHref));
+                }
+                cookieConsentElement.appendChild(_createDismissLink(dismissText));
+
+                return cookieConsentElement;
+            }
+
+            function _createDialogElement(cookieText, dismissText, linkText, linkHref) {
+                var glassStyle = 'position:fixed;width:100%;height:100%;z-index:999;' +
+                    'top:0;left:0;opacity:0.5;filter:alpha(opacity=50);' +
+                    'background-color:#ccc;';
+                var dialogStyle = 'z-index:1000;position:fixed;left:50%;top:50%';
+                var contentStyle = 'position:relative;left:-50%;margin-top:-25%;' +
+                    'background-color:#fff;padding:20px;box-shadow:4px 4px 25px #888;';
+
+                var cookieConsentElement = document.createElement('div');
+                cookieConsentElement.id = cookieConsentId;
+
+                var glassPanel = document.createElement('div');
+                glassPanel.style.cssText = glassStyle;
+
+                var content = document.createElement('div');
+                content.style.cssText = contentStyle;
+
+                var dialog = document.createElement('div');
+                dialog.style.cssText = dialogStyle;
+
+                var dismissLink = _createDismissLink(dismissText);
+                dismissLink.style.display = 'block';
+                dismissLink.style.textAlign = 'right';
+                dismissLink.style.marginTop = '8px';
+
+                content.appendChild(_createConsentText(cookieText));
+                if (!!linkText && !!linkHref) {
+                    content.appendChild(_createInformationLink(linkText, linkHref));
+                }
+                content.appendChild(dismissLink);
+                dialog.appendChild(content);
+                cookieConsentElement.appendChild(glassPanel);
+                cookieConsentElement.appendChild(dialog);
+                return cookieConsentElement;
+            }
+
+            function _setElementText(element, text) {
+                if (supportsTextContent) {
+                    element.textContent = text;
+                } else {
+                    element.innerText = text;
+                }
+            }
+
+            function _createConsentText(cookieText) {
+                var consentText = document.createElement('span');
+                _setElementText(consentText, cookieText);
+                return consentText;
+            }
+
+            function _createDismissLink(dismissText) {
+                var dismissLink = document.createElement('a');
+                _setElementText(dismissLink, dismissText);
+                dismissLink.id = dismissLinkId;
+                dismissLink.href = '#';
+                dismissLink.style.marginLeft = '15px';
+                dismissLink.style.color = '#F5F5F5';
+                return dismissLink;
+            }
+
+            function _createInformationLink(linkText, linkHref) {
+                var infoLink = document.createElement('a');
+                _setElementText(infoLink, linkText);
+                infoLink.href = linkHref;
+                infoLink.target = '_blank';
+                infoLink.style.marginLeft = '15px';
+                infoLink.style.fontsize = '12px';
+                infoLink.style.color = '#F5F5F5';
+                return infoLink;
+            }
+
+            function _dismissLinkClick() {
+                _saveUserPreference();
+                _removeCookieConsent();
+                return false;
+            }
+
+            function _showCookieConsent(cookieText, dismissText, linkText, linkHref, isDialog) {
+                if (_shouldDisplayConsent()) {
+                    _removeCookieConsent();
+                    var consentElement = (isDialog) ?
+                        _createDialogElement(cookieText, dismissText, linkText, linkHref) :
+                        _createHeaderElement(cookieText, dismissText, linkText, linkHref);
+                    var fragment = document.createDocumentFragment();
+                    fragment.appendChild(consentElement);
+                    document.body.appendChild(fragment.cloneNode(true));
+                    document.getElementById(dismissLinkId).onclick = _dismissLinkClick;
+                }
+            }
+
+            function showCookieConsentBar(cookieText, dismissText, linkText, linkHref) {
+                _showCookieConsent(cookieText, dismissText, linkText, linkHref, false);
+            }
+
+            function showCookieConsentDialog(cookieText, dismissText, linkText, linkHref) {
+                _showCookieConsent(cookieText, dismissText, linkText, linkHref, true);
+            }
+
+            function _removeCookieConsent() {
+                var cookieChoiceElement = document.getElementById(cookieConsentId);
+                if (cookieChoiceElement != null) {
+                    cookieChoiceElement.parentNode.removeChild(cookieChoiceElement);
+                }
+            }
+
+            function _saveUserPreference() {
+                // Set the cookie expiry to one year after today.
+                var expiryDate = new Date();
+                expiryDate.setMonth(expiryDate.getMonth() + 6);
+                document.cookie = cookieName + '=y; path=/; expires=' + expiryDate.toGMTString();
+            }
+
+            function _shouldDisplayConsent() {
+                // Display the header only if the cookie has not been set.
+                return !document.cookie.match(new RegExp(cookieName + '=([^;]+)'));
+            }
+
+            var exports = {};
+            exports.showCookieConsentBar = showCookieConsentBar;
+            exports.showCookieConsentDialog = showCookieConsentDialog;
+            return exports;
+        })();
+
+        window.cookieChoices = cookieChoices;
+        return cookieChoices;
+    })(this);
+</script>
+    <script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'https://reparandgo.com/mentionsLegales');});</script>
     </body>
 </html>

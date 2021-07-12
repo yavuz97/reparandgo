@@ -1,45 +1,1 @@
-<?php
-
-namespace App\Listener;
-
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\RouterInterface;
-use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-use Symfony\Component\Security\Http\Authentication\AuthenticationSuccessHandlerInterface;
-
-/**
- * Class AfterLoginRedirection
- *
- * @package App\Listener
- */
-class AfterLoginRedirection implements AuthenticationSuccessHandlerInterface
-{
-    private $router;
-
-    /**
-     * AfterLoginRedirection constructor.
-     *
-     * @param RouterInterface $router
-     */
-    public function __construct(RouterInterface $router)
-    {
-        $this->router = $router;
-    }
-
-    /**
-     * @param Request $request
-     *
-     * @param TokenInterface $token
-     *
-     * @return RedirectResponse
-     */
-    public function onAuthenticationSuccess(Request $request, TokenInterface $token)
-    {
-            $redirection = new RedirectResponse($this->router->generate('home'));
-
-        return $redirection;
-    }
-}
-
-
+<?php    namespace App\Listener;    use Symfony\Component\HttpFoundation\RedirectResponse;    use Symfony\Component\HttpFoundation\Request;    use Symfony\Component\Routing\RouterInterface;    use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;    use Symfony\Component\Security\Http\Authentication\AuthenticationSuccessHandlerInterface;    /**     * Class AfterLoginRedirection     *     * @package App\Listener     */    class AfterLoginRedirection implements AuthenticationSuccessHandlerInterface    {        private $router;        /**         * AfterLoginRedirection constructor.         *         * @param RouterInterface $router         */        public function __construct(RouterInterface $router)        {            $this->router = $router;        }        /**         * @param Request $request         *         * @param TokenInterface $token         *         * @return RedirectResponse         */        public function onAuthenticationSuccess(Request $request, TokenInterface $token)        {            $redirection = new RedirectResponse($this->router->generate('home'));            return $redirection;        }    }

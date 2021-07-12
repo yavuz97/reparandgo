@@ -1,42 +1,1 @@
-<?php
-
-namespace App\Controller;
-
-use App\Entity\Intervention;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-
-class InterventionController extends AbstractController
-{
-    /**
-     * @Route("/intervention", name="intervention")
-     */
-    public function index(): Response
-    {
-        return $this->render('intervention/index.html.twig', [
-            'controller_name' => 'InterventionController',
-        ]);
-    }
-
-
-    /**
-     * @Route("/listerInterventions", name="listerInterventions")
-     */
-    public function listerInterventions(): Response
-    {
-        $interventions = $this->getDoctrine()->getRepository(Intervention::class)->findAll();
-
-
-        return $this->render('intervention/index.html.twig', [
-            'controller_name' => 'InterventionController',
-            'controller_name' => $interventions,
-
-        ]);
-    }
-
-
-
-
-
-}
+<?php    namespace App\Controller;    use App\Entity\Intervention;    use App\Entity\PrixInter;    use App\Entity\Produit;    use Doctrine\ORM\EntityManagerInterface;    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;    use Symfony\Component\HttpFoundation\Request;    use Symfony\Component\HttpFoundation\Response;    use Symfony\Component\Routing\Annotation\Route;    class InterventionController extends AbstractController    {        public function tabPrixInter($id)        {            // retoure une tableau avec les valeurs des intervention et les prix pour un produit donnée            $interventions = $this->getDoctrine()->getRepository(Intervention::class)->findAll();            $produit = $this->getDoctrine()->getRepository(Produit::class)->find($id);            $tab = array();            foreach ($interventions as $intervention) {                $prixInter = $this->getDoctrine()->getRepository(PrixInter::class)->findByProdInter($id, $intervention->getId());                $prix = null;                $duree = null;                $id_prixInter = null;                if ($prixInter) {                    $prix = $prixInter->getPrix();                    $duree = $prixInter->getDuree();                    $id_prixInter = $prixInter->getId();                }                $tab [] = [                    'id_intervention' => $intervention->getId(),                    'nom_intervention' => $intervention->getNom(),                    'id_produit' => $produit->getId(),                    'id_prixInter' => $id_prixInter,                    'prix' => $prix,                    'duree' => $duree                ];            }            return $tab;        }        /**         * @Route("interventions-produit/{id}", name="interventions-produit")         */        public function interventionProduit($id, Request $request, EntityManagerInterface $entityManager)        {            $produit = $this->getDoctrine()->getRepository(Produit::class)->find($id);            $tabInter = $this->tabPrixInter($id);            if ($request->get('validation')) {                for ($x = 0; $x < count($request->get('prixInter')['prix']); $x++) {                    if ($request->get('prixInter')['prix'][$x]) {                        $prix = $request->get('prixInter')['prix'][$x];                        $duree = $request->get('prixInter')['duree'][$x];                        $intervention = $this->getDoctrine()->getRepository(Intervention::class)->find($request->get('prixInter')['id_intervention'][$x]);                        $prixInter = $this->getDoctrine()->getRepository(PrixInter::class)->find($request->get('prixInter')['id_prixInter'][$x]);                        if (!$prixInter) {                            $prixInter = new PrixInter();                        }                        if ($duree) {//                        dd($duree);                            $prixInter->setDuree(new \DateTime($duree));                        }                        $prixInter->setProduit($produit);                        $prixInter->setIntervention($intervention);                        $prixInter->setPrix($prix);                        $entityManager->persist($prixInter);                        $entityManager->flush();                    }                }                return $this->redirectToRoute('interventions-produit', ['id' => $id]);            }            return $this->render('admin/phone/interventions-produit.html.twig', [                'tabPrixInter' => $tabInter,                'produit' => $produit,            ]);        }    }

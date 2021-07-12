@@ -53,25 +53,29 @@
 
     .itemScroll {
         display: inline-block;
-        min-height: 250px;
+        margin: 7em -3em;
+        max-width: 423px;
+        min-height: 212px;
         min-width: 400px;
-        margin: 2em 1em;
-        max-width: 700px;
+        transform: rotate(
+                59deg
+        );
+        padding-left: 50px;
     }
     .itemScroll img{
         object-fit: cover;
         max-width: 100%;
         max-height: 100%;
     }
-    .itemScroll button{
-        left: -570px;
-        position: relative;
-        top: 97px;
-        width: 157px;
+    .itemScroll button {
         background-color: #1e1f1ec2;
-        font-family: cursive;
         border: none;
         cursor: alias;
+        font-family: cursive;
+        left: -282px;
+        position: relative;
+        top: 52px;
+        width: 112px;
     }
     @media screen and (max-width: 500px) {
         .itemScroll {
@@ -97,4 +101,44 @@
 .scrollbar-hidden {
     -ms-overflow-style: none;
     scrollbar-width: none; /* Firefox */
+}
+
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .itemScroll {
+        display: inline-block;
+        margin: 7em -3em;
+        max-width: 410px;
+        min-height: 210px;
+        min-width: 521px;
+        transform: rotate(
+                59deg
+        );
+    }
+    .mainScroll {
+        align-items: center;
+        background: linear-gradient(
+                0deg
+                ,hsla(0,0%,100%,.6) 24%,rgba(58,62,62,.71) 69%);
+        color: #959595;
+        display: flex;
+        grid-area: mainScroll;
+        height: 39vh;
+        overflow-y: hidden;
+        padding: 0;
+    }
+    .itemScroll button {
+        background-color: #1e1f1ec2;
+        border: none;
+        cursor: alias;
+        font-family: cursive;
+        left: -386px;
+        position: relative;
+        top: 67px;
+        width: 157px;
+    }
+
 }

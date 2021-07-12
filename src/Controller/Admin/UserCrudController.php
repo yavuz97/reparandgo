@@ -1,32 +1,1 @@
-<?php
-
-namespace App\Controller\Admin;
-
-use App\Entity\User;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use Vich\UploaderBundle\Form\Type\VichImageType;
-
-class UserCrudController extends AbstractCrudController
-{
-    public static function getEntityFqcn(): string
-    {
-        return User::class;
-    }
-
-    public function configureFields(string $pageName): iterable
-    {
-
-        $fields = [
-            TextField::new('nom'),
-            TextField::new('prenom'),
-            TextField::new('email'),
-        ];
-
-        return $fields;
-    }
-}
+<?php    namespace App\Controller\Admin;    use App\Entity\User;    use EasyCorp\Bundle\EasyAdminBundle\Config\Action;    use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;    use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;    use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;    use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;    use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;    use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;    use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;    use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;    use Vich\UploaderBundle\Form\Type\VichImageType;    class UserCrudController extends AbstractCrudController    {        public static function getEntityFqcn(): string        {            return User::class;        }        public function configureFilters(Filters $filters): Filters        {            return $filters                ->add('nom')                ->add('prenom')                ->add('email')                ;        }        public function configureActions(Actions $actions): Actions        {            // if the method is not defined in a CRUD controller, link to its route            $user_notes = Action::new('user_notes', 'notes', 'fa fa-envelope')                // if the route needs parameters, you can define them:                // 2) using a callable (useful if parameters depend on the entity instance)                // (the type-hint of the function argument is optional but useful)                ->linkToRoute('user_notes', function (User $user): array {                    return [                        'id' => $user->getId()                    ];                });            return $actions                // ...                ->remove(Crud::PAGE_INDEX, Action::NEW)                ->add(Crud::PAGE_INDEX, $user_notes)                ->add(Crud::PAGE_INDEX, Action::DETAIL);        }        public function configureFields(string $pageName): iterable        {            $fields = [                TextField::new('nom'),                TextField::new('prenom'),                TextField::new('email'),            ];            return $fields;        }    }

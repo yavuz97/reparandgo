@@ -6,7 +6,6 @@
             top: 125px;
         }
     </style>
-    <div style="margin-top:150px "></div>
     {% for message in app.flashes('message') %}
         <div class="alert alert-success m-t-100" role="alert"></div>
     {% endfor %}
@@ -16,12 +15,13 @@
     {% for message in app.flashes('danger') %}
         <div style="margin-top: 100px" class="alert alert-danger m-t-100" role="alert"></div>
     {% endfor %}
-    <div style="margin-top:150px "></div>
-    <div class="container">
-        <h1 class="row justify-content-center">Identification</h1>
-        <hr class="w-25"/>
+    <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
+
+    <div class="mb-5">
+        <h1 class="row justify-content-center">Identifications</h1>
+        <hr style="margin: 15px auto;">
         <div class="d-flex justify-content-center">
-            <div class="border border-dark rounded w-75 p-3">
+            <div class="border border-dark rounded w-75 p-5">
                 <form method="post" action="{{ path('security_login') }}">
                     <div class="col">
                         <label>Email :</label>
@@ -32,18 +32,11 @@
                         <input type="password" class="form-control" name="_password">
                     </div>
                     <br/>
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center px-5">
                         <button type="submit" class="btn btn-outline-success">S'identifier</button>
+                        <a class="mt-5" href="{{ path('registration') }}"> Vous n'avez pas un compte ? Créer un compte </a>
                     </div>
                 </form>
-{#                <div class="row ">#}
-{#                    <div class="col-6">#}
-{#                        <a style="margin-left: 20px;" href="{{ path('oubliePass') }}"> Mot de passe oublié ? </a>#}
-{#                    </div>#}
-{#                    <div class="col-6">#}
-{#                        <a style="margin-left: 20px" href="{{ path('renvoieActivationCompte') }}"> Renvoyer un mail de confirmation </a>#}
-{#                    </div>#}
-{#                </div>#}
             </div>
         </div>
 

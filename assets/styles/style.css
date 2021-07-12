@@ -1,21 +1,19 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&display=swap');
 /*general*/
+* {
+    font-family: 'Poppins', sans-serif;
+}
 .responsiveMenuBar{
     display: none;
 }
 
+
 a{
-    font-family: 'Lato', sans-serif;
     font-size: 17px;
 }
-header{
-    font-family: 'Lato', sans-serif;
-}
+
 body {
     color: #454545;
-    /*font-family: 'Cabin-Regular';*/
-    font-family: 'Lato', sans-serif;
     font-size: 22px;
 }
 
@@ -69,10 +67,10 @@ footer{
 
 .navbar {
     padding: 6px 70px;
-    background-color: #141316;
+    position: relative;
+    background: black;
     -webkit-transition: background-color .3s;
     transition: background-color .3s;
-    position: fixed;;
     width: 100%;
 }
 
@@ -973,6 +971,9 @@ le page produit*/
 .yav-card-title-container{
     height: 75%
 }
+.homeFaIconsContainer p{
+    font-size: 13px;
+}
 @media (min-width: 992px){
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1.5rem;
@@ -999,7 +1000,7 @@ and (max-device-width : 480px) {
         position: relative;
     }
     .navbar {
-        height: 160px;
+        height: 200px;
     }
 
     .logo {
@@ -1039,11 +1040,12 @@ and (max-device-width : 480px) {
     .sidenav a {
         display: block;
         font-size: 54px;
-        padding: 10px 8px 8px 96px;
+        padding: 10px 8px 69px 96px;
         text-decoration: none;
         transition: .3s;
         color: white;
         font-weight: bold;
+        font-family: 'Lato';
     }
     .sidenav a:hover {
         color: #f1f1f1;
@@ -1071,7 +1073,7 @@ and (max-device-width : 480px) {
         font-size: 77px;
     }
     .yav-container .container p{
-        font-size: 27px;
+        font-size: 35px;
     }
     .yav-container {
         padding: 114px 0 181px 0;
@@ -1097,11 +1099,30 @@ and (max-device-width : 480px) {
 
     /*home page responsive*/
     .mainScroll {
-        height: 46vh;
-        padding: 194px 0 0 0;
+        align-items: center;
+        background: linear-gradient(
+                0deg
+                ,hsla(0,0%,100%,.6) 24%,rgba(58,62,62,.71) 69%);
+        color: #959595;
+        display: flex;
+        grid-area: mainScroll;
+        height: 38vh;
+        overflow-y: hidden;
+        padding: 158px 0 0 0;
+    }
+    .homeFaIconsContainer i{
+        font-size: 90px;
+        margin-bottom: 5px;
+
+    }
+    .homeFaIconsContainer h5{
+        font-size: 36px;
+    }
+    .homeFaIconsContainer p{
+        font-size: 35px;
     }
     h1 {
-        font-size: 5.9vw;
+        font-size: 58px;
     }
     h2 {
         font-size: 3.0vh;
@@ -1113,13 +1134,14 @@ and (max-device-width : 480px) {
         font-size: 2vh;
     }
     p {
-        font-size: 2vmin;
+        font-size: 35px;
     }
     .fa{
         font-size: 73px;
     }
-    .h5, h5 {
-        font-size: 30px
+    .h5 h5{
+        font-size: 35px;
+        font-weight: bold;
     }
     /*serie des phones */
     .phone-card{
@@ -1174,9 +1196,31 @@ and (max-device-width : 480px) {
         height: 36%;
     }
 
-
-
-
+    .googleAvisLinkFa{
+        font-size: 33px;
+    }
+    .googleImageAndTextContainer a {
+        left: -63px;
+        position: relative;
+        top: -55px;
+        font-size: 16px;
+    }
+    .googleAvisLinkFa {
+        font-size: 18px;
+    }
+    .googleImageAndTextContainer img {
+        position: relative;
+        right: -44px;
+        top: -16px;
+        width: 278px;
+    }
+    .iphone-s1-6 {
+        margin-bottom: -451px;
+        opacity: 1;
+        -webkit-transform:translate(-50%,-84%) rotate(31deg);
+        -ms-transform: translate(-50%,-84%) rotate(31deg);
+        transform: translate(-50%,-84%) rotate(31deg);
+    }
 
 }
 

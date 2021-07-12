@@ -88,11 +88,11 @@
         </form>
         <div class="lines">
             {% for note in notes %}
-            <form method="post" style="position: absolute;
+                <form method="post" style="position: absolute;
        margin: 24px 0 0 4px;">
-                <button style="padding: 0px 15px 0 15px;" type="submit" name="supprimer_note" value="{{ note.id }}" class="btn btn-sm btn-danger"> x </button>
-            </form>
-            <div class="text" contenteditable spellcheck="false">
+                    <button style="padding: 0px 15px 0 15px;" type="submit" name="supprimer_note" value="{{ note.id }}" class="btn btn-sm btn-danger"> x </button>
+                </form>
+                <div class="text" contenteditable spellcheck="false">
                     <em> {{ note.date|date("m/d/Y")  }} </em> <span class="noteAuteur" >{{ note.auteur }}</span> <br /><br />
                     {{ note.note }}
                 </div>
@@ -107,6 +107,5 @@
 
 
 {% endblock %}
-
 
 

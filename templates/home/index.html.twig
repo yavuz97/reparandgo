@@ -1,77 +1,239 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Réparation Téléphone & Ordinateur & Tablette & clés minute sur Metz - Repar and go {% endblock %}
+{% block meta %}
 
+<meta name="description" content="Réparez vos téléphones en 20 minutes. Ecran cassé ? On fait remplacement d'écran d'iphone, samsung, xiomi, oppo.. Solution pour des problèmes
+de batterie ou buttons smartphone. Réparation de l'ordinateur et tabllete.  Vente d'accessoire téléphone.
+achat et vente des smartphones">
+<meta name="robots" content="index,follow" />
+{% endblock %}
+{% block stylesheets %}
+<style>
+    .home-hero{
+        display: none;
+    }
+    #homePageDesktopTitle{
+        display: none;
+    }
+    .btnLgMobile{
+        display: none;
+    }
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+        #phoneScroll {
+            display: none;
+        }
+        .home-hero{
+            display: block;
+        }
+        .btnLgMobile{
+            display: block;
+        }
+        .home-hero{
+            position: relative;
+            height: 50vh;
+            overflow: hidden;
+            background: url(https://reparandgo.com/build/general/homeHeroWomen.4e942a18.png) no-repeat center;
+            background-size: cover;
+            background-position-x: 0;
+            margin-bottom: 90px;
+        }
+        .home-hero-container{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -170%);
+            text-align: left;
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Poppins', serif;
+        }
+        #homeHeroTitle{
+            font-weight: 700;
+
+        }
+        .home-hero-container h1{
+            font-family: sans-serif;
+            font-size: 81px;
+            letter-spacing: 0.2rem;
+            margin: 0;
+            text-shadow: 0 0 10px #00000054;
+        }
+        .des {
+            margin: 20px;
+            display: block;
+            font-size: 26px;
+            text-shadow: 0 0 10px black;
+        }
+        .btnLgMobile {
+            color: #ffffff;
+            padding: 28px 100px;
+            text-decoration: none;
+            background: #f7d33f;
+            border-radius: 8px;
+            transition: 0.3s all;
+            font-size: 57px;
+            position: absolute;
+            font-weight: 900;
+            text-shadow: 0 0 10px #00000054;
+            transform: translate(4%, -105%);
+            box-shadow: 2px 2px 11px 7px rgb(0 0 0 / 20%);
+        }
+        .btnLgMobile:hover{
+            opacity: 0.8;
+        }
+        .mobileIconsMargin{
+            margin-bottom: 130px;
+        }
+
+    }
+</style>
+{% endblock %}
 {% block body %}
 
 
+{#<style>#}
+{#    .homeFaIconsContainer p{#}
+{#        font-size: 13px;#}
+{#    }#}
+{#    @media only screen#}
+{#    and (min-device-width : 320px)#}
+{#    and (max-device-width : 480px) {#}
+{#        .mainScroll {#}
+{#            align-items: center;#}
+{#            background: linear-gradient(#}
+{#                    0deg, hsla(0, 0%, 100%, .6) 24%, rgba(58, 62, 62, .71) 69%);#}
+{#            color: #959595;#}
+{#            display: flex;#}
+{#            grid-area: mainScroll;#}
+{#            height: 42vh;#}
+{#            overflow-y: hidden;#}
+{#            padding: 171px 0 0 0;#}
+{#        }#}
+{#        .homeFaIconsContainer i{#}
+{#            font-size: 90px;#}
+{#            margin-bottom: 5px;#}
 
+{#        }#}
+{#        .homeFaIconsContainer h5{#}
+{#            font-size: 36px;#}
+{#        }#}
+{#        .homeFaIconsContainer p{#}
+{#            font-size: 35px;#}
+{#        }#}
+{#        .homeFaIconsContainer col{#}
+{#           margin-bottom: 10px;#}
+{#        }#}
+{#        .googleAvisLinkFa{#}
+{#            font-size: 33px;#}
+{#        }#}
+{#        .googleImageAndTextContainer a {#}
+{#            left: -63px;#}
+{#            position: relative;#}
+{#            top: -31px;#}
+{#        }#}
+{#        .googleImageAndTextContainer img {#}
+{#            position: relative;#}
+{#            right: -44px;#}
+{#            top: -16px;#}
+{#            width: 278px;#}
+{#        }#}
+{#        .yav-container .container h1 {#}
+{#            font-size: 58px;#}
+{#        }#}
+
+{#        .iphone-s1-6.show {#}
+{#            opacity: 1;#}
+{#            -webkit-transform: translate(-46%,-47%);#}
+{#            -ms-transform: translate(-46%,-47%);#}
+{#            transform: translate(-50%,-84%) rotate(#}
+{#                    31deg#}
+{#            );#}
+{#        }#}
+
+
+{#    }#}
+
+{#</style>#}
 
     <div id="hero-image-navbar-trigger" > </div>
+
+    <div class="home-hero">
+        <div class="home-hero-container">
+            <h1 id="homeHeroTitle"><span> Réparation <br> sur Metz </span></h1>
+            <span class="des">Téléphone & ordinateur & tablette & clés-minute</span>
+        </div>
+    </div>
+    <div class="align-items-center">
+        <a class="btnLgMobile" href="#"><i class="fa fa-wrench" aria-hidden="true"></i> Trouver  mon appareil </a>
+    </div>
+
     <div class="grid-containerScroll">
 
-        <main class="grid-itemScroll mainScroll">
+        <main id="phoneScroll" class="grid-itemScroll mainScroll">
             <div class="itemsScroll">
                 <div class="itemScroll item1">
                     <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_tel-min.png') }}" alt="telephone">
-                    <a href="{{ path('list-marques') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
+                    <a href="{{ path('list-marques') }}" > <button class="btn btn-md btn-dark"> aller ! </button> </a>
                 </div>
                 <div class="itemScroll item2">
                     <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_ordi-min.png') }}" alt="telephone">
-                    <a href="{{ path('reparationOrdinateur') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
+                    <a href="{{ path('reparationOrdinateur') }}" > <button class="btn btn-md btn-dark"> aller ! </button> </a>
                 </div>
                 <div class="itemScroll item3">
                     <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_tab-min.png') }}"  alt="telephone">
-                    <a href="{{ path('reparationTablette') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
+                    <a href="{{ path('reparationTablette') }}" > <button class="btn btn-md btn-dark"> aller ! </button> </a>
                 </div>
                 <div class="itemScroll item4">
                     <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_cle-min.png') }}" alt="telephone">
-                    <a href="{{ path('clesMinute') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
+                    <a href="{{ path('clesMinute') }}" > <button class="btn btn-md btn-dark"> aller ! </button> </a>
                 </div>
                 <div class="itemScroll item5">
                     <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_access-min.png') }}" alt="telephone">
                 </div>
                 <div class="itemScroll item6">
                     <img class="menuService-img" src="{{ asset('build/scrollPhone/mob_imp-min.png') }}" alt="telephone">
-                    <a href="{{ path('impressionTampon') }}" > <button class="btn btn-lg btn-dark"> aller ! </button> </a>
+                    <a href="{{ path('impressionTampon') }}" > <button class="btn btn-md btn-dark"> aller ! </button> </a>
                 </div>
             </div>
 
         </main>
     </div>
 
-    <h1 class="mb-5" style="text-align: center;font-style: italic;color: gray; font-family: FontAwesome" >  ‘‘Répar'&Go a tout ce qu'il faut.’’ </h1>
-    <div  class="container container-sm container-md container-lg container-xl container-xxl  ">
+    <h1 id="homePageDesktopTitle" class="mb-5" style="text-align: center;font-style: italic;color: gray; font-family: FontAwesome" >  ‘‘ Réparation Téléphone & Ordinateur & Tablette & clés minute sur Metz.  <br> - Repar and go’’ </h1>
+    <div  class="homeFaIconsContainer container container-sm container-md container-lg container-xl container-xxl  ">
         <div class="row" style="    margin-top: 100px;margin-bottom: 47px;">
-            <div class="col col-lg-2 col-xl-2  col-sm-4 col-md-4 mb-md-5 text-center">
-                <i class="fa fa-bug fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Virus</h5>
-                <p class="text-muted fw-light fs-6">Nettoyage de virus, augementation de vitesse</p>
+            <div class="mobileIconsMargin col col-lg-2 col-xl-2 col-sm-12 col-md-12 mb-lg-5 text-center">
+                <i class="fa fa-bug fa-2x mb-md-5 mb-sm-5 mb-lg-2" aria-hidden="true"></i>
+                <h5 class="fw-bold mb-lg-0 mb-md-5 mb-sm-5">Virus</h5>
+                <p class="text-muted fw-light mt-md-3">formatage de votre appareil</p>
             </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4 col-md-4 mb-md-5 text-center">
-                <i class="fa fa-upload fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Mise à jour</h5>
-                <p class="text-muted fw-light fs-6"> Mise à jour de votre système</p>
+            <div class="mobileIconsMargin col col-lg-2 col-xl-2 col-sm-12 col-md-12  text-center">
+                <i class="fa fa-upload fa-2x mb-md-5 mb-sm-5 mb-lg-2" aria-hidden="true"></i>
+                <h5 class="fw-bold mb-lg-0 mb-md-5 mb-sm-5">Mise à jour</h5>
+                <p class="text-muted fw-light mt-md-3"> Mise à jour de votre appareil éléctronique </p>
             </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4 col-md-4 mb-md-5 text-center">
-                <i class="fa fa-mobile fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Ecran</h5>
-                <p class="text-muted fw-light fs-6 "> Changement de écran cassé. Réplacement d'écran</p>
+            <div class="mobileIconsMargin col col-lg-2 col-xl-2 col-sm-12 col-md-12   text-center">
+                <i class="fa fa-mobile fa-2x mb-md-5 mb-sm-5 mb-lg-2" aria-hidden="true"></i>
+                <h5 class="fw-bold mb-lg-0 mb-md-5 mb-sm-5">Ecran</h5>
+                <p class="text-muted fw-light mt-md-3"> Changement d'écran cassé. Remplacement d'écran</p>
             </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4   col-md-4 text-center">
-                <i class="fa fa-battery-half fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Batterie</h5>
-                <p class="text-muted fw-light fs-6 ">Problèmes lié au batterie non fonctionnel</p>
+            <div class="mobileIconsMargin col col-lg-2 col-xl-2 col-sm-12     col-md-12 text-center">
+                <i class="fa fa-battery-half fa-2x mb-md-5 mb-sm-5 mb-lg-2" aria-hidden="true"></i>
+                <h5 class="fw-bold mb-lg-0 mb-md-5 mb-sm-5">Batterie</h5>
+                <p class="text-muted fw-light mt-md-3">Problèmes liés à la batterie</p>
             </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4 col-md-4 text-center">
-                <i class="fa fa-sliders fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Buttons</h5>
-                <p class="text-muted fw-light fs-6"> Réparation des buttons on/off ou buttons de clavier</p>
+            <div class="mobileIconsMargin col col-lg-2 col-xl-2 col-sm-12 col-md-12   text-center">
+                <i class="fa fa-sliders fa-2x mb-md-5 mb-sm-5 mb-lg-2" aria-hidden="true"></i>
+                <h5 class="fw-bold mb-lg-0 mb-md-5 mb-sm-5">Boutons</h5>
+                <p class="text-muted fw-light mt-md-3"> Boutons on/off de téléphone & tablette </p>
             </div>
-            <div class="col col-lg-2 col-xl-2 col-sm-4 col-md-4 text-center">
-                <i class="fa fa-key fa-2x mb-2" aria-hidden="true"></i>
-                <h5 class="fw-bold">Clés minute</h5>
-                <p class="text-muted fw-light fs-6">Service de clés-minute. Réproduction de vos clés</p>
+            <div class="mobileIconsMargin col col-lg-2 col-xl-2 col-sm-12    col-md-12 text-center">
+                <i class="fa fa-key fa-2x mb-md-5 mb-sm-5 mb-lg-2" aria-hidden="true"></i>
+                <h5 class="fw-bold mb-lg-0 mb-md-5 mb-sm-5">Clés minute</h5>
+                <p class="text-muted fw-light mt-md-3">Service de clés-minute. Réproduction des clés</p>
             </div>
         </div>
     </div>
@@ -80,19 +242,18 @@
         <div class="container container-md container-sm">
             <div class="row">
                 <div class="col-md-8 offset-md-4  col-lg-8 offset-lg-4  col-sm-12 offset-sm-4  col-xs-12 offset-xs-4 " >
-                    <h1>Réparation rapide et efficace! </h1>
-                    <p class="mt-4">Écran cassé? Batterie non fonctionnelle? Téléphone bloqué? Faites confiance à notre service de réparation et déblocage et confiez nous votre téléphone. Nous vous le remettrons comme neuf en un rien de temps!</p>
+                    <h2 class="fw-bold">Réparation de smartphone rapide et efficace! </h2>
+                    <p class="mt-4 homeSloganText">Écran cassé? Batterie non fonctionnelle? Téléphone bloqué? <br> Faites confiance à notre service de réparation et déblocage et confiez nous votre téléphone. Nous vous le remettrons comme neuf en un rien de temps!</p>
                 </div>
             </div>
-            <figure class="iphone-s1-6"> <img style="width: 986px"  src="{{ asset("build/general/iphoneClined.webp") }}" alt="iphoneS1" ></figure>
+            <figure class="iphone-s1-6"> <img style="width: 986px"  src="{{ asset("build/general/iphoneClined.png") }}" alt="iphoneS1" ></figure>
         </div>
     </div>
 
-    <div id="" class="yav-container yav-container-dark">
+    <div id="" class="yav-container homeDarkPart yav-container-dark">
         <div class="container" >
-            <div class="row">
-                <div class="vektors-home"  >
-                    <div class="col">
+            <div class="row text-center">
+                    <div class="col col-lg-3 col-md-6 col-sm-6  mb-mb-5 mb-sm-5 mb-lg-0">
                         <div class="undrawSVG-index d-flex align-items-center justify-content-center">
                             <img src="{{ asset("build/undraw/undraw_app_data_re_vg5c.svg") }}" alt="android" >
                         </div>
@@ -101,46 +262,48 @@
                         </div>
                         <p> Réparation des problèmes lié au système  </p>
                     </div>
-                    <div class="col">
+                    <div class="col col-lg-3 col-md-6 col-sm-6 mb-mb-5 mb-sm-5 mb-lg-0">
                         <div class="undrawSVG-index d-flex align-items-center justify-content-center">
                             <img src="{{ asset("build/undraw/undraw_voice_assistant_nrv7.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
                         </div>
                         <div class="undrawSVG-index d-flex align-items-center justify-content-center">
-                            <h5>Button on/off </h5>
+                            <h5>Changement de pièce </h5>
                         </div>
-                        <p>Réparation des problèmes de bouton d'alimentation</p>
+                        <p>Réparation de votre appareil</p>
                     </div>
-                    <div class="col">
+                    <div class="col col-lg-3 col-md-6 col-sm-6 mt-mb-5 mt-sm-5 mt-lg-0">
                         <div class="undrawSVG-index d-flex align-items-center justify-content-center" >
                             <img src="{{ asset("build/undraw/undraw_sync4_xlc6.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
                         </div>
                         <div class="d-flex align-items-center justify-content-center">
                             <h5>  Réseau   </h5>
                         </div>
-                        <p> Réparation des problèmes lié au connexion  </p>
+                        <p> Réparation des problèmes de connexion  </p>
                     </div>
-                    <div class="col">
+                    <div class="col col-lg-3 col-md-6 col-sm-6 mt-mb-5 mt-sm-5 mt-lg-0">
                         <div class="undrawSVG-index d-flex align-items-center justify-content-center">
                             <img src="{{ asset("build/undraw/undraw_Mobile_app_re_catg.svg") }}" alt="android" style="max-height: 100%; max-width: 100%;object-fit: cover">
                         </div>
                         <div class="d-flex align-items-center justify-content-center">
-                            <h5> Batterie  </h5>
+                            <h5> Achat  </h5>
                         </div>
-                        <p>Réparation des problèmes de bouton d'alimentation</p>
+                        <p>On achète vos anciens appareils</p>
                     </div>
-                </div>
+
 
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="h-bold mt-100 mb-4 title-homePage-dark" >La Tranquilité D'esprit pour vos problèmes informatiques </h1>
+                    <h2 class="h-bold mt-100 mb-4 title-homePage-dark fw-bold text-monospace" >  Réparation et achat de votre ancien smartphone   &  Vente accessoires </h2>
                 </div>
+                <p> Répar and go est là pour répondre à tous vos problèmes.
+                Nous <strong>achetons et vendons</strong> des téléphones. Vous pouvez aussi trouver des <strong>accessoires de téléphones</strong> dans notre établissement. </p>
             </div>
             <div class="row googleImageAndTextContainer" >
                 <div class="col  d-flex flex-column justify-content-center align-items-center ">
                     <div> Les avis sur Google  </div>
-                    <img src="{{ asset("build/general/google_avis.png") }}">
-                    <a href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5"> Voir tout les avis <i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                    <img src="{{ asset("build/general/google_avis.png") }}" alt="googleAvis">
+                    <a href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5"> Voir tout les avis <i class="fa fa-external-link googleAvisLinkFa" aria-hidden="true"></i> </a>
 
                 </div>
 
@@ -153,7 +316,7 @@
 
                                 <div class="googleUserImg bgPurple">B</div>
                                 <div class="googleUserInfo">
-                                    <p>BAHU Alexia</p> <span>1 commentaire</span>
+                                    <p>Balex</p> <span>1 commentaire</span>
                                     <div>
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -167,8 +330,7 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">
-                                Très satisfaite, tant par l'accueil, les explications et la qualité du travail apportés à la réparation de l'écran de l'iphone 7 de mon fils. Les propriétaires sont charmants et soigneux. Prix tout à fait corrects. Mon fils est reparti ravi.                        </p>
-                        </div>
+                                J'y ai fait réparer un Galaxy A72 qui avait des problèmes de chargement. Excellent service même en prenant en compte le fait que le téléphone est très récent.                        </div>
                     </div>
                 </div>
                 <div class="col mb-md-5 col-lg-4 col-md-12">
@@ -176,9 +338,9 @@
                         <div class="row">
                             <div class="col  d-flex align-items-center justify-content-center" >
 
-                                <div class="googleUserImg bg-info">J</div>
+                                <div class="googleUserImg bg-info">M</div>
                                 <div class="googleUserInfo">
-                                    <p>Julien F.</p> <span>1 commentaire</span>
+                                    <p>Mamadou Aliou Bah.</p> <span>1 commentaire</span>
                                     <div>
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -192,34 +354,33 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">
-                                Mon IPhone 6S ne fonctionnais plus .. Impossible de le démarrer .. un accueil chaleureux, une réparation rapide et je repars avec une batterie neuve également !
-                                Après avoir regardé les avis sur la page j&rsquo;ai choisis cette boutique vraiment bien située en plus ! Je dois dire que je ne suis pas déçu ! Super rapport qualité/prix ! Je recommande vivement !                        </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-md-5 col-lg-4 col-md-12">
-                    <div class="card cardGoogle" >
-                        <div class="row">
-                            <div class="col  d-flex align-items-center justify-content-center" >
-
-                                <div class="googleUserImg bgGreenD">E</div>
-                                <div class="googleUserInfo">
-                                    <p>Elisa A.</p> <span>1 commentaire</span>
-                                    <div>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">
-                                Dépannage un dimanche suite à un écran cassé, accueil très chaleureux, serviable et conciliant. Travail très bien effectué et rapide. Ravie d avoir pu faire réparer mon téléphone un dimanche après-midi et surtout très compétent. Je recommande vivement
+                                Réparation Samsung a50 changement écran original moins d une heure c est fait.je vous conseille les yeux fermer
                             </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-md-5 col-lg-4 col-md-12">
+                    <div class="card cardGoogle" >
+                        <div class="row">
+                            <div class="col  d-flex align-items-center justify-content-center" >
+
+                                <div class="googleUserImg bgGreenD">Y</div>
+                                <div class="googleUserInfo">
+                                    <p>yacine marie fall</p> <span>1 commentaire</span>
+                                    <div>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Très professionnel et sympathique! Je recommande fortement (Translated by Google) Very professional and friendly! I highly recommend                            </p>
                         </div>
                     </div>
                 </div>
@@ -249,7 +410,7 @@
                                 <h4 class="h-bold">Votre téléphone ne s'allume plus ? </h4>
                             </div>
                             <div class="iphone-details right text-left">
-                                <h4 class="h-bold">La pile ne garde plus la charge ?</h4>
+                                <h4 class="h-bold">La batterie ne tient plus la charge ?</h4>
                             </div>
                         </div>
                     </div>
@@ -261,6 +422,7 @@
 
     {{ encore_entry_script_tags('homePage') }}
     {{ encore_entry_script_tags('scrollPhone') }}
+
 
 {% endblock %}
 

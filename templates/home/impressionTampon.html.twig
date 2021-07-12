@@ -4,15 +4,89 @@
 
 {% block body %}
 
-
+<style>
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+        .canRq-left-content img {
+            height: 485px;
+            object-fit: cover;
+            object-position: right 74%;
+            width: 290px;
+        }
+        .canRq-right-content img {
+            height: 492px;
+            margin-top: 32px;
+            object-fit: cover;
+            object-position: right 74%;
+            width: 348px;
+        }
+        .canRq-title {
+            font-size: 45px;
+            margin-bottom: 46px;
+        }
+        .canRq-text {
+            font-size: 30px;
+            font-weight: 300;
+        }
+        .small-center-info-tampon {
+            margin-bottom: 45px;
+            margin-top: 2rem;
+        }
+        .small-center-info, .small-center-info-tampon {
+            color: #000;
+            font-size: 41px;
+            font-style: italic;
+            text-align: center;
+            width: 100%;
+        }
+        .tamponW100-container img {
+            height: 490px;
+            margin: 0;
+            object-fit: cover;
+            object-position: right 46%;
+            padding: 0;
+            width: 100%;
+        }
+        .canSq-title {
+            font-size: 33px;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+        .canSq-text {
+            font-size: 35px;
+            font-weight: 100;
+        }
+        .canSq-content.left {
+            padding: 0 486px 0 0;
+        }
+        .canSq-row {
+            background-color: #fff;
+            display: table-row;
+            height: 777px;
+        }
+        .bigCenterTitle {
+            font-size: 56px;
+            padding: 63px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .bigCenterTitleRow{
+            padding: 157px 0 0 0;
+        }
+        .yav-container-imprimerie{
+            padding: 9px 0 181px;
+        }
+    }
+</style>
 <div  id="hero-image-navbar-trigger" ></div>
 
-<div class="row" style="width: 100%">
+<div class="row bigCenterTitleRow" style="width: 100%">
     <div class="bigCenterTitle"> Tampon Gravure & Impimerie</div>
 </div>
 
 
-<div  class="yav-container" >
+<div  class="yav-container yav-container-imprimerie" >
     <div class="container">
         <div class="canRq-container">
             <div class="canRq-left-content">

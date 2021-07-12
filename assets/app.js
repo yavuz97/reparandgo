@@ -21,16 +21,7 @@ import $ from 'jquery'
 
 import peScrollChange from './peScroll'
 
-$(window).on('load', function(){
-    console.log("windows load");
-    peScrollChange.init({
-        elem: '.navbar',
-        trigger: document.querySelector('#hero-image-navbar-trigger').offsetHeight,
-        classesToChange: 'nav-transp',
-        removeClass: true,
-    });
 
-});
 
 document.getElementById("id_responsiveMenuBar").onclick = function openNav() {
     document.getElementById("mySidenav").style.width = "60%";
@@ -41,4 +32,6 @@ document.getElementById("closeNavBar").onclick = function openNav() {
     document.getElementById("id_responsiveMenuBar").style.display = "block";
 
 };
+
+
 

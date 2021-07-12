@@ -1,32 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
-
+{% block title %} service Clés minutes sur Metz  {% endblock %}
+{% block meta %}
+<meta name="description" content="On est spécialisé dans la réparation et le duplicata de clé , nous sommes la solution pour tous vos problèmes de clés !">
+{% endblock %}
 {% block body %}
-    <style>
-        td{
-            font-weight: 400;
-        }
-
-        @media only screen
-        and (min-device-width : 320px)
-        and (max-device-width : 480px) {
-            .hero-container img {
-                display: block;
-                height: 29vh;
-                width: 100%;
-                margin-left: 39px;
-            }
-            .tablePrixClesMinute   i{
-                font-size: 30px;
-            }
-            .clesMinuteTabPrix {
-                top: 155px;
-                left: 0;
-            }
-        }
-
-    </style>
 
 
 
@@ -45,7 +23,7 @@
                 </div>
             </div>
             <div style="height: 25%;" class="card-small-txt-container">
-                <div class="card-small-txt">On est spécialisé dans la réparation et le duplicata de clé , nous sommes la solution pour tous vos problèmes de clés !
+                <div class="card-small-txt">On est spécialisé dans la réparation et le duplicata de clés , nous sommes la solution pour tous vos problèmes de clés !
 
                 </div>
             </div>
@@ -61,12 +39,12 @@
                     <table class="tablePrixClesMinute">
                         <tr>
                             <td> <i class="fa fa-key" aria-hidden="true"></i>
-                                Plates</td>
+                                Plate</td>
                             <td>6€</td>
                         </tr>
                         <tr>
                             <td> <i class="fa fa-key" aria-hidden="true"></i>
-                                A gorges</td>
+                                A gorge</td>
                             <td>14€</td>
                         </tr>
                         <tr>
@@ -76,7 +54,7 @@
                         </tr>
                         <tr>
                             <td><i class="fa fa-key" aria-hidden="true"></i>
-                                Clés de voiture de voiture</td>
+                                Clés de voiture </td>
                             <td></td>
                         </tr>
                         <tr>
@@ -108,7 +86,7 @@
     <div class="container">
         <div class="row">
             <div class="col-6 col-lg-6 col-md-8 " >
-                <h1 class="clesMinuteH1First">Nous réalisons en quelques minutes vos reproductions de clés!</h1>
+                <h1 class="clesMinuteH1First">Service Clés minute sur Metz </h1>
             </div>
         </div>
         <figure class="birCokAnahtar "> <img style="width: 386px;"  src="{{ asset("build/services/clefminute/evAnahtari.png") }}" alt="cles" ></figure>
@@ -121,16 +99,14 @@
         <i class="fa fa-clock-o" aria-hidden="true"></i>
         <div class="smoothCard-title">Disponibilité</div>
         <div class="smoothCard-text">
-            Parce que nous savons qu’un problème tombe toujours au plus mauvais moment, nos serruriers interviennent 24h/24 et ce, 7j/7 pour tous les services d’urgence.
+            Nous sommes ouvert du lundi au samedi.
         </div>
     </div>
     <div  class="smoothCard">
         <i class="fa fa-key" aria-hidden="true"></i>
         <div class="smoothCard-title">Polyvalence</div>
         <div class="smoothCard-text">
-            Nous vous offrons une vaste gamme de services.
-
-            De l’installation d’une nouvelle serrure numérique au changement d’un barillet en passant par la reproduction de vos clés, vous pourrez compter sur nous.
+            Nous effectuons des duplicatas de différents types de clés
         </div>
     </div>
     <div  class="smoothCard">
@@ -146,7 +122,7 @@
 
 
 <div class="row" style="width: 100%">
-  <div class="small-center-info">Pour tout <strong> demande spécifique </strong>  contactez nous <span class="phoneSpan">  07 83 61 62 16 <i class="fas fa-phone"></i></span></div>
+  <div class="small-center-info">Pour toute <strong> demande spécifique </strong>  contactez nous <span class="phoneSpan"> 0387749801 <i class="fas fa-phone"></i></span></div>
 </div>
 
 
@@ -160,10 +136,10 @@
                     Reproduction de clés :
                 </div>
                 <div class="card-small-txt">
-                    Nous réalisons les clés suivants : plates, à gorges, clés de voiture,
+                    Nous réalisons les clés suivantes : plate, à gorge, clés de voiture,
                     clés spéciales, clés protégées, clés à numéro. <br> <br>
-                    Nous réalisons en quelques minutes vos reproductions de clés, grâce à un grand choix de modèles de clés différentes et un stock important. Vous repartez immédiatement avec vos nouvelles clés
-                    Clé brevetée : En cas de perte, la clé brevetée peut être reproduite sur commande, un délais de un à plusieurs jours est nécessaire selon les disponibilités fournisseurs.
+                    Nous réalisons en quelques minutes vos reproductions de clés, grâce à un grand choix de modèles de clés différentes et un stock important. Vous repartez immédiatement avec vos nouvelles clés. <br>
+                    Clé brevetée : En cas de perte, la clé brevetée peut être reproduite sur commande, un délai de un à plusieurs jours est nécessaire selon les disponibilités fournisseurs.
                     <br>
 
                 </div>
@@ -181,7 +157,7 @@
 
 <div class="yav-gallarie">
     <div class="yav-gallarie-title">
-        Voici certains images de chez nous
+        Voici certaines photos de chez nous
     </div>
         <div class="yav-gallarie-photo-container">
             <img src="{{ asset("build/services/imageBoutique/lesCles.jpg") }} ">

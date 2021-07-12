@@ -12,14 +12,12 @@ if (!mediaQery.matches) { // If media query matches
     function checkOffset() {
         if($('#social-float').offset().top + $('#social-float').height()
             >= $('#abc').offset().top - 10){
-            $('#imageCol').css('display', 'flex');
-            $('#imageCol').css('align-items', 'flex-end');
             $('#social-float').css('position', 'absolute');
+            $('#social-float').addClass( "bottom-0" );
         }
 
 
         if($(document).scrollTop() + window.innerHeight < $('#abc').offset().top){
-            $('#imageCol').css('display', 'block');
             $('#social-float').css('position', 'fixed'); // restore when you scroll up
 
         }

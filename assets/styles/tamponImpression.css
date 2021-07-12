@@ -90,3 +90,56 @@
     object-position: right 74%;
     margin-top: -168px;
 }
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .canRq-left-content img {
+        height: 485px;
+        object-fit: cover;
+        object-position: right 74%;
+        width: 290px;
+    }
+    .canRq-right-content img {
+        height: 492px;
+        margin-top: 32px;
+        object-fit: cover;
+        object-position: right 74%;
+        width: 348px;
+    }
+    .canRq-title {
+        font-size: 45px;
+        margin-bottom: 46px;
+    }
+    .canRq-text {
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .small-center-info-tampon {
+        margin-bottom: 45px;
+        margin-top: 2rem;
+    }
+    .small-center-info, .small-center-info-tampon {
+        color: #000;
+        font-size: 41px;
+        font-style: italic;
+        text-align: center;
+        width: 100%;
+    }
+    .tamponW100-container img {
+        height: 490px;
+        margin: 0;
+        object-fit: cover;
+        object-position: right 46%;
+        padding: 0;
+        width: 100%;
+    }
+    .canSq-title {
+        font-size: 33px;
+        font-weight: 600;
+        margin-bottom: 22px;
+    }
+    .canSq-text {
+        font-size: 35px;
+        font-weight: 100;
+    }
+}
