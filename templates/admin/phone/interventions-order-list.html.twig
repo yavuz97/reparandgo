@@ -1,0 +1,105 @@
+
+{{ encore_entry_link_tags('app') }}
+{% block body %}
+
+    <div style="height: 10vh"></div>
+
+
+    {% set url = ea_url()
+        .setController('App\\Controller\\Admin\\ProduitCrudController')
+        .setAction('index') %}
+
+    <div class="container">
+        <a  href="{{ url }}">  Retour au liste des produits </a>
+        <h5 style="margin-top: 30px"> {{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }} </h5>
+        <hr>
+        <form method="post">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Intervention </th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Durée</th>
+                    <th scope="col">Vider</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for intervention in tabPrixInter %}
+
+                    <tr>
+                        <td>
+                            {{ intervention.nom_intervention  }}
+                            <input name="prixInter[id_intervention][]" type="text" value="{{ intervention.id_intervention }}" hidden>
+                        </td>
+                        <td>
+                            <input name="prixInter[prix][]" type="number" step="0.1" min="1" class="form-control w-100" value="{{ intervention.prix | default('') }}"  >
+                        </td>
+                        <td>
+                            <input name="prixInter[duree][]" type="time" class="form-control w-100" value="{{ intervention.duree is empty ? "" : intervention.duree|date("H:i")  }}"  >
+                        </td>
+                        <td>
+                            {% if (intervention.id_prixInter) %}
+                                <a href="{{ path('removePrixInter', {'id': intervention.id_prixInter}) }}"  class="btn btn-danger"> <i class="fa fa-trash" aria-hidden="true"></i></a>
+                            {% else %}
+                                <div class="btn" style="background-color: gray; cursor: no-drop;"> <i class="fa fa-trash" aria-hidden="true"></i></div>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <input name="prixInter[id_produit][]" type="text" value="{{ intervention.id_produit }}" hidden>
+                    <input name="prixInter[id_prixInter][]" type="text" value="{{ intervention.id_prixInter | default('') }}" hidden>
+                {% endfor %}
+
+                </tbody>
+            </table>
+            <button class="btn btn-success" name="validation" value="true"> Soummettre </button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+{#    <div class="container">#}
+{#        <h5> {{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }} </h5>#}
+{#        <hr>#}
+{#        <form method="post">#}
+{#        <table class="table">#}
+{#        <thead>#}
+{#        <tr>#}
+{#            <th scope="col">Intervention </th>#}
+{#            <th scope="col">Prix</th>#}
+
+{#        </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+
+{#        {% for intervention in interventions %}#}
+{#            {% for prixInter in prixInterventions %}#}
+{#                {% if intervention == prixInter.intervention %}#}
+{#                    {% set prix = prixInter.prix  %}#}
+{#                {% endif %}#}
+{#            {% endfor %}#}
+
+{#            <tr>#}
+{#                <td>#}
+{#                    {{ intervention.nom  }}#}
+{#                    <input name="intervention" type="text" value="{{ intervention.id }}" hidden>#}
+{#                </td>#}
+{#                <td>#}
+{#                    <input name="prix" type="text" class="form-control w-100" value="{{ prix | default('') }}"  >#}
+{#                </td>#}
+{#            </tr>#}
+{#            <input name="produit" type="text" value="{{ produit.id }}" hidden>#}
+{#        {% endfor %}#}
+
+{#        </tbody>#}
+{#    </table>#}
+{#        <button class="btn btn-success" name="validation" value="true"> Soummettre </button>#}
+{#        </form>#}
+{#</div>#}
+
+{% endblock %}
