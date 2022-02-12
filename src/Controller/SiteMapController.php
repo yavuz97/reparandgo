@@ -29,7 +29,6 @@ class SiteMapController extends AbstractController
         $urls[] = ['loc' => $this->generateUrl('reparationOrdinateur')];
         $urls[] = ['loc' => $this->generateUrl('reparationTablette')];
         $urls[] = ['loc' => $this->generateUrl('clesMinute')];
-        $urls[] = ['loc' => $this->generateUrl('impressionTampon')];
         $urls[] = ['loc' => $this->generateUrl('security_login')];
         $urls[] = ['loc' => $this->generateUrl('registration')];
         $urls[] = ['loc' => $this->generateUrl('list-marques')];
@@ -49,37 +48,37 @@ class SiteMapController extends AbstractController
                 'lastmod' => $produit->getUpdatedAt()->format('Y-m-d')
             ];
         }
-        foreach ($this->getDoctrine()->getRepository(Marque::class)->findAll() as $marque){
-            foreach ($this->getDoctrine()->getRepository(Categorie::class)->findAll() as $categorie) {
-                $images = [
-                    'loc' => 'images/brand_images/'. $marque->getImage(),
-                    'title' =>  $marque->getNom()
-                ];
-                $urls[] = [
-                    'loc' => $this->generateUrl('list-produits-marque-categorie',[
-                        'id_marque' => $marque->getId(),
-                        'id_categorie' => $categorie->getId()
-                    ]),
-                    'image' => $images,
-                ];
-            }
+//        foreach ($this->getDoctrine()->getRepository(Marque::class)->findAll() as $marque){
+//            foreach ($this->getDoctrine()->getRepository(Categorie::class)->findAll() as $categorie) {
+//                $images = [
+//                    'loc' => 'images/brand_images/'. $marque->getImage(),
+//                    'title' =>  $marque->getNom()
+//                ];
+//                $urls[] = [
+//                    'loc' => $this->generateUrl('list-produits-marque-categorie',[
+//                        'id_marque' => $marque->getId(),
+//                        'id_categorie' => $categorie->getId()
+//                    ]),
+//                    'image' => $images,
+//                ];
+//            }
+//
+//        }
 
-        }
-
-        foreach ($this->getDoctrine()->getRepository(Categorie::class)->findAll() as $categorie) {
-            $urls[] = [
-                'loc' => $this->generateUrl('list-marques-categorie',[
-                    'id' => $categorie->getId()
-                ]),
-            ];
-        }
-        foreach ($this->getDoctrine()->getRepository(Serie::class)->findAll() as $serie) {
-            $urls[] = [
-                'loc' => $this->generateUrl('seriePhone',[
-                    'id' => $serie->getId()
-                ]),
-            ];
-        }
+//        foreach ($this->getDoctrine()->getRepository(Categorie::class)->findAll() as $categorie) {
+//            $urls[] = [
+//                'loc' => $this->generateUrl('list-marques-categorie',[
+//                    'id' => $categorie->getId()
+//                ]),
+//            ];
+//        }
+//        foreach ($this->getDoctrine()->getRepository(Serie::class)->findAll() as $serie) {
+//            $urls[] = [
+//                'loc' => $this->generateUrl('seriePhone',[
+//                    'id' => $serie->getId()
+//                ]),
+//            ];
+//        }
 
         // Fabricationd de la réponse
         $response = new Response(

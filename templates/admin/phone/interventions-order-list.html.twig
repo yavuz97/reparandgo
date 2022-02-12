@@ -6,54 +6,48 @@
 
 
     {% set url = ea_url()
-        .setController('App\\Controller\\Admin\\ProduitCrudController')
+        .setController('App\\Controller\\Admin\\InterventionCrudController')
         .setAction('index') %}
 
     <div class="container">
-        <a  href="{{ url }}">  Retour au liste des produits </a>
-        <h5 style="margin-top: 30px"> {{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }} </h5>
+        <a  href="{{ url }}">  Retour au liste des interventions </a>
         <hr>
-        <form method="post">
-            <table class="table">
+            <table class="table table-striped">
                 <thead>
                 <tr>
+                    <th scope="col">id order </th>
                     <th scope="col">Intervention </th>
-                    <th scope="col">Prix</th>
-                    <th scope="col">Durée</th>
-                    <th scope="col">Vider</th>
+                    <th scope="col">image </th>
+                    <th scope="col">up </th>
+                    <th scope="col">down </th>
                 </tr>
                 </thead>
                 <tbody>
 
-                {% for intervention in tabPrixInter %}
+                {% for intervention in interventions %}
 
                     <tr>
                         <td>
-                            {{ intervention.nom_intervention  }}
-                            <input name="prixInter[id_intervention][]" type="text" value="{{ intervention.id_intervention }}" hidden>
+                            {{ intervention.nOrder  }}
                         </td>
                         <td>
-                            <input name="prixInter[prix][]" type="number" step="0.1" min="1" class="form-control w-100" value="{{ intervention.prix | default('') }}"  >
+                            {{ intervention.nom  }}
                         </td>
                         <td>
-                            <input name="prixInter[duree][]" type="time" class="form-control w-100" value="{{ intervention.duree is empty ? "" : intervention.duree|date("H:i")  }}"  >
+                            {{ intervention.image | raw }}
                         </td>
                         <td>
-                            {% if (intervention.id_prixInter) %}
-                                <a href="{{ path('removePrixInter', {'id': intervention.id_prixInter}) }}"  class="btn btn-danger"> <i class="fa fa-trash" aria-hidden="true"></i></a>
-                            {% else %}
-                                <div class="btn" style="background-color: gray; cursor: no-drop;"> <i class="fa fa-trash" aria-hidden="true"></i></div>
-                            {% endif %}
+                        <a href="{{ path('interUp', {'id': intervention.id, 'redirectionVar' : "customList" }) }}"> <i style="font-size: 36px;color: green" class="fa fa-arrow-up" aria-hidden="true"></i> </a>
                         </td>
+                        <td>
+                            <a href="{{ path('interDown', {'id': intervention.id, 'redirectionVar' : "customList"}) }}"> <i style="font-size: 36px;color: red" class="fa fa-arrow-down" aria-hidden="true"></i> </a>
+                        </td>
+
                     </tr>
-                    <input name="prixInter[id_produit][]" type="text" value="{{ intervention.id_produit }}" hidden>
-                    <input name="prixInter[id_prixInter][]" type="text" value="{{ intervention.id_prixInter | default('') }}" hidden>
                 {% endfor %}
 
                 </tbody>
             </table>
-            <button class="btn btn-success" name="validation" value="true"> Soummettre </button>
-        </form>
     </div>
 
 

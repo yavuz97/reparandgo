@@ -1,51 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Répareration {{ produit.nom }} par Repar and go sur Metz {% endblock %}
+{% block title %}Répareration {{ produit.nom }} : Repar and go sur Metz {% endblock %}
 {% block meta %}
 <meta name="description" content="Réparation de téléphone {{ produit.nom }}  metz ">
-<meta name="keywords" content="Réparation {{ produit.marque.nom }} Metz Repar and go " />
+<meta name="keywords" content="Réparation rapide {{ produit.marque.nom }} Metz Repar and go " />
 
 {% endblock %}
 {% block body %}
 
-    <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
 
     <div class="container container-resp-w100">
         <div class="row">
             <div class="col-12 d-flex flex-column align-items-center justify-content-center">
-                <h5> Vous avez <span class="text-primary">10%</span>  de réduction si vous avez une compte Repar'& Go</h5>
-                <p class="text-muted"> <small> <em class="inforProduitShow"> Inscrition est gratuit, qu'attendez vous ? :) <a class="inscrivezVousLink" href="{{ path('registration') }}"> inscrivez-vous  </a>  </em> </small>  </p>
+                <h5 class="responsivePadding rp-txt-45 mt-5"> Vous avez <span class="text-primary">5%</span>  de réduction si vous avez une compte Repar'& Go</h5>
+                <p class="text-muted  responsivePadding rp-txt-45"> <small> <em class="inforProduitShow "> Inscrition est gratuit, qu'attendez vous ? :) <a class="inscrivezVousLink" href="{{ path('registration') }}"> inscrivez-vous  </a>  </em> </small>  </p>
             </div>
 
         </div>
-        <div class="row">
-            <div  class="col-6 position-relative" id="imageCol" style=" min-height: 550px;">
-                <img  style="height: 500px;"  id="social-float" src="{{ asset("images/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
+        <div class="row responsivePadding">
+            <div  class=" col-lg-6 col-md-12 col-sm-12 col-12 position-relative" id="imageCol" style=" min-height: 550px;">
+                <img   id="social-float" src="{{ asset("images/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="row mt-5">
                     <h1> Réparation {{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }}</h1>
                 </div>
                 <div class="row">
-                    <p class="fw-light m-0 showProduitGaranties">24 mois de garantie <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
-                    <p class="fw-light">Réparation à partir de  20 minutes <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
+                    <p class="fw-light m-0 showProduitGaranties">Tout les réparations en sous garantie  <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
+                    <p class="fw-light">Réparation à partir de  10 minutes <i style="background: #56cc56;color: white;font-size: 14px;padding: 4px;border-radius: 5px;" class="fa fa-check" aria-hidden="true"></i> </p>
                 </div>
 
 
                 <h3>Nos interventions</h3>
                 <hr />
-                {% for prixInter in  produit.prixInters %}
+                {% for prixInter in  prixInters %}
                     <div class="card interventionCard w-100">
                         <div class="row no-gutters me-2">
 
                             <div class="col-sm-3 align-items-center justify-content-center d-flex">
-                                {{ prixInter.intervention.image | raw }}
+                                {{ prixInter.image | raw }}
                             </div>
                             <div class="col-sm-9 mt-3">
                                 <div class="card-body p-0">
                                     <div class="row ">
                                         <div class="col-9 align-items-center ">
-                                            <p class="fw-light interventionNameProduitShow" >{{ prixInter.intervention.nom }}</p>
+                                            <p class="fw-light interventionNameProduitShow" >{{ prixInter.nom }}</p>
                                         </div>
                                         <div class="col-3 align-items-center ">
                                             <h4 class=" float-end position-relative" >{{ prixInter.prix ~ " €" | default('') }}</h4>
@@ -96,6 +95,6 @@
     </div>
 
 
-        {{ encore_entry_script_tags('page_produit') }}
+{#        {{ encore_entry_script_tags('page_produit') }}#}
 
 {% endblock %}

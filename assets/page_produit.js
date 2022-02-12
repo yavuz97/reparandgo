@@ -17,6 +17,8 @@ if (!mediaQery.matches) { // If media query matches
         }
 
 
+
+
         if($(document).scrollTop() + window.innerHeight < $('#abc').offset().top){
             $('#social-float').css('position', 'fixed'); // restore when you scroll up
 

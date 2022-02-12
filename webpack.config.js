@@ -1,4 +1,5 @@
 const Encore = require('@symfony/webpack-encore');
+var webpack = require('webpack');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -13,6 +14,11 @@ Encore
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
+    .addPlugin(   new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+    }))
 
     .copyFiles({
  from: './assets/images',
@@ -40,6 +46,7 @@ Encore
     .addEntry('service_clesMinute', './assets/service_clesMinute.js')
     .addEntry('page_produit', './assets/page_produit.js')
     .addEntry('scrollPhone', './assets/scrollPhone.js')
+    .addEntry('owlCrouselSlider', './assets/owlCrouselSlider.js')
     // .addEntry('toto', './assets/toto.js')
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

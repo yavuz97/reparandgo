@@ -6,6 +6,22 @@
 
 
 <div id="hero-image-navbar-trigger" style="height: 5vh;"></div>
+
+    <div class="row mb-5 mt-5">
+        {% for marque in marquesDeCategorie %}
+            <div class="col-3 col-md-4">
+                <a href="{{ path('list-produits-marque-categorie', {'id_marque' : marque.id, 'id_categorie' : 2}) }}">
+                    <div  class="smoothCard">
+                        <div class="imageCover_brand" style="width: 100%;height: 200px">
+                            <img style="object-fit: cover; max-height: 100%; max-width: 100%" src="{{ asset("images/brand_images/" ~ marque.image ) }}" alt="{{ marque.image }}">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+
 <div id="sloganContent" class="yav-container">
     <div class="container">
         <div class="row">
@@ -36,7 +52,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2 class="h-bold mt-100 mb-4" >La Tranquilité D'esprit pour vos problèmes tech </h2>
+                <h2 class="h-bold mt-100 mb-4" >La Tranquilité d'esprit pour vos problèmes tech </h2>
                 <p>Chez Répar' & Go avec une expérience plus du 10 ans dans le domaine, nous sommes à votre service pour diagnostiquer et réparer tout,
                     du simple écran cassé aux réparations les plus avancées impliquant la micro-soudure.
                 </p>

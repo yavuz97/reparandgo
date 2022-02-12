@@ -11,12 +11,14 @@ import './styles/style.css';
 import './styles/clesMinute.css';
 import './styles/computerReparation.css';
 import './styles/tabletteReparation.css';
-import './styles/tamponImpression.css';
 import './styles/scrollPhones.css';
+
 
 // start the Stimulus application
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 import $ from 'jquery'
 
 import peScrollChange from './peScroll'

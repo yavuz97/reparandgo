@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&display=swap');
 /*general*/
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 .responsiveMenuBar{
     display: none;
@@ -18,14 +18,10 @@ body {
 }
 
 /*logo*/
-.logo-vektor{
-    height: 27px;
-    width: 36px;
-    margin-top: -4px;
-}
+
 .logo{
-    height: 25px;
-    width: 147px;
+    height: 85px;
+    width: 100%;
 }
 
 
@@ -66,7 +62,7 @@ footer{
 }
 
 .navbar {
-    padding: 6px 70px;
+    padding: 6px 0;
     position: relative;
     background: black;
     -webkit-transition: background-color .3s;
@@ -769,7 +765,7 @@ width: 30%;
 }
 
 .phoneSpan:hover{
-    color: #ffa902;
+    color: #ffc107;
     transition:  .3s;
 
 }
@@ -936,7 +932,7 @@ le page produit*/
 }
 .phone_show_interventions i{
     margin-right: 3%;
-    color: #fbf40d;
+    color: #ffc107;
 }
 
 
@@ -945,13 +941,13 @@ le page produit*/
 }
 
 .interventionCard:hover i{
-    color: #fbf40d;
+    color: #ffc107;
 }
 .interventionCard:hover p{
-    color: #fbf40d;
+    color: #ffc107;
 }
 .interventionCard:hover h4{
-    color: #fbf40d;
+    color: #ffc107;
 }
 .interventionCard{
     transition: all .2s ease-in-out;
@@ -974,41 +970,92 @@ le page produit*/
 .homeFaIconsContainer p{
     font-size: 13px;
 }
+
+#imageCol img{
+    height: 500px;
+}
+.secondTitleHomePage{}
+
+.secondTextHomePage{
+    font-size: 17px;
+    padding: 0 81px;
+    font-weight: 400;
+}
+
+
+.btnMobileHomeContainer{
+    display: none;
+}
+.logoMobile{
+    display: none;
+}
+
 @media (min-width: 992px){
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
     }
 }
-
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
+    .logoMobile{
+        width: 130%;
+        display: block;
+        height: auto;
+    }
+    .baseSearchBar{
+        display: none;
+    }
+    .btnMobileHomeContainer{
+        display: block;
+    }
+    .btnMobileHome{
+        background-color: #f5ed09;
+        box-shadow: 2px 2px 4px 15px #f5ed09;
+        color: #fff;
+        font-size: 49px;
+        font-weight: 700;
+        margin-bottom: 136px;
+        margin-top: 151px;
+        text-shadow: 0 0 10px #00000054;
+    }
+    .btnMobileHome i{
+        position: absolute;
+        left: 102px;
+    }
+    .btnMobileHome span{
+        font-size: 34px;
+        font-weight: 600;
+    }
 
+    .container, .container-md, .container-sm {
+        max-width: 884px;
+    }
+
+    .responsivePadding{
+        margin: 30px 0 0 0;
+        padding: 0 31px;
+    }
+    .rp-txt-45{
+        font-size: 45px;
+    }
+    .mobileIconsMargin{
+        margin-bottom: 130px;
+    }
 
     .navbar a {
         background-color: transparent;
         color: #fff;
         float: left;
-        position: relative;
-        margin-top: 23px;
-        left: -200px;
+        left: -217px;
+        margin-top: 9px;
     }
-    .logo {
-        height: 88px;
-        width: 482px;
-        position: relative;
-    }
+
     .navbar {
         height: 200px;
     }
 
-    .logo {
-        height: 88px;
-        width: 482px;
-        position: relative;
-        right: -150px;
-    }
 
     .navbar-toggler {
         height: 100px;
@@ -1171,10 +1218,15 @@ and (max-device-width : 480px) {
 
     }
     /*phone show*/
+
+    #imageCol {
+        display: none;
+    }
     #imageCol img{
         max-width: 100%;
         max-height: 100%;
         object-fit: cover;
+        height: 950px;
     }
     .small, small {
         font-size: 35px;
@@ -1189,7 +1241,13 @@ and (max-device-width : 480px) {
         max-width: 100%;
     }
     .interventionNameProduitShow{
-        font-size: 30px;
+        font-size: 47px;
+    }
+    .interventionCard {
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+        margin-bottom: 21px;
+        padding: 20px 19px;
     }
 
     .yav-card-title-container{
@@ -1220,6 +1278,24 @@ and (max-device-width : 480px) {
         -webkit-transform:translate(-50%,-84%) rotate(31deg);
         -ms-transform: translate(-50%,-84%) rotate(31deg);
         transform: translate(-50%,-84%) rotate(31deg);
+    }
+
+    .marqueButtonsFa{
+        font-size: 130px;
+    }
+    .marqueButtonsTxt{
+        font-weight: 700;
+        font-size: 51px;
+    }
+
+    .contactBoutiqueImg{
+        width: 900px;
+    }
+    .ft50Mb{
+        font-size: 50px;
+    }
+    .ft70Mb{
+        font-size: 70px;
     }
 
 }
