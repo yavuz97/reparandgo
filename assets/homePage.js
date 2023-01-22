@@ -2,6 +2,9 @@
 
 import $ from 'jquery'
 import peScrollChange from './peScroll'
+import 'select2/dist/css/select2.css'
+import select2 from 'select2/dist/js/select2'
+
 
 
 
@@ -21,27 +24,9 @@ if (!mediaQery.matches) { // If media query matches
         });
 
 
-        // peScrollChange.init({
-        //     elem: '.iphone-s3',
-        //     trigger: '.iphone-s3',
-        //     classesToChange: 'show',
-        //     offset: 100,
-        // });
 
     })
 }
-// }else{
-//     $(window).on('load', function(){
-//
-//         peScrollChange.init({
-//             elem: '.iphone-s3',
-//             trigger: '.iphone-s3',
-//             classesToChange: 'show',
-//             offset: 100,
-//         });
-//
-//     })
-// }
 
 
 
