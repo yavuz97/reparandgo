@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block meta %}
+    <meta name="description" content="
+    Connexion : Repar and go
+    ">
+{% endblock %}
+{% block body %}
+    <style>
+        .alert{
+            top: 125px;
+        }
+    </style>
+    {% for message in app.flashes('message') %}
+        <div class="alert alert-success m-t-100" role="alert"></div>
+    {% endfor %}
+    {% for message in app.flashes('warning') %}
+        <div class="alert alert-warning m-t-100" role="alert"></div>
+    {% endfor %}
+    {% for message in app.flashes('danger') %}
+        <div style="margin-top: 100px" class="alert alert-danger m-t-100" role="alert"></div>
+    {% endfor %}
+    <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
+
+    <div class="mb-5">
+        <h1 class="row justify-content-center">Identifications</h1>
+        <hr style="margin: 15px auto;">
+        <div class="d-flex justify-content-center">
+            <div class="border border-dark rounded w-75 p-5">
+                <form method="post" action="{{ path('security_login') }}">
+                    <div class="col">
+                        <label>Email :</label>
+                        <input type="text" class="form-control" name="_username">
+                    </div>
+                    <div class="col">
+                        <label>Mot de passe :</label>
+                        <input type="password" class="form-control" name="_password">
+                    </div>
+                    <br/>
+                    <div class="row justify-content-center px-5">
+                        <button type="submit" class="btn btn-outline-success">S'identifier</button>
+                        <a class="mt-5" href="{{ path('registration') }}"> Vous n'avez pas un compte ? Créer un compte </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+{% endblock %}

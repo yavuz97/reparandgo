@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block meta %}
+    <meta name="description" content="Inscription : Repar and go">
+{% endblock %}
+{% block body %}
+    {{ form_start(form) }}
+
+    <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
+
+    <div class="container mt-100 mb-5 ">
+        <h1 class="row justify-content-center">S'inscrire </h1>
+        <hr/>
+        <div class="d-flex justify-content-center">
+            <div class="border border-dark rounded w-75 p-5">
+                <div class="row">
+                    <div class="col">
+                        {{ form_label(form.nom, 'nom :', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="col">
+                        {{ form_label(form.prenom, 'prénom :', {'label_attr': {'class': 'form-label'}}) }}
+
+                        {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        {{ form_label(form.email, 'email :', {'label_attr': {'class': 'form-label'}}) }}
+
+                        {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        {{ form_label(form.password, 'mot de passe :', {'label_attr': {'class': 'form-label'}}) }}
+
+                        {{ form_widget(form.password, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="col">
+                        {{ form_label(form.confirmpassword, 'confirmer mot de passe :', {'label_attr': {'class': 'form-label'}}) }}
+
+                        {{ form_widget(form.confirmpassword, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+
+                <br/>
+                <div class="row justify-content-center px-5">
+                    <button type="submit" class="btn btn-outline-success"> valider </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    {{ form_end(form) }}
+
+
+
+
+{% endblock %}
+
+
+

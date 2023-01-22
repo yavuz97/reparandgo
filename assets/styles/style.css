@@ -1,0 +1,1411 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&display=swap');
+/*general*/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+.responsiveMenuBar{
+    display: none;
+}
+
+
+a{
+    font-size: 17px;
+}
+
+body {
+    color: #454545;
+    font-size: 22px;
+}
+
+/*logo*/
+
+.logo{
+    height: 85px;
+    width: 100%;
+}
+
+
+/*footer */
+footer{
+
+    background: black;
+    color: #d0cab8;
+}
+.footer-coordinates{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 78px;
+    padding: 59px 105px 0 97px;
+}
+.footer-phones{
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+    font-style: oblique;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+
+
+/*navbar*/
+.navbar-brand span{
+    margin: 0 -4px 0 -7px;
+}
+
+
+
+.nav-item a{
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+}
+
+.navbar {
+    padding: 6px 0;
+    position: relative;
+    background: black;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    width: 100%;
+}
+
+.navbar a {
+    color: white;
+    background-color: transparent;
+}
+nav{
+    z-index: 99;
+}
+
+.navbar.nav-transp {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+nav a {
+    color: #fff3f3;
+    font-weight: bold;
+}
+nav.main ul li.fade-link div {
+    opacity: 0;
+    /*visibility: hidden;*/
+    visibility: visible;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+}
+nav.main ul li.fade-link:hover div {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*navbar menu phones */
+.menuPhone{
+    position: absolute;
+    margin: 6px 0 0 22px;
+    background: #ffffff;
+    width: 178px;
+    padding: 0 0 17px 13px;
+    box-shadow:  1px 1px 5px 1px  rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.menuPhoneTitle{
+    font-size: 15px;
+    margin-bottom: -7px;
+    margin-top: 10px;
+}
+.menuPhoneSub{
+    margin: 0 0 -17px 0;
+    font-size: 14px;
+    font-style: italic;
+}
+.titleMenuDrop{
+    font-weight: 500;
+    margin-top: 8px;
+    font-size: 18px;
+}
+.menuPhone hr{
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    width: 88%;
+    float: left;
+    margin-bottom: -4px;
+    margin-top: 9px;
+}
+.list-item-drop{
+    display: inline-grid;
+    line-height: 4px;
+}
+.list-item-drop a{
+    font-weight: lighter;
+    text-decoration-line: none;
+    color: black;
+    transition:   0.7s ease;
+
+}
+.list-item-drop a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+
+/*navbar menu service */
+.menuService{
+    width: 100%;
+    position: absolute;
+    margin: 0 0 0 0;
+    background: #000000;
+    display: block;
+    padding: 80px 48px 67px 7px;
+    box-shadow: 1px 1px 5px 1px rgb(0 0 0 / 20%);
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.menuService h5{
+    color: white;
+}
+.menuService p{
+    color: #9f9797;
+}
+.menuService-img{
+    width: 100%;
+    height: auto;
+}
+.menuService .row .col{
+    padding: 0 0 0 34px;
+}
+.menuService .row .col img{
+    margin-top: 50px;
+}
+nav.main ul li.fade-service div {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+    line-height: 36px;
+    margin-bottom: 10px;
+}
+nav.main ul li.fade-service:hover div {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*navbar menu phones */
+.menuPhone{
+    position: absolute;
+    margin: 6px 0 0 22px;
+    background: #ffffff;
+    width: 180px;
+    padding: 0 0 17px 13px;
+    box-shadow:  1px 1px 5px 1px  rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.titleMenuDrop{
+    font-weight: 500;
+    margin-top: 8px;
+    font-size: 18px;
+}
+.menuPhone hr{
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    float: left;
+    margin-top: -9px;
+    width: 88%;
+}
+.list-item-drop{
+    display: inline-grid;
+}
+.list-item-drop a{
+    font-weight: lighter;
+    text-decoration-line: none;
+    color: black;
+    transition:   0.7s ease;
+
+}
+.list-item-drop a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+
+/*navbar menu service */
+.menuService{
+    width: 100%;
+    position: absolute;
+    margin: 0 0 0 0;
+    background: #000000;
+    display: block;
+    padding: 80px 48px 67px 7px;
+    box-shadow: 1px 1px 5px 1px rgb(0 0 0 / 20%);
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.menuService h5{
+    color: white;
+}
+.menuService p{
+    color: #9f9797;
+}
+.menuService-img{
+    width: 100%;
+    height: auto;
+}
+.menuService .row .col{
+    padding: 0 0 0 34px;
+}
+.menuService .row .col img{
+    margin-top: 50px;
+}
+nav.main ul li.fade-service div {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+}
+nav.main ul li.fade-service:hover div {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*hero image */
+.hero-image {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -99;
+}
+
+.hero-image.index-black{
+
+    background-image:  url('../images/general/2telReparAndGo.png')
+}
+.hero-image-small.brokenComputer{
+    background-image:  url('../images/general/computerCoverBroken.jpg')
+}
+.hero-image-small.reparationOrdinateurCover{
+    background-image:  url('../images/general/reparationOrdinateurCover.jpg')
+}
+.hero-image-small.boutique2{
+    background-image:  url('../images/general/boutique2.png')
+}
+.hero-image-small {
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -99;
+    margin-bottom: 50px;
+}
+
+
+/*testimonials */
+
+.testim-title{
+    display: flex;
+    color: black;
+}
+.testim-title h1{
+    font-weight: 300;
+    margin: 24px auto;
+}
+.testim-title img{
+    position: absolute;
+    right: 16px;
+    width: 346px;
+    top: 9px;
+}
+
+
+/*home page content*/
+
+.yav-container{
+    position: relative;
+    padding: 70px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.yav-container-dark {
+    background-color: #141316;
+    color: #e5ecec;
+}
+.yav-container-dark p{
+    font-weight: 300;
+    font-size: 21px;
+}
+
+
+
+
+
+
+.iphone-s1-6 {
+    -webkit-transform: translate(-67%, -54%);;
+    -ms-transform: translate(-67%, -54%);;
+    transform: translate(-67%, -54%);;
+    opacity: 0;
+    margin-bottom: -451px;
+    -webkit-transition: 1s .3s;
+    transition: 1s .3s;
+}
+.iphone-s1-6.show {
+    -webkit-transform: translate(-46%, -47%);
+    -ms-transform: translate(-46%, -47%);
+    transform: translate(-46%, -47%);
+    opacity: 1;
+}
+
+
+
+.iphone-s6 {
+    width: 785px;
+    height: 785px;
+    -webkit-transform: translateX(calc(50% - 90px));
+    -ms-transform: translateX(calc(50% - 90px));
+    transform: translateX(calc(50% - 90px));
+    margin-top: calc(-50% - 107px);
+    margin: -259px 0 0 0;
+}
+.iphone-s6 img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.iphone-s6 img:first-of-type {
+    -webkit-transform: translate(0, 50%);
+    -ms-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+}
+.iphone-s6 img:last-of-type {
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s;
+    -webkit-transform: translate(200%, 55px);
+    -ms-transform: translate(200%, 55px);
+    transform: translate(200%, 55px);
+}
+.iphone-s6.show img {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.iphone-s6.show img:last-of-type {
+    -webkit-transform: translate(-100px, 55px);
+    -ms-transform: translate(-100px, 55px);
+    transform: translate(-100px, 55px);
+}
+
+
+.iphone-s3 {
+    -webkit-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    transform: translateY(10%);
+    opacity: 0;
+    -webkit-transition: 1s .3s;
+    transition: 1s .3s;
+    position: relative;
+}
+.iphone-s3 img {
+    width: 100%;
+}
+.iphone-s3.show {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.iphone-features-cont {
+    margin-bottom: -80px;
+}
+
+
+
+
+
+
+.iphone-details {
+    position: relative;
+    z-index: 999;
+}
+.iphone-details h4 {
+    font-size: 26px;
+}
+.iphone-details p {
+    font-size: 19px;
+    font-family: 'Cabin-Regular';
+}
+.iphone-details:before, .iphone-details:after {
+    content: '';
+    border-style: solid;
+    position: absolute;
+}
+.iphone-details:after {
+    border-width: 1px 0 0 0;
+    width: 68px;
+    top: 15px;
+}
+.iphone-details:before {
+    border-radius: 100%;
+    border-width: 1px;
+    height: 8px;
+    width: 8px;
+    top: 12px;
+}
+
+.iphone-details.left {
+    left: 0;
+}
+.iphone-details.left:before, .iphone-details.left:after {
+    left: 100%;
+}
+.iphone-details.left:before {
+    margin-left: 10px;
+}
+.iphone-details.left:after {
+    margin-left: 25px;
+}
+
+.iphone-details.right {
+    right: 0;
+}
+.iphone-details.right:before, .iphone-details.right:after {
+    right: 100%;
+}
+.iphone-details.right:before {
+    margin-right: 10px;
+}
+.iphone-details.right:after {
+    margin-right: 25px;
+}
+
+.iphone-details:nth-of-type(1), .iphone-details:nth-of-type(3) {
+    margin-top: 225px;
+}
+
+.iphone-details:nth-of-type(2), .iphone-details:nth-of-type(4) {
+    margin-top: 200px;
+}
+
+
+.boutique-content{
+    z-index: -99;
+    background-color: black;
+    height: 105vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.boutique-content .col-6{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+#boutique-img{
+    width: 708px;
+    z-index: 50;
+    height: 380px;
+    position: absolute;
+    left: 134px;
+    top: 227px;
+    border: white;
+    border-width: 78px;
+    box-shadow: 0px -1px 11px 0px rgb(255 255 255);
+    border-radius: 10px;
+}
+#fayette-img{
+    width: 816px;
+    z-index: 40;
+    position: absolute;
+    top: 0;
+    left: -168px;
+    border-radius: 1px;
+}
+
+/*vektors */
+.vektors-home p{
+    text-align: center;
+    font-size: 15px;
+}
+.vektors-home{
+    padding: 18px 41px 0 11px;
+    display: flex;
+    margin-top: 40px;
+}
+
+.vektors-home img:nth-of-type(2){
+    display: none;
+}
+.showRed{
+    display: block;
+    z-index: 999;
+}
+.removeShowRed{
+    display: none;
+}
+
+
+
+.vektors-home i:hover{
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+    color: #0092d6;
+}
+
+
+
+
+
+/*google avis */
+.avis-google-container{
+    height: 281px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    margin-top: 152px;
+    margin-bottom: 217px;
+}
+.google-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.google-left div{
+    font-weight: 300;
+    font-size: 31px;
+    margin-top: 52px;
+    margin-bottom: 15px;
+}
+.google-left img{
+    width: 264px;
+}
+
+
+/*product page*/
+.phone-conainer{
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction: row;*/
+    /*justify-content: flex-start;*/
+    /*padding: 14px 14px;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.phone-card{
+    /*width: 310px;*/
+    /*height: 483px;*/
+    /*margin: 8px 6px;*/
+    /*transition:   0.5s ease;*/
+    height: auto;
+    transition: .5s ease;
+    width: 245px;
+    padding: 8px 12px;
+}
+.phone-card:hover{
+    box-shadow: 0px 0px 3px 0px rgb(0 0 0);
+}
+.phone-card-img {
+    width: 100%;
+    height: 100%;
+    /*remove this to come back to 4 phone per row*/
+}
+.phone-card-img img{
+    /*width: 310px;*/
+    /*height: 483px;*/
+    /*object-fit: cover;*/
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+.phone-card-text{
+    /*text-align: center;*/
+    /*margin: -51px 0 0 0;*/
+    /*font-size: 18px;*/
+    /*font-weight: 300;*/
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+.prices-list-title{
+    margin: 61px 0 0 0;font-size: 19px;font-weight: 400;font-style: italic;
+}
+.reparation-prices img{
+    width: 38px;position: absolute;top: 248px;    transform: rotate(21deg);
+}
+.prices-list{
+    font-weight: 300;
+    font-style: oblique;
+}
+
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+.mt-70 {
+    margin-top: 70px;
+}
+hr {
+    position: relative;
+    color: inherit;
+    width: 120px;
+    border-top: 1px solid;
+}
+.phoneOutside-left{
+    height: 505px;
+    position: absolute;
+    width: 206px;
+    bottom: 206px;
+    left: 76px;
+    transform: skew(359deg,351deg);
+}
+.phoneOutside-right{
+    display: block;
+    height: 483px;
+    position: absolute;
+    width: 193px;
+    bottom: 226px;
+    right: 127px;
+    transform: skew(359deg,11deg);
+}
+.phoneInsideTable-cote{
+    height: 578px;
+    position: absolute;
+    width: 186px;
+    bottom: 0;
+    right: -33px;
+    padding: 149px 0 0 0;
+    color: #e6eaea;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.phoneInsideTable-center{
+  height: 578px;position: absolute;width: 303px;bottom: 184px;right: 400px;
+    padding: 56px 0 0 0;
+    color: #e6eaea;
+    font-size: 18px;
+    font-weight: 400;
+}
+.phoneInsideTable-title{
+    font-size: 30px;
+    font-weight: 500;
+}
+.phoneInsideTable-containter{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0 0 0;
+}
+.phoneInsideTable-containter-names {
+    text-align: initial;
+}
+.phoneInsideTable-containter-prices {
+    text-align: end;
+}
+
+
+.phoneInsideTable-logo{
+
+}
+.phoneInsideTable-logo img{
+width: 30%;
+}
+
+.small-center-info{
+    text-align: center;
+    width: 100%;
+    margin-top: 5rem;
+    font-size: 17px;
+    color: black;
+    font-style: italic;
+}
+.small-center-info-tampon{
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 17px;
+    color: black;
+    font-style: italic;
+    margin-bottom: 103px;
+}
+
+.bigCenterTitle{
+    text-align: center;
+    width: 100%;
+    padding: 63px 0;
+    font-size: 37px;
+}
+
+.phoneSpan{
+    font-weight: 500;
+    border: solid;
+    border-radius: 32px;
+    padding: 10px 14px;
+    margin-left: 17px;
+    border-width: 1px;
+    font-style: normal;
+    cursor:pointer;
+}
+
+.phoneSpan:hover{
+    color: #ffc107;
+    transition:  .3s;
+
+}
+
+
+
+
+
+.undrawSVG-index img{
+    max-height: 100%; max-width: 100%;object-fit: cover;
+    height: 130px;
+    width: auto;
+}
+
+.googleUserImg{
+    border-radius: 23px;
+    color: white;
+    min-width: 14px;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.googleUserInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 8px;
+    position: relative;
+    bottom: -6px;
+}
+.googleUserInfo div i{
+    color: #f8b805;
+    font-size: 16px;
+    position: relative;
+    top: -7px;
+}
+.googleUserInfo p {
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+.googleUserInfo span {
+    color: #747480;
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+}
+.bgPurple{
+    background-color: rebeccapurple;
+}
+.bgGreenD{
+    background-color: #33691e;
+}
+.ngBlueL{
+    background-color: #512da8;
+}
+
+
+.cardGoogle .card-text{
+    font-size: 17px;
+    color:#696060;
+}
+.cardGoogle{
+    height: 100%;
+    padding: 27px 0 0 0;
+
+}
+
+.googleImageAndTextContainer div{
+    font-weight: 300;
+    font-size: 31px;
+    margin-top: 17px;
+    margin-bottom: 15px;
+}
+.googleImageAndTextContainer img{
+    width: 170px;
+    position: relative;
+    top: -16px;
+    right: -44px;
+}
+.googleImageAndTextContainer a{
+    position: relative;
+    top: -41px;
+    left: -38px;
+}
+
+
+
+/*contact page*/
+
+
+.contact-md-img-container{
+    width: 100%;
+    height: auto;
+}
+.contact-md-img-container img{
+    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 728px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../images/contact/boutique_pers.png");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax_blue_direction {
+    /* The image used */
+    background-image: url("../images/contact/reparAndGoDirection.jpg");
+
+    /* Set a specific height */
+    min-height: 233px;
+
+    /* Create the parallax scrolling effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-information-container{
+    box-shadow: 0px 0px 20px 6px rgb(0 0 0 / 20%);
+    margin-top: 21px;
+}
+.contact-information{
+    height: 100%;
+    padding: 44px 26px;
+    font-size: 19px;
+}
+.googleMapsImageContainer {
+    padding: 0
+}
+.googleMapsImageContainer img {
+    width: 100%;
+}
+
+.img-direction-blue{
+    padding: 0
+}
+
+
+
+
+
+/*
+le page produit*/
+
+.phone_show_interventions div div{
+    margin-bottom: 20px;
+}
+.phone_show_interventions i{
+    margin-right: 3%;
+    color: #ffc107;
+}
+
+
+.phone_show_interventions h6{
+    margin: 9px 0 0 1px;
+}
+
+.interventionCard:hover i{
+    color: #ffc107;
+}
+.interventionCard:hover p{
+    color: #ffc107;
+}
+.interventionCard:hover h4{
+    color: #ffc107;
+}
+.interventionCard{
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.interventionCard:hover{
+    transform: scale(1.1);
+}
+
+
+.sidenav{
+    display: none;
+}
+
+
+.yav-card-title-container{
+    height: 75%
+}
+.homeFaIconsContainer p{
+    font-size: 13px;
+}
+
+#imageCol img{
+    height: 500px;
+}
+.secondTitleHomePage{}
+
+.secondTextHomePage{
+    font-size: 17px;
+    padding: 0 81px;
+    font-weight: 400;
+}
+
+
+.btnMobileHomeContainer{
+    display: none;
+}
+.logoMobile{
+    display: none;
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .logoMobile{
+        width: 130%;
+        display: block;
+        height: auto;
+    }
+    .baseSearchBar{
+        display: none;
+    }
+    .btnMobileHomeContainer{
+        display: block;
+    }
+    .btnMobileHome{
+        background-color: #f5ed09;
+        box-shadow: 2px 2px 4px 15px #f5ed09;
+        color: #fff;
+        font-size: 49px;
+        font-weight: 700;
+        margin-bottom: 136px;
+        margin-top: 151px;
+        text-shadow: 0 0 10px #00000054;
+    }
+    .btnMobileHome i{
+        position: absolute;
+        left: 102px;
+    }
+    .btnMobileHome span{
+        font-size: 34px;
+        font-weight: 600;
+    }
+
+    .container, .container-md, .container-sm {
+        max-width: 884px;
+    }
+
+    .responsivePadding{
+        margin: 30px 0 0 0;
+        padding: 0 31px;
+    }
+    .rp-txt-45{
+        font-size: 45px;
+    }
+    .mobileIconsMargin{
+        margin-bottom: 130px;
+    }
+
+    .navbar a {
+        background-color: transparent;
+        color: #fff;
+        float: left;
+        left: -217px;
+        margin-top: 9px;
+    }
+
+    .navbar {
+        height: 200px;
+    }
+
+
+    .navbar-toggler {
+        height: 100px;
+        width: 100px;
+        color: white
+    }
+
+    .sidenav{
+        display: block;
+    }
+    .responsiveMenuBar{
+        font-size: 77px; cursor: pointer; position: absolute; color: white;float: right;right: 57px;
+        display: block;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 209px;
+    }
+
+    .sidenav a {
+        display: block;
+        font-size: 54px;
+        padding: 10px 8px 69px 96px;
+        text-decoration: none;
+        transition: .3s;
+        color: white;
+        font-weight: bold;
+        font-family: 'Lato';
+    }
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 78px;
+        margin-left: 50px;
+    }
+
+    .navbar{
+        height: 160px;
+    }
+
+    .hero-image {
+        height: 40vh;
+    }
+    .yav-container .container{
+        max-width: 100%;
+    }
+    .yav-container .container h1{
+        font-size: 77px;
+    }
+    .yav-container .container p{
+        font-size: 35px;
+    }
+    .yav-container {
+        padding: 114px 0 181px 0;
+    }
+    .title-homePage-dark{
+        font-size: 60px;
+    }
+
+    .page-footer h5{
+        font-size: 59px;
+    }
+    .page-footer h6{
+        font-size: 38px;
+    }
+    .page-footer i{
+        font-size: 100px;
+        margin-right: 10px;
+    }
+    .page-footer em{
+        font-size: 33px;
+    }
+
+
+    /*home page responsive*/
+    .mainScroll {
+        align-items: center;
+        background: linear-gradient(
+                0deg
+                ,hsla(0,0%,100%,.6) 24%,rgba(58,62,62,.71) 69%);
+        color: #959595;
+        display: flex;
+        grid-area: mainScroll;
+        height: 38vh;
+        overflow-y: hidden;
+        padding: 158px 0 0 0;
+    }
+    .homeFaIconsContainer i{
+        font-size: 90px;
+        margin-bottom: 5px;
+
+    }
+    .homeFaIconsContainer h5{
+        font-size: 36px;
+    }
+    .homeFaIconsContainer p{
+        font-size: 35px;
+    }
+    h1 {
+        font-size: 58px;
+    }
+    h2 {
+        font-size: 3.0vh;
+    }
+    h3{
+        font-size: 2vh;
+    }
+    h4{
+        font-size: 2vh;
+    }
+    p {
+        font-size: 35px;
+    }
+    .fa{
+        font-size: 73px;
+    }
+    .h5 h5{
+        font-size: 35px;
+        font-weight: bold;
+    }
+    /*serie des phones */
+    .phone-card{
+        width: 310px;
+        height: 483px;
+        margin: 8px 6px;
+        transition:   0.5s ease;
+    }
+    .phone-card-img img{
+        width: 310px;
+        height: 483px;
+        object-fit: cover;
+    }
+    .phone-card-text{
+        text-align: center;
+        margin: -24px 0 0 0;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    #imageCol{
+        display: flex;
+        align-items: center;
+    }
+    .blockquote-footer {
+        font-size: 30px;
+
+    }
+    /*phone show*/
+
+    #imageCol {
+        display: none;
+    }
+    #imageCol img{
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        height: 950px;
+    }
+    .small, small {
+        font-size: 35px;
+    }
+    .showProduitGaranties{
+        font-size: 32px;
+    }
+    .inscrivezVousLink{
+        font-size: 31px;
+    }
+    .container-resp-w100{
+        max-width: 100%;
+    }
+    .interventionNameProduitShow{
+        font-size: 47px;
+    }
+    .interventionCard {
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+        margin-bottom: 21px;
+        padding: 20px 19px;
+    }
+
+    .yav-card-title-container{
+        height: 36%;
+    }
+
+    .googleAvisLinkFa{
+        font-size: 33px;
+    }
+    .googleImageAndTextContainer a {
+        left: -63px;
+        position: relative;
+        top: -55px;
+        font-size: 16px;
+    }
+    .googleAvisLinkFa {
+        font-size: 18px;
+    }
+    .googleImageAndTextContainer img {
+        position: relative;
+        right: -44px;
+        top: -16px;
+        width: 278px;
+    }
+    .iphone-s1-6 {
+        margin-bottom: -451px;
+        opacity: 1;
+        -webkit-transform:translate(-50%,-84%) rotate(31deg);
+        -ms-transform: translate(-50%,-84%) rotate(31deg);
+        transform: translate(-50%,-84%) rotate(31deg);
+    }
+
+    .marqueButtonsFa{
+        font-size: 130px;
+    }
+    .marqueButtonsTxt{
+        font-weight: 700;
+        font-size: 51px;
+    }
+
+    .contactBoutiqueImg{
+        width: 900px;
+    }
+    .ft50Mb{
+        font-size: 50px;
+    }
+    .ft70Mb{
+        font-size: 70px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+    .responsiveMenuBar {
+        /* display: block; */
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        float: right;
+        font-size: 40px;
+        position: absolute;
+        right: 57px;
+    }
+    .iphone-s1-6.show {
+        opacity: 1;
+        -webkit-transform: translate(-80%,-47%);
+        -ms-transform: translate(-80%,-47%);
+        transform: translate(-80%,-47%);
+    }
+    .respMenuLink{
+        font-size: 48px;
+        text-decoration: none;
+        color: gray;
+    }
+    .sidenav{
+        display: block;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 209px;
+    }
+    .sidenav a {
+        display: block;
+        font-size: 54px;
+        padding: 10px 8px 8px 96px;
+        text-decoration: none;
+        transition: .3s;
+        color: white;
+        font-weight: bold;
+    }
+
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 78px;
+        margin-left: 50px;
+    }
+
+    .acerComputers.show {
+        opacity: 1;
+        transform: translate(-41%,-77%);
+    }
+
+    .clesMinuteTabPrix {
+        top: 67px;
+        height: 41vh;
+        left: 21px;
+        position: absolute;
+        width: 27rem;
+    }
+    .hero-container .card {
+        top: 218px;
+        height: 20vh;
+        position: absolute;
+        right: 28px;
+        width: 38rem;
+    }
+    .hero-container img {
+        display: block;
+        height: 40vh;
+        width: 100%;
+    }
+}
+

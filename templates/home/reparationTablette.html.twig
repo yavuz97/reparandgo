@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réparation tablette Repar and go {% endblock %}
+
+{% block body %}
+
+
+<div id="hero-image-navbar-trigger" style="height: 5vh;"></div>
+
+    <div class="row mb-5 mt-5">
+        {% for marque in marquesDeCategorie %}
+            <div class="col-3 col-md-4">
+                <a href="{{ path('list-produits-marque-categorie', {'id_marque' : marque.id, 'id_categorie' : 2}) }}">
+                    <div  class="smoothCard">
+                        <div class="imageCover_brand" style="width: 100%;height: 200px">
+                            <img style="object-fit: cover; max-height: 100%; max-width: 100%" src="{{ asset("images/brand_images/" ~ marque.image ) }}" alt="{{ marque.image }}">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+
+<div id="sloganContent" class="yav-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  col-md-12" >
+                <h1> Réparation tablette! </h1>
+                <p style="margin-top: 2rem">Écran cassé? Batterie non fonctionnelle? Problème de connecteur? Faites confiance à notre service de réparation et confiez nous votre tablette. Nous vous la réparons en toute sécurité!</p>
+            </div>
+        </div>
+        <figure class="ipadClined"> <img src="{{ asset("build/services/tablette/ipad2.png") }}" alt="tabllete" ></figure>
+    </div>
+</div>
+
+<div id="" class="yav-container yav-container-dark">
+    <div class="container" >
+        <div class="row">
+            <div class="col">
+                <h1> Tablette android</h1>
+                <p>
+                   Nous avons une solution pour tout problème, nous avons des techniciens qualifiés pour
+                réparation des tablettes android </p>
+            </div>
+            <div class="col">
+                <h1>Tablette IOS</h1>
+                <p>
+                    Un problème avec votre tablette Apple ? On répare vos tablettes Apple,
+                rendez-vous à Repar and Go ! </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="h-bold mt-100 mb-4" >La Tranquilité d'esprit pour vos problèmes tech </h2>
+                <p>Chez Répar' & Go avec une expérience plus du 10 ans dans le domaine, nous sommes à votre service pour diagnostiquer et réparer tout,
+                    du simple écran cassé aux réparations les plus avancées impliquant la micro-soudure.
+                </p>
+
+
+                <figure class="tabletteWhite"><img src="{{ asset("build/services/tablette/tabletteWhite.png") }}" alt="ipad"></figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div  class="yav-container"  style="margin-top: 50px;">
+    <div class="container homeFaIconsContainer text-center">
+
+
+        <div class="row">
+            <div class="col col-lg-4 col-md-12 col-sm-12 mb-lg-0 mb-md-5 mb-sm-5 ">
+                <i class="fa fa-bug" aria-hidden="true"></i>
+                <h5 class="fw-bold">Formatage</h5>
+                <p>Formatage de tablette </p>
+            </div>
+            <div class="col col-lg-4 col-md-12 col-sm-12 mb-lg-0 mb-md-5 mb-sm-5 ">
+                <i class="fa fa-upload" aria-hidden="true"></i>
+                <h5 class="fw-bold">Mise à jour</h5>
+                <p>Mise à jour de votre tablette </p>
+            </div>
+            <div class="col col-lg-4 col-md-12 col-sm-12 mb-lg-0 mb-md-5 mb-sm-5 ">
+                <i class="fa fa-tasks" aria-hidden="true"></i>
+                <h5 class="fw-bold">Sauvegarde des données</h5>
+                <p> On effectue le récupération des données, et leur sauvegarde</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    {{ encore_entry_script_tags('service_tablette') }}
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PhoneController!{% endblock %}
+
+{% block body %}
+
+    <div id="hero-image-navbar-trigger" style="height: 5vh;margin-bottom: 10vh"></div>
+
+<div class="row">
+    <div class="col-6" style="    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    flex-wrap: wrap;">
+        <img src="{{ asset("build/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
+    </div>
+    <div class="col-6 " style="
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding: 87px 0px;
+">
+        <h4>{{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }}</h4>
+        <div class="information-reparation" style=" font-size: 18px;font-weight: 100;">
+        <div>   Réparation en <strong> 20 min  </strong> </div>
+        <div>  Sans  <strong>rendez-vous</strong>  </div>
+        <div>  Réparation garantie <strong> 2 ans </strong>   </div>
+        </div>
+
+
+       <div class="reparation-prices">
+           <div class="prices-list-title"> Pour avoir une idée de nos tarifs
+           </div>
+           <div class="prices-list">
+               <div>Changement d’écran </div>
+               <div>Remplacement de batterie  </div>
+           </div>
+       </div>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

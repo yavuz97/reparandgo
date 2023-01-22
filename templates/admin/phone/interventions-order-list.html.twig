@@ -1,0 +1,99 @@
+
+{{ encore_entry_link_tags('app') }}
+{% block body %}
+
+    <div style="height: 10vh"></div>
+
+
+    {% set url = ea_url()
+        .setController('App\\Controller\\Admin\\InterventionCrudController')
+        .setAction('index') %}
+
+    <div class="container">
+        <a  href="{{ url }}">  Retour au liste des interventions </a>
+        <hr>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">id order </th>
+                    <th scope="col">Intervention </th>
+                    <th scope="col">image </th>
+                    <th scope="col">up </th>
+                    <th scope="col">down </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for intervention in interventions %}
+
+                    <tr>
+                        <td>
+                            {{ intervention.nOrder  }}
+                        </td>
+                        <td>
+                            {{ intervention.nom  }}
+                        </td>
+                        <td>
+                            {{ intervention.image | raw }}
+                        </td>
+                        <td>
+                        <a href="{{ path('interUp', {'id': intervention.id, 'redirectionVar' : "customList" }) }}"> <i style="font-size: 36px;color: green" class="fa fa-arrow-up" aria-hidden="true"></i> </a>
+                        </td>
+                        <td>
+                            <a href="{{ path('interDown', {'id': intervention.id, 'redirectionVar' : "customList"}) }}"> <i style="font-size: 36px;color: red" class="fa fa-arrow-down" aria-hidden="true"></i> </a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+    </div>
+
+
+
+
+
+
+
+
+{#    <div class="container">#}
+{#        <h5> {{  produit.marque.nom }} {{ produit.serie.nom }} {{ produit.model }} </h5>#}
+{#        <hr>#}
+{#        <form method="post">#}
+{#        <table class="table">#}
+{#        <thead>#}
+{#        <tr>#}
+{#            <th scope="col">Intervention </th>#}
+{#            <th scope="col">Prix</th>#}
+
+{#        </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+
+{#        {% for intervention in interventions %}#}
+{#            {% for prixInter in prixInterventions %}#}
+{#                {% if intervention == prixInter.intervention %}#}
+{#                    {% set prix = prixInter.prix  %}#}
+{#                {% endif %}#}
+{#            {% endfor %}#}
+
+{#            <tr>#}
+{#                <td>#}
+{#                    {{ intervention.nom  }}#}
+{#                    <input name="intervention" type="text" value="{{ intervention.id }}" hidden>#}
+{#                </td>#}
+{#                <td>#}
+{#                    <input name="prix" type="text" class="form-control w-100" value="{{ prix | default('') }}"  >#}
+{#                </td>#}
+{#            </tr>#}
+{#            <input name="produit" type="text" value="{{ produit.id }}" hidden>#}
+{#        {% endfor %}#}
+
+{#        </tbody>#}
+{#    </table>#}
+{#        <button class="btn btn-success" name="validation" value="true"> Soummettre </button>#}
+{#        </form>#}
+{#</div>#}
+
+{% endblock %}

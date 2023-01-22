@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réparations {% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset("css/clesMinute.css") }}"  >
+
+   <div class="container">
+
+       <div class="smoothCard-container">
+           <div  class="smoothCard">
+               <i class="fa fa-clock-o" aria-hidden="true"></i>
+               <div class="smoothCard-title">Disponibilité</div>
+               <div class="smoothCard-text">
+                   Parce que nous savons qu’un problème tombe toujours au plus mauvais moment, nos serruriers interviennent 24h/24 et ce, 7j/7 pour tous les services d’urgence.
+               </div>
+           </div>
+           <div  class="smoothCard">
+               <i class="fa fa-key" aria-hidden="true"></i>
+               <div class="smoothCard-title">Polyvalence</div>
+               <div class="smoothCard-text">
+                   Nous vous offrons une vaste gamme de services.
+
+                   De l’installation d’une nouvelle serrure numérique au changement d’un barillet en passant par la reproduction de vos clés, vous pourrez compter sur nous.
+               </div>
+           </div>
+           <div  class="smoothCard">
+               <i class="fa fa-smile-o" aria-hidden="true"></i>
+               <div class="smoothCard-title">Courtoisie</div>
+               <div class="smoothCard-text">
+                   En plus de la qualité de nos prestations, nous mettons un point d’honneur à toujours nous montrer aimables et professionnels avec chacun de nos clients.
+                   En effet, nous pensons qu’une ambiance de travail sereine est profitable pour tous.
+               </div>
+           </div>
+       </div>
+
+   </div>
+{% endblock %}

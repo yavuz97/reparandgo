@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réparation Téléphone & Ordinateur & Tablette & clés minute sur Metz - Repar and go {% endblock %}
+{% block meta %}
+
+<meta name="robots" content="noindex,noindex" />
+{% endblock %}
+{% block stylesheets %}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+{% endblock %}
+{% block body %}
+
+
+
+
+    <select class="js-example-responsive" style="width: 50%">
+        <optgroup label="hello">dd</optgroup>
+        <option>dzad</option>
+        <option>dzad</option>
+        <option>dzad</option>
+
+        <optgroup label="s">zz</optgroup>
+        <option>dzad</option>
+        <option>dzad</option>
+        <option>dzad</option>
+    </select>
+
+    <!-- END OF TESTIMONIALS -->
+
+    <script>
+
+        $(".js-example-responsive").select2({
+            width: 'resolve' // need to override the changed default
+        });
+
+    </script>
+    {{ encore_entry_script_tags('homePage') }}
+
+
+
+{% endblock %}
+
+
+

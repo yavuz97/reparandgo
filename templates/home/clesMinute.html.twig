@@ -1,0 +1,237 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Clés minute Metz  {% endblock %}
+{% block meta %}
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Cles minute Metz, On est spécialisé dans la réparation et  duplicata de clé , reprodcution cles pas cher !">
+{#    <meta name="format-detection" content="telephone=no">#}
+
+{% endblock %}
+{% block stylesheets %}
+<style>
+
+    .clesMinuteSliderSection .owl-carousel .owl-item img {
+        margin: 0 auto 17px;
+        max-width: 40vh;
+        transform-style: preserve-3d;
+        width: 40vh;
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+        .hero-container-ClesDeux .card {
+            bottom: -406px;
+            left: 74px;
+            position: absolute;
+            transition: .3s;
+            width: 910px;
+            z-index: 5;
+        }
+        .yav-gallarie {
+            margin-bottom: 150px;
+            margin-top: 472px;
+        }
+        #imgBackOnCard{
+            display: none;
+        }
+        #clesMinuteQuestion{
+            margin-bottom: 230px;
+        }
+        a[href^=tel] {
+            text-decoration:inherit;
+            color: inherit;
+            font-size: 13px;
+        }
+    }
+
+
+</style>
+{% endblock %}
+{% block body %}
+
+
+    <!-- TESTIMONIALS -->
+    <section class="clesMinuteSliderSection">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="clesSlider" class="owl-carousel">
+
+                        <!--TESTIMONIAL 1 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img  class="img-circle" src="{{ asset("build/services/clefminute/clesPlate.jpg") }}" alt="">
+                                <p class="clesMinuteScrollText" >6 €</p>
+                            </div>
+                            <div class="testimonial-name">clés plates</div>
+                        </div>
+
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img  class="img-circle imgClesMinuteScroll" src="{{ asset("build/services/clefminute/clesAGorge.jpg") }}" alt="">
+                                <p class="clesMinuteScrollText" >14 €</p>
+                            </div>
+                            <div class="testimonial-name">Clés à gorge</div>
+                        </div>
+
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img  class="img-circle" src="{{ asset("build/services/clefminute/clesDeVoiture.jpg") }}" alt="">
+                                <p class="clesMinuteScrollText" ></p>
+                            </div>
+                            <div class="testimonial-name" style="margin-top: 37px;">Clés de voiture</div>
+                        </div>
+
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img  class="img-circle" src="{{ asset("build/services/clefminute/cle-point.png") }}" alt="">
+                                <p class="clesMinuteScrollText" >28 €</p>
+                            </div>
+                            <div class="testimonial-name">Clés à point</div>
+                        </div>
+
+
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img  class="img-circle" src="{{ asset("build/services/clefminute/clesAnumero.jpg") }}" alt="">
+                                <p class="clesMinuteScrollText"></p>
+                            </div>
+                            <div style="    margin-top: 42px;" class="testimonial-name">Clés sécurisés</div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF TESTIMONIALS -->
+
+
+{#    <div  class="hero-container">#}
+{#        <img  src=" {{ asset("build/services/clefminute/anahtarBeyazFon.jpg") }} " alt="key">#}
+{#        <div id="clesMinuteTopCard" class="card rellax" >#}
+{#            <div class="card-body ">#}
+{#                <div class="yav-card-title-container" >#}
+{#                    <h1 class="yav-card-title yav-underline" >#}
+{#                        Cles Minute Metz <br>Répar’&Go#}
+{#                    </h1>#}
+{#                </div>#}
+{#                <div style="height: 25%;" class="card-small-txt-container">#}
+{#                    <div class="card-small-txt">On est spécialisé dans la réparation et le duplicata de clés , nous sommes la solution pour tous vos problèmes de clés !#}
+
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+
+{#    </div>#}
+
+
+
+
+
+<div  id="firstContainer"  class="yav-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-lg-6 col-md-8 " >
+                <h1 class="clesMinuteH1First">  Cles Minute Metz <br>Répar’&Go </h1>
+                <p>On est spécialisé dans la réparation et duplicata de clé  , nous sommes la solution pour tous vos problèmes de clés !</p>
+                <h2 style="font-weight: 900;color: #bb0000;font-style: italic;" class="clesMinuteH1First"> Réparation et duplicata de clé</h2>
+            </div>
+        </div>
+        <figure class="birCokAnahtar "> <img style="width: 386px;"  src="{{ asset("build/services/clefminute/evAnahtari.png") }}" alt="cles" ></figure>
+    </div>
+</div>
+</div>
+
+<div class="smoothCard-container">
+    <div  class="smoothCard">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <div class="smoothCard-title">Disponibilité</div>
+        <div class="smoothCard-text">
+            Nous sommes ouvert du lundi au samedi.
+        </div>
+    </div>
+    <div  class="smoothCard">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <div class="smoothCard-title">Polyvalence</div>
+        <div class="smoothCard-text">
+            Nous effectuons des duplicatas de différents types de clés
+        </div>
+    </div>
+    <div  class="smoothCard">
+        <i class="fa fa-smile-o" aria-hidden="true"></i>
+        <div class="smoothCard-title">Courtoisie</div>
+        <div class="smoothCard-text">
+            En plus de la qualité de nos prestations, nous mettons un point d’honneur à toujours nous montrer aimables et professionnels avec chacun de nos clients.
+            En effet, nous pensons qu’une ambiance de travail sereine est profitable pour tous.
+        </div>
+    </div>
+</div>
+
+
+
+<div id="clesMinuteQuestion" class="row" style="width: 100%">
+  <div class="small-center-info">Pour toute <strong> demande spécifique </strong>  contactez nous <span  class="phoneSpan"> 03 87 74 98 01 <i class="fa fa-phone" aria-hidden="true"></i></span></div>
+</div>
+
+
+
+<div class="hero-container-ClesDeux" style="">
+    <img id="imgBackOnCard"  src="{{ asset("build/services/clefminute/anahtarDelik1.jpg") }}  ">
+    <div class="card rellax"  >
+        <div class="card-body hero-container-ClesDeux-cardBody">
+            <div  class="yav-card-text-container" >
+                <div class="yav-card-title" >
+                    Reproduction de clés :
+                </div>
+                <div class="card-small-txt">
+                    Nous réalisons les clés suivantes : plate, à gorge, clés de voiture,
+                    clés spéciales, clés protégées, clés à numéro. <br> <br>
+                    Nous réalisons en quelques minutes vos reproductions de clés, grâce à un grand choix de modèles de clés différentes et un stock important. Vous repartez immédiatement avec vos nouvelles clés. <br>
+                    Clé brevetée : En cas de perte, la clé brevetée peut être reproduite sur commande, un délai de un à plusieurs jours est nécessaire selon les disponibilités fournisseurs.
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="yav-gallarie">
+    <div class="yav-gallarie-title">
+        Voici certaines photos de chez nous
+    </div>
+        <div class="yav-gallarie-photo-container">
+            <img src="{{ asset("build/services/imageBoutique/lesCles.jpg") }} ">
+            <img src="{{ asset("build/services/imageBoutique/clefFabric.jpg") }} ">
+            <img src="{{ asset("build/services/imageBoutique/machine.png") }} ">
+            <img src="{{ asset("build/services/imageBoutique/koltuk.jpg") }} ">
+            <img src="{{ asset("build/services/imageBoutique/imageBoutique.png") }} ">
+            <img src="{{ asset("build/services/imageBoutique/bureau.jpg") }} ">
+
+        </div>
+</div>
+
+
+
+
+
+    {{ encore_entry_script_tags('owlCrouselSlider') }}
+    {{ encore_entry_script_tags('service_clesMinute') }}
+
+
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+
+
+
+{% endblock %}

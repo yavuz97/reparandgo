@@ -1,0 +1,94 @@
+.acerComputers {
+    /*-webkit-transform: translate(-42%, -20%);*/
+    /*-ms-transform: translate(-42%, -20%);*/
+    transform: translate(-48%, -77%);
+    opacity: 0;
+    margin-bottom: -342px;
+    -webkit-transition: 1s .3s;
+    transition: 1s .3s;
+}
+.acerComputers.show {
+    /*-webkit-transform: translate(-42%, -30%);*/
+    /*-ms-transform: translate(-42%, -30%);*/
+    transform: translate(-16%, -77%);
+    opacity: 1;
+}
+
+.serviceOrdi-dissableComputer-content h1{
+    font-weight: bold;
+}
+.serviceOrdi-dissableComputer-content p{
+    color:#a4aaaf;
+}
+
+
+.serviceOrdi-dissableComputer {
+    /*-webkit-transform: translate(-42%, -20%);*/
+    /*-ms-transform: translate(-42%, -20%);*/
+    transform: translate(-48%, -77%);
+    opacity: 0;
+    margin-bottom: -342px;
+    -webkit-transition: 1s .3s;
+    transition: 1s .3s;
+}
+.serviceOrdi-dissableComputer.show {
+    /*-webkit-transform: translate(-42%, -30%);*/
+    /*-ms-transform: translate(-42%, -30%);*/
+    transform: translate(-16%, -77%);
+    opacity: 1;
+}
+
+
+
+
+.drop-shadow img {
+    filter: drop-shadow(-40px 42px 38px #666666);
+    -webkit-filter: drop-shadow(-40px 42px 38px #666666);
+}
+.computerIcons i{
+    color: #313131;
+    margin: auto;
+    height: 29px;
+    width: 100%;
+    font-size: 57px;
+    text-align: center;
+}
+
+.computerIcons .col div{
+    color: #313131;
+    text-align: center;
+    font-size: 80%;
+    font-weight: 600;
+}
+.computerIcons .col p{
+    margin-bottom: 100px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #a59d92;
+    text-align: center;
+}
+
+.computerIcons .col:hover  i{
+    color: #f7da4e;
+    transition: color .3s;
+
+}
+.computerIcons .col:hover div{
+    color: #f7da4e;
+    transition: color .3s;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .acerComputers {
+        margin-bottom: -150px;
+        opacity: 1;
+        transform: translate(31%,0%);
+    }
+    .serviceOrdi-dissableComputer {
+        margin-bottom: -103px;
+        opacity: 1;
+        transform: translate(-15%,9%);
+    }
+}

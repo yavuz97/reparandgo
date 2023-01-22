@@ -1,0 +1,204 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<style>
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+        .canRq-left-content img {
+            height: 485px;
+            object-fit: cover;
+            object-position: right 74%;
+            width: 290px;
+        }
+        .canRq-right-content img {
+            height: 492px;
+            margin-top: 32px;
+            object-fit: cover;
+            object-position: right 74%;
+            width: 348px;
+        }
+        .canRq-title {
+            font-size: 45px;
+            margin-bottom: 46px;
+        }
+        .canRq-text {
+            font-size: 30px;
+            font-weight: 300;
+        }
+        .small-center-info-tampon {
+            margin-bottom: 45px;
+            margin-top: 2rem;
+        }
+        .small-center-info, .small-center-info-tampon {
+            color: #000;
+            font-size: 41px;
+            font-style: italic;
+            text-align: center;
+            width: 100%;
+        }
+        .tamponW100-container img {
+            height: 490px;
+            margin: 0;
+            object-fit: cover;
+            object-position: right 46%;
+            padding: 0;
+            width: 100%;
+        }
+        .canSq-title {
+            font-size: 33px;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+        .canSq-text {
+            font-size: 35px;
+            font-weight: 100;
+        }
+        .canSq-content.left {
+            padding: 0 486px 0 0;
+        }
+        .canSq-row {
+            background-color: #fff;
+            display: table-row;
+            height: 777px;
+        }
+        .bigCenterTitle {
+            font-size: 56px;
+            padding: 63px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .bigCenterTitleRow{
+            padding: 157px 0 0 0;
+        }
+        .yav-container-imprimerie{
+            padding: 9px 0 181px;
+        }
+    }
+</style>
+<div  id="hero-image-navbar-trigger" ></div>
+
+<div class="row bigCenterTitleRow" style="width: 100%">
+    <div class="bigCenterTitle"> Tampon Gravure & Impimerie</div>
+</div>
+
+
+<div  class="yav-container yav-container-imprimerie" >
+    <div class="container">
+        <div class="canRq-container">
+            <div class="canRq-left-content">
+                <div class="canRq-img">
+                    <img src="{{ asset("build/services/tamponImpression/thanksPembe.jpg") }}">
+                </div>
+                <div class="text-Container">
+                    <div class="canRq-title">
+                        Demandez un devis rapide
+                    </div>
+                    <div class="canRq-text">
+                        Faites appel à notre équipe pour créer des documents
+                        qui vous ressemblent : cartes de visites, flyers, affiches,
+                        CV,… nous vous proposons des créations graphiques et des
+                        impressions qui répondent à votre charte graphique. COPIE CONFORME
+                        répond à vos devis sous 24h grâce à la demande de devis en ligne
+                        simple et gratuit.
+                    </div>
+                </div>
+            </div>
+
+            <div class="canRq-right-content" >
+                <div class="text-Container">
+                    <div class="canRq-title">
+                        Une offre spéciale pour vous !
+                    </div>
+                    <div class="canRq-text">
+                        Que ce soit pour les étudiants ou les entreprises, nous pouvons répondre à toutes vos demandes.
+                        Boostez l'activité de votre entreprise et créez des supports de communications qui vous correspondent !
+                        Imprimez des dossiers de qualités pour vos rapports de fin d'étude avec des reliures adaptées.
+                    </div>
+                </div>
+                <div class="canRq-img">
+                    <img src="{{ asset("build/services/tamponImpression/qrYesil.jpg") }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" style="width: 100%">
+    <div class="small-center-info-tampon">Pour tout <strong> demande spécifique </strong>  contactez nous <span class="phoneSpan">  07 83 61 62 16 <i class="fas fa-phone"></i></span></div>
+</div>
+
+<div class="tamponW100-container">
+
+    <div  class="hero-container">
+        <img  src="{{ asset("build/services/tamponImpression/kagitZeytin.jpg") }}">
+    </div>
+
+
+    <div  class="yav-container" >
+        <div class="container">
+            <div class="canSq-container">
+                <div class="canSq-row">
+                    <div class="canSq-cell">
+                        <div class="canSq-img"> <img src="{{ asset("build/services/tamponImpression/zeytinDali.jpg") }}"> </div>
+                    </div>
+                    <div class="canSq-cell">
+                        <div class="canSq-content right">
+                            <div class="canSq-title">FABRICATION DE TAMPONS EN 24H</div>
+                            <div class="canSq-text">Confiez-nous la confection de vos tampons, cachets cire,
+                                timbres secs ou fers à dorer. La fabrication se fait sur place, avec une grande précision
+                                et dans un délai de 24 h.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canSq-row">
+                    <div class="canSq-cell">
+                        <div class="canSq-content left">
+                            <div class="canSq-title">DES PRODUITS DE QUALITE IRREPROCHABLE </div>
+                            <div class="canSq-text">
+                                Vous souhaitez renouveler vos tampons d’associations ou de bureaux ? Faites-nous confiance, nous sommes forts dans la création et la fabrication de tampons. Professionnels dans le métier, nous vous assurons la qualité au meilleur prix. Tous nos produits sont conçus pour vous apporter le meilleur confort d’utilisation.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canSq-cell">
+                        <div class="canSq-img"> <img src="{{ asset("build/services/tamponImpression/yesilTablo.jpg") }}"> </div>
+                    </div>
+                </div>
+                <div class="canSq-row">
+                    <div class="canSq-cell">
+                        <div class="canSq-img"> <img src="{{ asset("build/services/tamponImpression/zarf.jpg") }}"> </div>
+                    </div>
+                    <div class="canSq-cell">
+                        <div class="canSq-content right">
+                            <div class="canSq-title">ESTHETIQUE</div>
+                            <div class="canSq-text">Nous vous fournissons des cachets répondant à vos exigences techniques et esthétiques.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canSq-row">
+                    <div class="canSq-cell">
+                        <div class="canSq-content left">
+                            <div class="canSq-title">UN VÉRITABLE OUTIL DE TRAVAIL</div>
+                            <div class="canSq-text">Un tampon encreur reste un outil de travail indispensable au sein d’une entreprise afin de valider ou reconnaitre des informations. Il permet de vous authentifier et de mettre en valeur à moindre coût. Afin d’optimiser le tampon pas cher, vous avez même la possibilité de changer que l’empreinte et garder son mécanisme
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canSq-cell">
+                        <div class="canSq-img"> <img src="{{ asset("build/services/tamponImpression/canonMakine.jpg") }}"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+

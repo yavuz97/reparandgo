@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}les produits Repar and go {% endblock %}
+{% block meta %}
+<meta name="robots" content="noindex" />
+{% endblock %}
+{% block body %}
+
+    <div class="col"></div>
+
+    <div class="phone-conainer">
+        {% for produit in produits %}
+        <a href="{{ path("produit_show", {'id':produit.id, 'nomProd' : produit.getNomUrl }) }}" style="    color: #3a4658;text-decoration: none;">
+        <div class="phone-card">
+            <div class="phone-card-img">
+              <img src="{{ asset("images/product_images/" ~ produit.image ) }}" alt="{{ produit.image }}">
+            </div>
+            <div class="phone-card-text"  > {{ produit.marque.nom }}  {{ produit.serie.nom }}  {{ produit.model }} </div>
+        </div>
+        </a>
+        {% endfor %}
+
+
+    </div>
+
+{% endblock %}
