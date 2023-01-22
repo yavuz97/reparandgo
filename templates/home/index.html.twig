@@ -6,6 +6,7 @@
     <meta name="description" content="Réparez vos téléphones en 20 minutes. Ecran cassé ? On  remplace rapidement les d'écrans d'iphone, Samsung, Xiaomi, Oppo... Nous solutionnons les problèmes
                 de batterie ou boutons smartphone. Réparation d'ordinateur et tablette. Vente d'accessoires téléphone.
                 achat et vente des smartphones : Repar and go ">
+
     <meta name="robots" content="index,follow"/>
 {% endblock %}
 {% block stylesheets %}
@@ -123,6 +124,82 @@
                 transform: translate(0);
             }
         }
+
+        .home-hero{
+            display: none;
+        }
+        @media only screen
+        and (min-device-width : 320px)
+        and (max-device-width : 480px) {
+            #phoneScroll {
+                display: none;
+            }
+            .home-hero{
+                display: block;
+            }
+            .btnLgMobile{
+                display: block;
+            }
+            .home-hero{
+                position: relative;
+                height: 50vh;
+                overflow: hidden;
+                /*background: url(https://reparandgo.com/build/general/homeHeroWomen.4e942a18.png) no-repeat center;*/
+                background: url(https://reparandgo.com/build/general/homeHeroWomen.4e942a18.png) no-repeat center;
+                background-size: cover;
+                background-position-x: 0;
+                margin-bottom: 90px;
+            }
+            .home-hero-container{
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0, -170%);
+                text-align: left;
+                color: white;
+                text-transform: uppercase;
+                font-family: 'Poppins', serif;
+            }
+            #homeHeroTitle{
+                font-weight: 700;
+                margin-top: -11%;
+
+            }
+            .home-hero-container h1{
+                font-family: sans-serif;
+                font-size: 81px;
+                letter-spacing: 0.2rem;
+                margin: 0;
+                text-shadow: 0 0 10px #00000054;
+            }
+            .des {
+                margin: 20px;
+                display: block;
+                font-size: 26px;
+                text-shadow: 0 0 10px black;
+            }
+            .btnLgMobile {
+                color: #ffffff;
+                padding: 28px 100px;
+                text-decoration: none;
+                background: #f7d33f;
+                border-radius: 8px;
+                transition: 0.3s all;
+                font-size: 57px;
+                position: absolute;
+                font-weight: 900;
+                text-shadow: 0 0 10px #00000054;
+                transform: translate(4%, -105%);
+                box-shadow: 2px 2px 11px 7px rgb(0 0 0 / 20%);
+            }
+            .btnLgMobile:hover{
+                opacity: 0.8;
+            }
+            .mobileIconsMargin{
+                margin-bottom: 130px;
+            }
+
+        }
     </style>
 {% endblock %}
 
@@ -131,6 +208,14 @@
 
 
     <div id="hero-image-navbar-trigger"></div>
+
+
+    <div class="home-hero">
+        <div class="home-hero-container">
+            <h1 id="homeHeroTitle"><span> Réparation <br> sur Metz </span></h1>
+            <span class="des">Téléphone & ordinateur & tablette & clés-minute</span>
+        </div>
+    </div>
 
     <div id="homePageItemsRow" class="row">
         <div class="itemHomePage col-lg-3 col-md-6 col-sm-6 col-6">
