@@ -6,6 +6,8 @@
     <meta name="description" content="Réparez vos téléphones en 20 minutes. Ecran cassé ? On  remplace rapidement les d'écrans d'iphone, Samsung, Xiaomi, Oppo... Nous solutionnons les problèmes
                 de batterie ou boutons smartphone. Réparation d'ordinateur et tablette. Vente d'accessoires téléphone.
                 achat et vente des smartphones : Repar and go ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <meta name="robots" content="index,follow"/>
 {% endblock %}
@@ -18,12 +20,15 @@
                 top: -16px;
                 width: 601px;
             }
+            /*
             .googleImageAndTextContainer div {
                 font-size: 79px;
                 font-weight: 300;
                 margin-bottom: 15px;
                 margin-top: 17px;
             }
+            */
+
             .yav-container {
                 padding: 6px 0 151px;
             }
@@ -145,7 +150,7 @@
                 height: 50vh;
                 overflow: hidden;
                 /*background: url(https://reparandgo.com/build/general/homeHeroWomen.4e942a18.png) no-repeat center;*/
-                background: url(https://reparandgo.com/build/general/homeHeroWomen.4e942a18.png) no-repeat center;
+                /*background: url(https://reparandgo.com/build/general/homeHeroWomen.4e942a18.png) no-repeat center;*/
                 background-size: cover;
                 background-position-x: 0;
                 margin-bottom: 90px;
@@ -253,7 +258,7 @@
                 <br>
             </a>
             <span>
-                 <select  style="font-size: 37px; height: 80px;margin-top: 30px;"
+                 <select  style="font-size: 37px; height: 80px;margin-top: 20px;"
                          class="w-100 js-example-basic-single js-states form-control searchProd searchProdMobile">
                    <option value="" disabled selected>Trouver mon appareil</option>
                 {% for marque in marques %}
@@ -281,6 +286,7 @@
                         Réparez vos téléphones en 20 minutes. Ecran cassé ? On  remplace les d'écrans d'iphone, Samsung, Xiaomi, Oppo... Nous solutionnons les problèmes
                         de batterie ou boutons smartphone. Réparation d'ordinateur et tablette. Vente d'accessoires téléphone.
                         achat et vente des smartphones
+                        <button class="btn btn-lg btn-dark">rechercher  modèle </button>
                     </p>
                 </div>
             </div>
@@ -456,7 +462,7 @@
     </div>
 
 
-    {{ encore_entry_script_tags('homePage') }}
+{#    {{ encore_entry_script_tags('homePage') }}#}
 
 
 {% endblock %}
